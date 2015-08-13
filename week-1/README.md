@@ -1,15 +1,50 @@
 # Week 1: Introduction to Course & Front-end Tooling
 
-## Course Overview
+In this course, we'l be focusing on intermediate–advanced front-end web development techniques and best practices. We'll be introducing the following tools and concepts, following industry standards with a focus on the user-centered design process:
 
-## Version Control
+### Tools
+- _**Git & Github**_ for version control & collaboration
+- _**Atom**_ for hacking/text editing with built-in Git integration
+- _**Prepros**_ for CSS compiling and build processing
+- _**Chrome DevTools**_ for advanced CSS/JavaScript debugging
+
+### Concepts
+- **Responsive web design** (cross-device)
+- **CSS authoring** (preprocessors)
+- **CSS architecture/frameworks** (DRY/SMACSS)
+- **HTML prototyping** (usability testing)
+- **JavaScript** (interactive programming)
+
+The goal for this course is for each student to have a basic grasp of the tooling, yet a thorough understanding of the concepts as presented and their necessity in the web design & development process.
+
+You'll also notice a few over-arching themes being repeated throughout the course that, while not core to curriculum, will provide a better understanding of how the development process at large.
+
+#### Themes
+- **Marketing vs product design** (website vs web-app)
+- **Agile development**
+- **Open-source** (software)
+- **Contribution/Attribution** (on the web)
+- **Hacking**
+
+
+## What is Version Control
+
+**Version control** is a system that records changes to a file or set of files over time so that you can recall specific versions later.
 
 - [Wikipedia: Revision Control](https://en.wikipedia.org/wiki/Revision_control)
 - [Git: Getting started about Version Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
 [![What is Version Control](images/git/what-is-version-control.png)](https://vimeo.com/41027679)
 
-### What is Git?
+### What is Git/Github?
+
+**Git** is the most popular version control system that developers use to track and share code.
+
+Git provides a history of revisions or changes to files and an organization system around it
+
+Git allows groups of people to work on the same documents (often code) at the same time, and without stepping on each other's toes. It's a distributed version control system.
+
+**Github** is an
 
 ### Development Work-flow
 
