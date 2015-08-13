@@ -28,7 +28,7 @@ You'll also notice a few over-arching themes being repeated throughout the cours
 
 Let's get started by introducing the foundational concept that will help us track and share our code, **version control**.
 
-## What is Version Control
+## Version Control
 
 **Version control** (also known as **source control management**) is a system that records changes to a file or set of files over time so that you can recall specific versions later. Many popular systems include aspects of version control built-in to the software like word processors (ie. Google Docs, etc) and content management systems (ie. WordPress, etc).
 
@@ -42,6 +42,7 @@ There's multiple types of version control systems available, including [CVS](htt
 - [The top 7 open source version control system](http://www.smashingmagazine.com/2008/09/the-top-7-open-source-version-control-systems/)
 - [Git: Getting started - about version control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
+**Video: [Git Basics: What is Version Control?](https://vimeo.com/41027679)**
 [![What is Version Control](images/git/what-is-version-control.png)](https://vimeo.com/41027679)
 
 ### What is Git/GitHub?
@@ -101,6 +102,8 @@ In Git, merging brings the changes in two branches together. A pull request is a
 
 ## Atom
 
-## Developer Tools
-
 ## Prepros
+
+## Chrome DevTools
+
+## HTML/CSS Review
