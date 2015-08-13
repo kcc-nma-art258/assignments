@@ -17,15 +17,16 @@ In this course, we'l be focusing on intermediate–advanced front-end web develo
 
 The goal for this course is for each student to have a basic grasp of the tooling, yet a thorough understanding of the concepts as presented and their necessity in the web design & development process.
 
-You'll also notice a few over-arching themes being repeated throughout the course that, while not core to curriculum, will provide a better understanding of how the development process at large.
+You'll also notice a few over-arching themes being repeated throughout the course that, while not core to curriculum, will provide a better understanding of how the development process works at large.
 
 #### Themes
 - **Marketing vs product design** (website vs web-app)
+- **Craftsmanship** (hacking)
 - **Agile development**
-- **Open-source** (software)
+- **Open-source software**
 - **Contribution/Attribution** (on the web)
-- **Hacking**
 
+Let's get started by introducing the foundational concept that will help us track and share our code, **version control**.
 
 ## What is Version Control
 
