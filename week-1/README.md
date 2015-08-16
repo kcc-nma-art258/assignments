@@ -135,7 +135,7 @@ Students may use any text editor they would like for this course, however Atom w
 
 One of the bigger concepts of the semester will be  authoring CSS using [Sass](http://sass-lang.com/). Sass (Syntactically Awesome Stylesheets) is a scripting language that preprocesses (ie. compiles in to) CSS. Sass extends CSS, providing features that are not yet available like variables, nesting, mixins, and operators to simplify our styling process and make our code more modular, scalable, and maintainable.
 
-- [Wikipedia: Sass](https://en.wikipedia.org/wiki/Sass_(stylesheet_language)
+- [Wikipedia: Sass](https://en.wikipedia.org/wiki/Sass_(stylesheet_language))
 
 Since browsers only read CSS in its original form, we need to use a program to compile our written Sass in to CSS. Much like Git, Sass is a command-line tool, however there are GUI's, like **[Prepros](https://prepros.io/)**, available to assist with the process.
 
