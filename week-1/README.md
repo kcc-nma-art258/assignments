@@ -33,27 +33,22 @@ Let's get started by introducing the foundational concept that will help us trac
 **Version control** (also known as **source control management**) is a system that records changes to a file or set of files over time so that you can recall specific versions later. Many popular systems include aspects of version control built-in to the software like word processors (ie. Google Docs, etc) and content management systems (ie. WordPress, etc).
 
 - [Wikipedia: Revision Control](https://en.wikipedia.org/wiki/Revision_control)
+- [Git SCM: Getting started - about version control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+
+
+There's multiple types of version control systems available, including [CVS](http://www.nongnu.org/cvs/), [SVN](http://subversion.apache.org/), [Git](https://git-scm.com/) et al. Each system is catered to a specific type of workflow for collaboration, but generally all provide the same file versioning/history capabilities.
+
+- [Wikipedia: List of types of version control](https://en.wikipedia.org/wiki/List_of_revision_control_software)
 
 **Video: [Git Basics: What is Version Control?](https://vimeo.com/41027679)**
 [![What is Version Control](images/git/what-is-version-control.png)](https://vimeo.com/41027679)
 
-### Types of Version Control
-
-There's multiple types of version control systems available, including [CVS](http://www.nongnu.org/cvs/), [SVN](http://subversion.apache.org/), [Git](https://git-scm.com/) et al. Each system is catered to a specific type of workflow for collaboration, but generally provide the same file versioning capabilities.
-
-- [Wikipedia: List of types of version control](https://en.wikipedia.org/wiki/List_of_revision_control_software)
-- [The top 7 open source version control system](http://www.smashingmagazine.com/2008/09/the-top-7-open-source-version-control-systems/)
-- [Git: Getting started - about version control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
-
-**Video: [Git Basics: What is Git?](https://vimeo.com/41381741)**
-[![What is Version Control](images/git/what-is-git.png)](https://vimeo.com/41381741)
-
 ### What is Git/GitHub?
 [![Git SCM Logo](images/git/git-logo.png)](https://git-scm.com/)
 
-**[Git](https://git-scm.com/) is the most popular version control system that developers use to track and share code.**
+**[Git](https://git-scm.com/) is the most popular version control system that developers use to track and share code today.**
 
-Git provides a history of revisions or changes to files and an organization system around it.
+Git provides common version control capabilities, but with it's own organizational workflow. Git's [branching model concept](#branch) encourages a *feature-based workflow*, allowing people to seamlessly switch back and forth between different features you're working on and experiment without impacting the integrity of your code-base.
 
 Git allows groups of people to work on the same documents (often code) at the same time, and without stepping on each other's toes. It's a distributed, version control system.
 
