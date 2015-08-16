@@ -50,7 +50,7 @@ There's multiple types of version control systems available, including [CVS](htt
 
 Git provides common version control capabilities, but with it's own, unique organizational workflow. Git's [branching model concept](#branch) encourages a *feature-based workflow*, allowing people to seamlessly switch back and forth between different features they're working on and experiment without impacting the integrity of their code-base.
 
-Git allows groups of people to work on the same documents (often code) at the same time, and without stepping on each other's toes. It's a distributed, version control system.
+Git also allows groups of people to work on the same documents (often code) at the same time, and without stepping on each other's toes. It's a distributed, version control system.
 
 [![Github](images/git/github-logo.png)](https://github.com/)
 
@@ -61,6 +61,7 @@ Unlike Git, which is strictly a command-line (CLI) tool, GitHub provides a web-b
 GitHub also provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
 
 ### Git concepts
+- [Git: The advantages of Git compared to other source control systems](https://git-scm.com/about/)
 - [Git: Getting started - Git basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
 
 #### Repository
@@ -84,13 +85,17 @@ In Git, merging brings the changes in two branches together. A pull request is a
 ### GitHub setup
 
 1. Sign up for a [free GitHub account](https://github.com/join)
+  - Setup [Two Factor Authentication (2FA)](https://github.com/blog/1614-two-factor-authentication) as an additional security measure
 2. Complete [ART258 GitHub account form](http://goo.gl/forms/QubL6AJy0F)
 3. *Download [GitHub Desktop app](https://desktop.github.com/)
   - [GitHub for Mac](https://central.github.com/mac/latest)
   - [GitHub for PC](https://github-windows.s3.amazonaws.com/GitHubSetup.exe)
 
-**GitHub Desktop app should already be installed on the studio classroom computers.*
+**The GitHub Desktop app should already be installed on the KOA 103 studio classroom computers.*
+
 ### GitHub development workflow
+
+As we go through the semester, we'll cover different aspects of Git & GitHub within our workflow. At a [high-level](https://en.wikipedia.org/wiki/High-_and_low-level), we'll be following the [GitHub-Flow]() methodology for development with some slight adjustments for this course.
 
 - Anything in the `master` branch is deployable
 - To work on something new, create a descriptively named branch off of `master` (ie: `home-page-bug-fix`)
@@ -104,7 +109,7 @@ In Git, merging brings the changes in two branches together. A pull request is a
 ## Atom text editor
 [![Atom Logo](images/atom/atom-logo.png)](https://atom.io/)
 
-**[Atom](https://atom.io/) is a "hackable text editor for the 21st century".** Similar to Adobe Dreamweaver, Brackets, Sublime Text, and Textmate, Atom is a standalone text editor built for coding/programming but completely customizable through HTML/CSS/JS.
+**[Atom](https://atom.io/) is a "hackable text editor for the 21st century".** Similar to *[Adobe Dreamweaver](http://www.adobe.com/products/dreamweaver.html)*, *[Brackets](http://brackets.io/)*, *[Sublime Text](http://www.sublimetext.com/)*, and *[Textmate](https://macromates.com/) (for OSX)*, Atom is a standalone text editor built for coding/programming. However, unlike the above editors, Atom comes with [built-in Git integration](https://atom.io/docs/v1.0.7/using-atom-version-control-in-atom), is [completely customizable](https://atom.io/docs/v1.0.7/hacking-atom-tools-of-the-trade) through JavaScript & CSS, and best of all, is [open-source](http://blog.atom.io/2014/05/06/atom-is-now-open-source.html) (ie. free).
 
 **Video: [GitHub presents: Atom 1.0](https://youtu.be/Y7aEiVwBAdk)**
 [![Atom](images/atom/atom.png)](https://youtu.be/Y7aEiVwBAdk)
@@ -117,24 +122,24 @@ Below are a few features which are important to have in a text editor.
 - Extensibility/plugins for additional functionality
 - Theming
 
-Along with the above features, Atom also includes [integration with Git](http://blog.atom.io/2014/03/13/git-integration.html), allowing users to:
-- Quickly rewind to the previous commit (`cmd-alt-z`)
-- Display the a list of all the untracked (new) and modified files in the project (`cmd-shift-b`)
+Along with the above features, Atom also includes [integration with Git](https://atom.io/docs/v1.0.7/using-atom-version-control-in-atom), providing the following additional capabilities:
+- Quickly rewind to a previous commit (`cmd-alt-z`)
+- Display the list of all the untracked (ie. new) and modified files in the project (`cmd-shift-b`)
 - Edit commit messages (if using Git CLI)
-- Highlight status of our untracked/modified files within the tree-view, gutter and status bar of the Atom interface.  
+- Highlight the status of our untracked and modified files within the tree-view, gutter and status bar of the Atom interface.  
 
-Students may use any text editor they would like for this course, however Atom will assist in learning the Git concepts and can be configured to fit any particular workflow.
+Students may use any text editor they prefer for this course, however Atom will assist in learning the Git concepts and can be configured to fit any particular workflow. It is recommended to atleast try the editor for the initial few weeks, since it will be used for presenting the exercises and should be easier to follow along with.
 
 ## Prepros
 [![Prepros Logo](images/prepros/prepros-logo.png)](https://prepros.io/)
 
-One of the bigger concepts of the semester will be  authoring CSS using [Sass](http://sass-lang.com/). Sass (Syntactically Awesome Stylesheets) is a scripting language that preprocesses (ie. compiles in to) CSS. Sass extends CSS, providing features that are not yet available like variables, nesting, mixins, and operators to simplify our styling process and make our code more modular, scalable, and maintainable.
+One of the bigger concepts of the semester will be  authoring CSS using [Sass](http://sass-lang.com/). Sass (Syntactically Awesome Stylesheets) is a scripting language that preprocesses (ie. compiles in to) CSS. Sass extends CSS, providing features that are not yet available like variables, nesting of rules, mixins/functions, and operators to simplify our styling process and make our code more modular, scalable, and maintainable.
 
 - [Wikipedia: Sass](https://en.wikipedia.org/wiki/Sass_(stylesheet_language))
 
-Since browsers only read CSS in its original form, we need to use a program to compile our written Sass in to CSS. Much like Git, Sass is a command-line tool, however there are GUI's, like **[Prepros](https://prepros.io/)**, available to assist with the process.
+Since browsers only read CSS in its original syntax, we need to use a program to compile our written Sass in to CSS so be served up to the browser. Similar to Git and other front-end tools, Sass was built as a command-line utility. In this course, we'll be using **[Prepros](https://prepros.io/)**, a third-party graphical user-interface (GUI) for CSS preprocessing, to assist us.
 
-Along with CSS preprocessing, Prepros will also help out in other aspects of our web development cycle, including:
+Along with Sass compiling, Prepros will also help out in other aspects of our web development build cycle, including:
 
 - CSS prefixing
 - Browser refresh & behavior synchronization
