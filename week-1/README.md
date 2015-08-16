@@ -59,7 +59,7 @@ Git allows groups of people to work on the same documents (often code) at the sa
 
 [![Github](images/git/github-logo.png)](https://github.com/)
 
-**[GitHub](https://github.com/) is a web-based, Git repository (ie. project) hosting service.**
+**[GitHub](https://github.com/) is a web-based, Git repository hosting service. *(ie. a 'hub' for Git repo's, get it?)* **
 
 Unlike Git, which is strictly a command-line (CLI) tool, GitHub provides a web-based graphical interface and desktop client for managing Git repositories.
 
@@ -72,7 +72,7 @@ GitHub also provides access control and several collaboration features such as b
 A Git repository is nothing more than a project. Any file in your repo will be tracked and a history of the changes will be recorded (unless [explicitly ignored](http://git-scm.com/docs/gitignore), which we'll talk about a bit later).
 
 #### Branch
-A Git branch is a working copy of your code, *in specific state*. When you're working on a project, you're going to have a bunch of different features or ideas in progress at any given time – some of which are ready to go, and others which are not. Branching exists to help you manage this workflow.
+A Git branch is a working copy of your code, *in a specific state*. When you're working on a project, you're going to have a bunch of different features or ideas in progress at any given time – some of which are ready to go, and others which are not. Branching exists to help you manage this workflow.
 
 #### Commit
 A commit saves your current changes to your current branch. Once you start making changes in a repository, Git will start tracking those changes. Whenever you add, edit, or delete a file, you're making a commit, and adding them to your branch. This process of adding commits keeps track of your progress as you work on a feature branch.
