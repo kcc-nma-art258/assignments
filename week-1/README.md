@@ -4,7 +4,7 @@ In this course, we'll be focusing on intermediate-to-advanced front-end web deve
 
 ### Tools
 - _**Git & GitHub**_ for version control & collaboration
-- _**Atom**_ for hacking/text editing with built-in Git integration
+- _**Atom**_ for text editing with built-in Git integration
 - _**Prepros**_ for CSS compiling and build processing
 - _**Chrome DevTools**_ for advanced CSS/JavaScript debugging
 
@@ -46,9 +46,9 @@ There's multiple types of version control systems available, including [CVS](htt
 ### What is Git/GitHub?
 [![Git SCM Logo](images/git/git-logo.png)](https://git-scm.com/)
 
-**[Git](https://git-scm.com/) is the most popular version control system that developers use to track and share code today.**
+**[Git](https://git-scm.com/) is the fastest growing and most popular version control system used to track and share documents today.**
 
-Git provides common version control capabilities, but with it's own organizational workflow. Git's [branching model concept](#branch) encourages a *feature-based workflow*, allowing people to seamlessly switch back and forth between different features you're working on and experiment without impacting the integrity of your code-base.
+Git provides common version control capabilities, but with it's own, unique organizational workflow. Git's [branching model concept](#branch) encourages a *feature-based workflow*, allowing people to seamlessly switch back and forth between different features they're working on and experiment without impacting the integrity of their code-base.
 
 Git allows groups of people to work on the same documents (often code) at the same time, and without stepping on each other's toes. It's a distributed, version control system.
 
@@ -101,10 +101,10 @@ In Git, merging brings the changes in two branches together. A pull request is a
   - If your classmates find any issues, make the fixes locally and push the changes to the same remote branch
   - Once your code has been reviewed by 2 classmates and your code is ready to turn in, create a new comment on your pull request with the words `@micjamking: Final Submission`; this will send me a notification that your assignment is ready to be graded.
 
-## Atom
+## Atom text editor
 [![Atom Logo](images/atom/atom-logo.png)](https://atom.io/)
 
-**[Atom](https://atom.io/) is a "hackable text editor for the 21st century".** Similar to Adobe Dreamweaver, Brackets, Sublime Text, and Textmate, Atom is a standalone text editor built for coding/programming.
+**[Atom](https://atom.io/) is a "hackable text editor for the 21st century".** Similar to Adobe Dreamweaver, Brackets, Sublime Text, and Textmate, Atom is a standalone text editor built for coding/programming but completely customizable through HTML/CSS/JS.
 
 **Video: [GitHub presents: Atom 1.0](https://youtu.be/Y7aEiVwBAdk)**
 [![Atom](images/atom/atom.png)](https://youtu.be/Y7aEiVwBAdk)
