@@ -106,34 +106,10 @@ As we go through the semester, we'll cover different aspects of Git & GitHub wit
   - If your classmates find any issues, make the fixes locally and push the changes to the same remote branch
   - Once your code has been reviewed by 2 classmates and your code is ready to turn in, create a new comment on your pull request with the words `@micjamking: Final Submission`; this will send me a notification that your assignment is ready to be graded.
 
-## Atom text editor
-[![Atom Logo](images/atom/atom-logo.png)](https://atom.io/)
-
-**[Atom](https://atom.io/) is a "hackable text editor for the 21st century".** Similar to *[Adobe Dreamweaver](http://www.adobe.com/products/dreamweaver.html)*, *[Brackets](http://brackets.io/)*, *[Sublime Text](http://www.sublimetext.com/)*, and *[Textmate](https://macromates.com/) (for OSX)*, Atom is a standalone text editor built for coding/programming. However, unlike the above editors, Atom comes with [built-in Git integration](https://atom.io/docs/v1.0.7/using-atom-version-control-in-atom), is [completely customizable](https://atom.io/docs/v1.0.7/hacking-atom-tools-of-the-trade) through JavaScript & CSS, and best of all, is [open-source](http://blog.atom.io/2014/05/06/atom-is-now-open-source.html) (ie. free).
-
-**Video: [GitHub presents: Atom 1.0](https://youtu.be/Y7aEiVwBAdk)**
-[![Atom](images/atom/atom.png)](https://youtu.be/Y7aEiVwBAdk)
-
-As a web developer, a text editor is your primary tool for crafting sites and apps, so finding an editor that you're comfortable with and is configurable to match your workflow is important.
-
-Below are a few features which are important to have in a text editor.
-- Autocompletion
-- File browser/file search
-- Extensibility/plugins for additional functionality
-- Theming
-
-Along with the above features, Atom also includes [integration with Git](https://atom.io/docs/v1.0.7/using-atom-version-control-in-atom), providing the following additional capabilities:
-- Quickly rewind to a previous commit (`cmd-alt-z`)
-- Display the list of all the untracked (ie. new) and modified files in the project (`cmd-shift-b`)
-- Edit commit messages (if using Git CLI)
-- Highlight the status of our untracked and modified files within the tree-view, gutter and status bar of the Atom interface.  
-
-Students may use any text editor they prefer for this course, however Atom will assist in learning the Git concepts and can be configured to fit any particular workflow. It is recommended to atleast try the editor for the initial few weeks, since it will be used for presenting the exercises and should be easier to follow along with.
-
 ## Prepros
 [![Prepros Logo](images/prepros/prepros-logo.png)](https://prepros.io/)
 
-One of the bigger concepts of the semester will be  authoring CSS using [Sass](http://sass-lang.com/). Sass (Syntactically Awesome Stylesheets) is a scripting language that preprocesses (ie. compiles in to) CSS. Sass extends CSS, providing features that are not yet available like variables, nesting of rules, mixins/functions, and operators to simplify our styling process and make our code more modular, scalable, and maintainable.
+One of the bigger concepts of the semester will be authoring CSS using [Sass](http://sass-lang.com/). Sass (Syntactically Awesome Stylesheets) is a scripting language that preprocesses (ie. compiles in to) CSS. Sass extends CSS, providing features that are not yet available like variables, nesting of rules, mixins/functions, and operators to simplify our styling process and make our code more modular, scalable, and maintainable.
 
 - [Wikipedia: Sass](https://en.wikipedia.org/wiki/Sass_(stylesheet_language))
 
@@ -164,5 +140,29 @@ Chrome Developer Tools (DevTools) helps you develop, test, and debug your web si
 If you're completely unfamiliar with the concept of debugging or have used other debuggers like Firebug but are inexperienced with Chrome DevTools, I highly recommend checking out the free online training course on [Chrome DevTools by Code School](https://www.codeschool.com/courses/discover-devtools). It's taught by [Paul Irish](http://www.paulirish.com/), one of the Chrome Developer team members, but uses [Code Schools](https://www.codeschool.com/) highly interactive, educational platform, so I find it more approachable than the Chrome DevTool documentation as an introduction to the tool.
 
 We'll be covering different aspects and topics on Chrome DevTools throughout the semester as we go through the web development process.
+
+## Atom text editor
+[![Atom Logo](images/atom/atom-logo.png)](https://atom.io/)
+
+**[Atom](https://atom.io/) is a "hackable text editor for the 21st century".** Similar to *[Adobe Dreamweaver](http://www.adobe.com/products/dreamweaver.html)*, *[Brackets](http://brackets.io/)*, *[Sublime Text](http://www.sublimetext.com/)*, and *[Textmate](https://macromates.com/) (for OSX)*, Atom is a standalone text editor built for coding/programming. However, unlike the above editors, Atom comes with [built-in Git integration](https://atom.io/docs/v1.0.7/using-atom-version-control-in-atom), is [completely customizable](https://atom.io/docs/v1.0.7/hacking-atom-tools-of-the-trade) through JavaScript & CSS, and best of all, is [open-source](http://blog.atom.io/2014/05/06/atom-is-now-open-source.html) (ie. free).
+
+**Video: [GitHub presents: Atom 1.0](https://youtu.be/Y7aEiVwBAdk)**
+[![Atom](images/atom/atom.png)](https://youtu.be/Y7aEiVwBAdk)
+
+As a web developer, a text editor is your primary tool for crafting sites and apps, so finding an editor that you're comfortable with and is configurable to match your workflow is important.
+
+Below are a few features which are important to have in a text editor.
+- Autocompletion
+- File browser/file search
+- Extensibility/plugins for additional functionality
+- Theming
+
+Along with the above features, Atom also includes [integration with Git](https://atom.io/docs/v1.0.7/using-atom-version-control-in-atom), providing the following additional capabilities:
+- Quickly rewind to a previous commit (`cmd-alt-z`)
+- Display the list of all the untracked (ie. new) and modified files in the project (`cmd-shift-b`)
+- Edit commit messages (if using Git CLI)
+- Highlight the status of our untracked and modified files within the tree-view, gutter and status bar of the Atom interface.  
+
+Students may use any text editor they prefer for this course, however Atom will assist in learning the Git concepts and can be configured to fit any particular workflow. It is recommended to atleast try the editor for the initial few weeks, since it will be used for presenting the exercises and should be easier to follow along with.
 
 ## HTML/CSS Review
