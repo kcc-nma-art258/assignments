@@ -4,9 +4,9 @@ In this course, we'll be focusing on intermediate-to-advanced front-end web deve
 
 ### Tools
 - _**Git & GitHub**_ for version control & collaboration
-- _**Atom**_ for text editing with built-in Git integration
 - _**Prepros**_ for CSS compiling and build processing
 - _**Chrome DevTools**_ for advanced CSS/JavaScript debugging
+- _**Atom**_ for text editing with built-in Git integration
 
 ### Concepts
 - **Responsive web design** (cross-device)
@@ -150,5 +150,19 @@ Along with Sass compiling, Prepros will also help out in other aspects of our we
 We'll be diving in to this tool starting Week 2 and will cover each of the features above in detail in the subsequent weeks.
 
 ## Chrome DevTools
+[![Chrome Devtools Logo](images/devtools/chrome-devtools-logo.png)](https://developers.google.com/web/tools/chrome-devtools/)
+
+When developing a website or application using web technologies, it's necessary to be able to debug the site for issues while viewing it in the browser or on a device. [Google Chrome's Developer Tools](https://developers.google.com/web/tools/chrome-devtools/) (ie. Chrome DevTools) are a set of built-in authoring and debugging tools for web technologies (HTML/CSS/JavaScript).
+
+Chrome Developer Tools (DevTools) helps you develop, test, and debug your web sites and applications directly from the Google Chrome browser. DevTools provides web developers the following capabilities which are essential to create usable, well functioning websites:
+
+- Inspection of the Document Object Model (DOM) and styles of the currently running page.
+- Debug JavaScript with breakpoints and the console.
+- Interact with a page and record performance using the Timeline & Auditing tools.
+- Test your pages on mobile using device emulation mode.
+
+If you're completely unfamiliar with the concept of debugging or have used other debuggers like Firebug but are inexperienced with Chrome DevTools, I highly recommend checking out the free online training course on [Chrome DevTools by Code School](https://www.codeschool.com/courses/discover-devtools). It's taught by [Paul Irish](http://www.paulirish.com/), one of the Chrome Developer team members, but uses [Code Schools](https://www.codeschool.com/) highly interactive, educational platform, so I find it more approachable than the Chrome DevTool documentation as an introduction to the tool.
+
+We'll be covering different aspects and topics on Chrome DevTools throughout the semester as we go through the web development process.
 
 ## HTML/CSS Review
