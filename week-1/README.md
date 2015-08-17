@@ -137,11 +137,13 @@ Chrome Developer Tools (DevTools) helps you develop, test, and debug your web si
 - Interact with a page and record performance using the Timeline & Auditing tools.
 - Test your pages on mobile using device emulation mode.
 
+Chrome DevTools can also serve as a complete authoring environment, similar to traditional text editors like [Atom](#atom) or Sublime Text, however setup is an advanced topic and only certain aspects will be covered in this course.
+
 If you're completely unfamiliar with the concept of debugging or have used other debuggers like Firebug but are inexperienced with Chrome DevTools, I highly recommend checking out the free online training course on [Chrome DevTools by Code School](https://www.codeschool.com/courses/discover-devtools). It's taught by [Paul Irish](http://www.paulirish.com/), one of the Chrome Developer team members, but uses [Code Schools](https://www.codeschool.com/) highly interactive, educational platform, so I find it more approachable than the Chrome DevTool documentation as an introduction to the tool.
 
 We'll be covering different aspects and topics on Chrome DevTools throughout the semester as we go through the web development process.
 
-## Atom text editor
+## Atom
 [![Atom Logo](images/atom/atom-logo.png)](https://atom.io/)
 
 **[Atom](https://atom.io/) is a "hackable text editor for the 21st century".** Similar to *[Adobe Dreamweaver](http://www.adobe.com/products/dreamweaver.html)*, *[Brackets](http://brackets.io/)*, *[Sublime Text](http://www.sublimetext.com/)*, and *[Textmate](https://macromates.com/) (for OSX)*, Atom is a standalone text editor built for coding/programming. However, unlike the above editors, Atom comes with [built-in Git integration](https://atom.io/docs/v1.0.7/using-atom-version-control-in-atom), is [completely customizable](https://atom.io/docs/v1.0.7/hacking-atom-tools-of-the-trade) through JavaScript & CSS, and best of all, is [open-source](http://blog.atom.io/2014/05/06/atom-is-now-open-source.html) (ie. free).
