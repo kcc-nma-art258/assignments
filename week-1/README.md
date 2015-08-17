@@ -1,6 +1,6 @@
 # Week 1: Introduction to Course & Front-end Tooling
 
-In this course, we'll be focusing on intermediate-to-advanced front-end web development techniques and best practices. We'll be introducing the following tools and concepts, following industry standards with a focus on the user-centered design process:
+In this course, we'll be focusing on intermediate-to-advanced front-end web development techniques and best practices. We'll be introducing the following tools and concepts:
 
 ### Tools
 - _**Git & GitHub**_ for version control & collaboration
