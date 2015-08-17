@@ -54,7 +54,7 @@ Git also allows groups of people to work on the same documents (often code) at t
 
 [![Github](images/git/github-logo.png)](https://github.com/)
 
-**[GitHub](https://github.com/) is a web-based, Git repository hosting service. *(ie. a 'hub' for Git repo's, get it?)* **
+**[GitHub](https://github.com/) is a web-based, Git repository hosting service. _(ie. a 'hub' for Git repo's, get it?)_**
 
 Unlike Git, which is strictly a command-line (CLI) tool, GitHub provides a web-based graphical interface and desktop client for managing Git repositories.
 
