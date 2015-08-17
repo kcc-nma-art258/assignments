@@ -1,6 +1,6 @@
-# Week 1: Introduction to Course & Front-end Tooling
+# Week 1: Intro to Course & Front-end Tools
 
-In this course, we'll be focusing on intermediate-to-advanced front-end web development techniques and best practices. We'll be introducing the following tools and concepts, following industry standards with a focus on the user-centered design process:
+In this course, we'll be focusing on intermediate-to-advanced front-end web development techniques and best practices. We'll be introducing the following tools and concepts:
 
 ### Tools
 - _**Git & GitHub**_ for version control & collaboration
@@ -54,7 +54,7 @@ Git also allows groups of people to work on the same documents (often code) at t
 
 [![Github](images/git/github-logo.png)](https://github.com/)
 
-**[GitHub](https://github.com/) is a web-based, Git repository hosting service. *(ie. a 'hub' for Git repo's, get it?)* **
+**[GitHub](https://github.com/) is a web-based, Git repository hosting service. _(ie. a 'hub' for Git repo's, get it?)_**
 
 Unlike Git, which is strictly a command-line (CLI) tool, GitHub provides a web-based graphical interface and desktop client for managing Git repositories.
 
@@ -65,7 +65,7 @@ GitHub also provides access control and several collaboration features such as b
 - [Git: Getting started - Git basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
 
 #### Repository
-A Git repository is nothing more than a project. Any file in your repo will be tracked and a history of the changes will be recorded (unless [explicitly ignored](http://git-scm.com/docs/gitignore), which we'll talk about a bit later).
+A Git repository is nothing more than a directory (ie. folder) on a computer. Any file in your 'repo' will be tracked and a history of the changes will be recorded (unless [explicitly ignored](http://git-scm.com/docs/gitignore), which we'll talk about a bit later).
 
 #### Branch
 A Git branch is a working copy of your code, *in a specific state*. When you're working on a project, you're going to have a bunch of different features or ideas in progress at any given time – some of which are ready to go, and others which are not. Branching exists to help you manage this workflow.
@@ -80,7 +80,7 @@ A good practice in web development is to create backups of your projects. This i
 In the *[GitHub development workflow](#github-development-workflow)*, theres a `master` branch that keeps the final record of the code ready for deployment. To get code from our feature branches in to our master branch, we need to make a pull request.
 
 #### Merge
-In Git, merging brings the changes in two branches together. A pull request is a request to merge a set of commits from on branch in to another. Merges can be performed on your local machine to combine changes from two feature branches before syncing, and making a pull request to the `master` branch on Github.
+In Git, merging brings the changes in two branches together. A pull request is a request to merge a set of commits from one branch in to another. Merges can be performed on your local machine to combine changes from two feature branches before syncing, and making a pull request to the `master` branch on Github.
 
 ### GitHub setup
 
