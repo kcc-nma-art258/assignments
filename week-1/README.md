@@ -556,14 +556,14 @@ How do we bring the two elements (logo and main nav) back into the container?
 Let’s skip the search bar row and move on to the next HTML section. Create three `<div>` within the proper wrapper.
 ```html
 <section class=”hero”>
-  <div class=”inner”>
+  <div class=”content”>
   	<div class=”hero-01 columns”>
   	</div>
     <div class=”hero-02 columns”>
   	</div>
     <div class=”hero-03 columns”>
   	</div>
-	</div>
+  </div>
 </section>
 ```
 How wide should each column be? Add a `width: 50%;` to `.hero-01` and `width:25%;` to `.hero-02` and `.hero-03`, a `height: 100px` to each one, and a unique background color to each element.
