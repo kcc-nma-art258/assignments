@@ -168,3 +168,506 @@ Along with the above features, Atom also includes [integration with Git](https:/
 Students may use any text editor they prefer for this course, however Atom will assist in learning the Git concepts and can be configured to fit any particular workflow. It is recommended to atleast try the editor for the initial few weeks, since it will be used for presenting the exercises and should be easier to follow along with.
 
 ## HTML/CSS Review
+
+### Creating a basic HTML page
+
+**Topics Covered**
+- Basic HTML structure
+- CSS linking
+- ID's versus Classes
+- Practical naming
+- Positioning
+  - Relative
+  - Absolute
+  - Fixed
+- Floats
+  - Clearing floats
+- Pseudo-elements
+  - `:before`/`:after`
+- Pseudo-classes
+  - `:first-child`/`:last-child`
+  - `:nth-child()`
+
+
+#### Declare your !DOCTYPE
+This tells the browser what version of HTML you are using and must come before the HTML tag. The HTML5 doctype is the simplest to remember:
+
+```
+<!DOCTYPE html>
+```
+
+#### Create your opening and closing HTML tags.
+This is where all your HTML will go.
+
+```
+<!DOCTYPE html>
+<html>
+  ...
+</html>
+```
+
+Create your opening and closing `<head>` and `<body>` tags.
+The `<head>` tag must include a title for the document. The head is also where you will include your stylesheets, scripts and meta tags. In your `<head>` tag, you will need to declare what type of character set you will be using for the document.
+
+```
+<meta charset=”UTF-8”>
+```
+
+The `<body>` tag will define the document’s body and where your HTML will be.
+
+```
+<head>
+  <meta charset=”UTF-8”>
+  <title>My First In Class Assignment</title>
+</head>
+<body>
+  ...
+</body>
+```
+All together now.
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=”UTF-8”>
+  <title>My First In Class Assignment</title>
+</head>
+<body>
+  ...
+</body>
+</html>
+```
+
+Save your file in an appropriate place as `index.html`. This will be the home page for the site we're creating.
+
+#### Break your down page structure
+
+Study your page structure and understand how things can be broken down into sections. By keeping everything simple, we can grasp the general layout and work on the details later.
+
+Our website has 5 main sections:
+
+- header
+- search
+- hero section
+- information
+- footer
+
+Let’s think about every section as a separate element and divide them accordingly within our HTML. It's also helpful to create comments to keep track of each element.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=”UTF-8”>
+  <title>My First In Class Assignment</title>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+  </header>
+
+  <!-- Search Section -->
+  <section>
+  </section>
+
+  <!-- Hero Section -->
+  <section>
+  </section>
+
+  <!-- Information Section -->
+  <section>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+  </footer>
+
+</body>
+</html>
+```
+
+#### IDs vs Classes (ie. serial number vs barcodes)
+
+`id`: unique identifiers _(serial number)_
+- Only one ID per element
+- Only only ID of that kind per page
+- Browser will navigate (scroll to) element with ID in url (ie. http://yourdomain.com#comments)
+
+`class`: reusable classifiers _(barcodes)_
+- Same class on multiple elements allowed
+- Multiple classes on same elements allowed
+
+**When should you use an ID versus a Class?**
+
+**Rule of thumb:** us id's for behavior and classes for styling
+
+An element can have both an `id` and a `class`, so start with a `class`. If you need something to be unique for a specific behavior (like navigation), add a unique `id` for that page.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=”UTF-8”>
+  <title>My First In Class Assignment</title>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class=”main-header”>
+  </header>
+
+  <!-- Search Section -->
+  <section class=”search”>
+  </section>
+
+  <!-- Hero Section -->
+  <section class=”hero”>
+  </section>
+
+  <!-- Info Section -->
+  <section class=”site-info”>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class=”main-footer”>
+  </footer>
+
+</body>
+</html>
+```
+
+#### Let’s start to style
+
+Create your stylesheet and save it in a folder called `styles`. The folder should live in the same directory as your home page `index.html`. However you name it is up to you, but let’s keep it simple and call it `style.css`.
+
+You should now have a folder named `styles` with a file called `style.css` within it.
+
+#### Linking your stylesheet
+
+In your `index.html`, link your stylesheet in the `<head>` of your document as such:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=”UTF-8”>
+  <title>My First In Class Assignment</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+...
+```
+**Question:**
+*If we moved `styles.css` out of the `styles` folder and in to the parent directory with `index.html` what would the new link be?*
+
+#### Testing
+In your `style.css`, give the body a background color of your choice.
+
+```
+body {
+  background-color: #FFCC00;
+}
+```
+
+Open your `index.html` file in your browser and confirm the background color was applied to the web page.
+
+#### Styling sections
+Let’s add more styling to the page. Since there is no content yet, none of the elements we created are being shown. We need to add a height to each element:
+
+```
+.main-header {
+  height: 60px;
+  background: green;
+}
+
+.search {
+  height: 60px;
+  background: orange;
+}
+
+.hero {
+  height: 460px;
+  background: red;
+}
+
+.site-info {
+  height: 260px;
+  background: purple;
+}
+
+.main-footer {
+  height: 200px;
+  background: blue;
+}
+
+```
+**Question:**
+What would be the best way (most effecicient/fastest) way if I wanted to apply the same styling to multiple elements?
+
+#### Reset browser default styling
+All browsers will apply a default styling to elements thats slightly different from each other so we need to 'reset' the styles so we can start from a consistent place cross-browser.
+
+A very simple reset can be something like this:
+```
+* {
+  margin: 0;
+  padding: 0;
+}
+```
+However, this can be over simplistic and incomplete. There are additional CSS resets avaialble which also supply a handy set of defaults for things like typography and form controls. Let take a look at [Eric Meyer's CSS Reset](http://meyerweb.com/eric/tools/css/reset/).
+A copy is included in this repo here: [reset.css](styles/reset.css)
+
+
+This new file should be declared before our `style.css` file so we start with a clean document, free of any default browser styling.
+
+```
+<head>
+  <meta charset=”UTF-8”>
+  <title>My First In Class Assignment</title>
+  <link rel="stylesheet” href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+```
+
+There are also other CSS resets avaialble, including:
+- [normalize.css](https://github.com/necolas/normalize.css/)
+- [HTML5 Doctor reset](http://html5doctor.com/html-5-reset-stylesheet/)
+- [Yahoo's YUI3 reset](https://github.com/yui/yui3/blob/master/src/cssreset/css/cssreset.css)
+
+#### Content Area and Centering
+
+Let’s add content areas in each section and give it a width, add a background color, and center it. Make the width 960px.
+
+**index.html**
+```
+<!-- Header Section -->
+<header class=”main-header”>
+	<div class=content>
+	</div>
+</header>
+
+<!-- Search Section -->
+<section class=”search”>
+	<div class=content>
+	</div>
+</section>
+
+<!-- Hero Section -->
+<section class=”hero”>
+	<div class=content>
+	</div>
+</section>
+
+<!-- Info Section -->
+<section class=”site-info”>
+  <div class=content>
+	</div>
+</section>
+
+<!-- Footer Section -->
+<footer class=”main-footer”>
+	<div class=content>
+	</div>
+</footer>
+```
+
+**style.css**
+```
+.content {
+  width: 960px;
+  margin: 0 auto;
+  background: white;
+}
+```
+**Question:**
+Why can’t we see the background color we added? What do we need to do?
+
+```
+.content {
+  width: 960px;
+  height: inherit;
+  margin: 0 auto;
+  background: white;
+}
+```
+
+#### Adding a logo and navigation
+Within our header, add one `<div>` element and one `<nav>` element. One will be your logo and one will be your main navigation. Give them a class.
+
+```
+<header class=”main-header”>
+  <div class=”content”>
+  	<div class=”logo”>
+  	</div>
+
+  	<nav class="main-nav”>
+  	</nav>
+	</div>
+</header>
+```
+
+Once these items have been added, give each one a width, height and background color in your css.
+
+```
+.logo {
+  height: 60px;
+  width: 100px;
+  background: gray;
+}
+
+.main-nav {
+  height: 60px;
+  width: 400px;
+  background: purple;
+}
+```
+Add content or text within each element.
+
+#### Absolute positioning elements
+We need to practice different positioning. Under the normal circumstances, you will probably not want to position items absolute unless you need them to be in a very specific location.
+
+In your css, add `position: absolute;` to your `.logo` and `.main-nav`. If you position something absolute, it will remove the element out of normal flow (how a browser normally renders something) and will reposition it on the page and will not affect any element around it.
+
+Now, add `top: 0;` and `left: 0;` to your `.logo`.
+
+```
+.logo {
+  width: 100px;
+  height: 40px;
+  background: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+```
+
+**What happens?**
+
+Now try to position the main navigation absolute with a `top: 0;` and `right: 0;`.
+
+**What happens?**
+
+Absolute position looks for the first parent element which has `position: relative;` applied to it and will reposition it’s coordinates based on that parent element.
+
+**Question:**
+How do we bring the two elements (logo and main nav) back into the container?
+
+#### Create columns
+Let’s skip the search bar row and move on to the next HTML section. Create three `<div>` within the proper wrapper.
+```
+<section class=”hero”>
+  <div class=”inner”>
+  	<div class=”hero-01 columns”>
+  	</div>
+    <div class=”hero-02 columns”>
+  	</div>
+    <div class=”hero-03 columns”>
+  	</div>
+	</div>
+</section>
+```
+How wide should each column be? Add a `width: 50%;` to `.hero-01` and `width:25%;` to `.hero-02` and `.hero-03`, a `height: 100px` to each one, and a unique background color to each element.
+
+#### Floating
+To make all items display inline to each other in a row, we need to float them. In layman's terms, floating takes an element out of normal flow and moves them either to the far left or far right (depending on how you float the element).
+
+**Try this:**
+- Float all elements left
+- Float all elements right. Wha
+- Change the widths to all three elements to 60% and keep the float right. What happens?
+- Change everything back to the original widths (50% and 25%) and make `.hero-01` `float: left` and `.hero-02` and `.hero-03` `float: right`.
+
+Resources:
+- [CSS Trick: All About Floats](http://css-tricks.com/all-about-floats/)
+
+#### Clearing
+Any time you float an element, it takes it out of normal flow and will position it according to how you specify it. To reset the flow of content, you need to clear your floats.
+In the past, a common technique would be to add an empty element at after all of the floats and in your css put `clear:both;` to remove all floats. That  createa unnecessary markup and isn't scalable.
+
+On your main section `.hero`, add the element `height: auto;`. Let’s say we don’t know how tall the content area will be. What happens?
+Because the content is removed from normal flow, the main div thinks there is nothing in it, so it collapses the height to 0.
+
+How do we display the two sections that just disappeared? We need to clear our floats.
+
+Most frameworks or other coders add a special rule to their CSS. We will add a rule in the beginning of our CSS document as follows:
+```
+.content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+```
+This selector `.content:after` may look unfamiliar, but it reads as follow
+> _All pseudo `:after` elements belonging to a `.content` element._
+
+The `:after` is known as a CSS _pseudo-class_. This type of pseudo class is only available in IE8+ and other modern browsers.
+
+Now, if you have floats in anything with the class of `.content`, it will automatically clear it and you don’t have to worry about setting a height.
+
+_Note: Clearing only works on floats, not elements positioned absolutely._
+
+#### More Pseudos
+Let’s clean up our HTML and how everything looks. Each column should have some spacing, so let’s change the width from 75% to 74% and 25% to 24%.
+
+Let’s give each column a left margin of 2% by adding it to our `.column` class.
+```
+.hero-01 {
+  background: brown;
+  float: left;
+  height: 460px;
+  width: 74%;
+}
+
+.hero-02 {
+  background: pink;
+  float: right;
+  height: 230px;
+  width: 24%;
+}
+
+.hero-03 {
+  background: blue;
+  float: right;
+  height: 230px;
+  width: 24%;
+}
+
+.column {
+  margin: 0 0 0 2%;
+}
+```
+
+Now, we have margin on both elements, but we don’t need a margin on the first element. How do we get rid of it? Let’s use `:first-child`, a _pseudo-class_.
+
+`element:first-child` applies style rules to the first element of the matched elements.
+
+```
+.column:first-child {
+  margin: 0;
+}
+```
+
+_Note: :last-child will not work in early versions of IE8 or lower, so avoid using it._
+
+`:nth-child()`
+
+What about making odd columns a different color?
+```
+element:nth-child(odd) {
+  background: red;
+}
+```
+What about making only the second column a different color?
+```
+element:nth-child(2) {
+  background: red;
+}
+```
+What about making every sixth column a different color?
+```
+element:nth-child(6n) { background: red;}
+```
+
+**References:**
+- [Mozilla: Writing Efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
+- [CSS Specificity](http://www.standardista.com/wp-content/uploads/2012/01/specificity3.pdf)
