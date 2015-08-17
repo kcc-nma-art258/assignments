@@ -192,14 +192,14 @@ Students may use any text editor they prefer for this course, however Atom will 
 #### Declare your !DOCTYPE
 This tells the browser what version of HTML you are using and must come before the HTML tag. The HTML5 doctype is the simplest to remember:
 
-```
+```html
 <!DOCTYPE html>
 ```
 
 #### Create your opening and closing HTML tags.
 This is where all your HTML will go.
 
-```
+```html
 <!DOCTYPE html>
 <html>
   ...
@@ -209,13 +209,13 @@ This is where all your HTML will go.
 Create your opening and closing `<head>` and `<body>` tags.
 The `<head>` tag must include a title for the document. The head is also where you will include your stylesheets, scripts and meta tags. In your `<head>` tag, you will need to declare what type of character set you will be using for the document.
 
-```
+```html
 <meta charset=”UTF-8”>
 ```
 
 The `<body>` tag will define the document’s body and where your HTML will be.
 
-```
+```html
 <head>
   <meta charset=”UTF-8”>
   <title>My First In Class Assignment</title>
@@ -225,7 +225,7 @@ The `<body>` tag will define the document’s body and where your HTML will be.
 </body>
 ```
 All together now.
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -254,7 +254,7 @@ Our website has 5 main sections:
 
 Let’s think about every section as a separate element and divide them accordingly within our HTML. It's also helpful to create comments to keep track of each element.
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -304,7 +304,7 @@ Let’s think about every section as a separate element and divide them accordin
 
 An element can have both an `id` and a `class`, so start with a `class`. If you need something to be unique for a specific behavior (like navigation), add a unique `id` for that page.
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -347,7 +347,7 @@ You should now have a folder named `styles` with a file called `style.css` withi
 
 In your `index.html`, link your stylesheet in the `<head>` of your document as such:
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -363,7 +363,7 @@ In your `index.html`, link your stylesheet in the `<head>` of your document as s
 #### Testing
 In your `style.css`, give the body a background color of your choice.
 
-```
+```css
 body {
   background-color: #FFCC00;
 }
@@ -374,7 +374,7 @@ Open your `index.html` file in your browser and confirm the background color was
 #### Styling sections
 Let’s add more styling to the page. Since there is no content yet, none of the elements we created are being shown. We need to add a height to each element:
 
-```
+```css
 .main-header {
   height: 60px;
   background: green;
@@ -408,7 +408,7 @@ What would be the best way (most effecicient/fastest) way if I wanted to apply t
 All browsers will apply a default styling to elements thats slightly different from each other so we need to 'reset' the styles so we can start from a consistent place cross-browser.
 
 A very simple reset can be something like this:
-```
+```css
 * {
   margin: 0;
   padding: 0;
@@ -420,7 +420,7 @@ A copy is included in this repo here: [reset.css](styles/reset.css)
 
 This new file should be declared before our `style.css` file so we start with a clean document, free of any default browser styling.
 
-```
+```html
 <head>
   <meta charset=”UTF-8”>
   <title>My First In Class Assignment</title>
@@ -439,7 +439,7 @@ There are also other CSS resets avaialble, including:
 Let’s add content areas in each section and give it a width, add a background color, and center it. Make the width 960px.
 
 **index.html**
-```
+```html
 <!-- Header Section -->
 <header class=”main-header”>
 	<div class=content>
@@ -472,7 +472,7 @@ Let’s add content areas in each section and give it a width, add a background 
 ```
 
 **style.css**
-```
+```css
 .content {
   width: 960px;
   margin: 0 auto;
@@ -482,7 +482,7 @@ Let’s add content areas in each section and give it a width, add a background 
 **Question:**
 Why can’t we see the background color we added? What do we need to do?
 
-```
+```css
 .content {
   width: 960px;
   height: inherit;
@@ -494,7 +494,7 @@ Why can’t we see the background color we added? What do we need to do?
 #### Adding a logo and navigation
 Within our header, add one `<div>` element and one `<nav>` element. One will be your logo and one will be your main navigation. Give them a class.
 
-```
+```html
 <header class=”main-header”>
   <div class=”content”>
   	<div class=”logo”>
@@ -508,7 +508,7 @@ Within our header, add one `<div>` element and one `<nav>` element. One will be 
 
 Once these items have been added, give each one a width, height and background color in your css.
 
-```
+```css
 .logo {
   height: 60px;
   width: 100px;
@@ -530,7 +530,7 @@ In your css, add `position: absolute;` to your `.logo` and `.main-nav`. If you p
 
 Now, add `top: 0;` and `left: 0;` to your `.logo`.
 
-```
+```css
 .logo {
   width: 100px;
   height: 40px;
@@ -554,7 +554,7 @@ How do we bring the two elements (logo and main nav) back into the container?
 
 #### Create columns
 Let’s skip the search bar row and move on to the next HTML section. Create three `<div>` within the proper wrapper.
-```
+```html
 <section class=”hero”>
   <div class=”inner”>
   	<div class=”hero-01 columns”>
@@ -590,7 +590,7 @@ Because the content is removed from normal flow, the main div thinks there is no
 How do we display the two sections that just disappeared? We need to clear our floats.
 
 Most frameworks or other coders add a special rule to their CSS. We will add a rule in the beginning of our CSS document as follows:
-```
+```css
 .content:after {
   content: "";
   display: table;
@@ -610,7 +610,7 @@ _Note: Clearing only works on floats, not elements positioned absolutely._
 Let’s clean up our HTML and how everything looks. Each column should have some spacing, so let’s change the width from 75% to 74% and 25% to 24%.
 
 Let’s give each column a left margin of 2% by adding it to our `.column` class.
-```
+```css
 .hero-01 {
   background: brown;
   float: left;
@@ -641,7 +641,7 @@ Now, we have margin on both elements, but we don’t need a margin on the first 
 
 `element:first-child` applies style rules to the first element of the matched elements.
 
-```
+```css
 .column:first-child {
   margin: 0;
 }
@@ -652,20 +652,22 @@ _Note: :last-child will not work in early versions of IE8 or lower, so avoid usi
 `:nth-child()`
 
 What about making odd columns a different color?
-```
+```css
 element:nth-child(odd) {
   background: red;
 }
 ```
 What about making only the second column a different color?
-```
+```css
 element:nth-child(2) {
   background: red;
 }
 ```
 What about making every sixth column a different color?
-```
-element:nth-child(6n) { background: red;}
+```css
+element:nth-child(6n) {
+  background: red;
+}
 ```
 
 **References:**
