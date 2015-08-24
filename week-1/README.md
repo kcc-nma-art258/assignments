@@ -64,6 +64,17 @@ GitHub also provides access control and several collaboration features such as b
 - [Git: The advantages of Git compared to other source control systems](https://git-scm.com/about/)
 - [Git: Getting started - Git basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
 
+### GitHub setup
+
+1. Sign up for a [free GitHub account](https://github.com/join)
+  - Setup [Two Factor Authentication (2FA)](https://github.com/blog/1614-two-factor-authentication) as an additional security measure
+2. Complete [ART258 GitHub account form](http://goo.gl/forms/QubL6AJy0F)
+3. *Download [GitHub Desktop app](https://desktop.github.com/)
+  - [GitHub for Mac](https://central.github.com/mac/latest)
+  - [GitHub for PC](https://github-windows.s3.amazonaws.com/GitHubSetup.exe)
+
+**The GitHub Desktop app should already be installed on the KOA 103 studio classroom computers.*
+
 #### Repository
 A Git repository is nothing more than a directory (ie. folder) on a computer. Any file in your 'repo' will be tracked and a history of the changes will be recorded (unless [explicitly ignored](http://git-scm.com/docs/gitignore), which we'll talk about a bit later).
 
@@ -81,17 +92,6 @@ In the *[GitHub development workflow](#github-development-workflow)*, theres a `
 
 #### Merge
 In Git, merging brings the changes in two branches together. A pull request is a request to merge a set of commits from one branch in to another. Merges can be performed on your local machine to combine changes from two feature branches before syncing, and making a pull request to the `master` branch on Github.
-
-### GitHub setup
-
-1. Sign up for a [free GitHub account](https://github.com/join)
-  - Setup [Two Factor Authentication (2FA)](https://github.com/blog/1614-two-factor-authentication) as an additional security measure
-2. Complete [ART258 GitHub account form](http://goo.gl/forms/QubL6AJy0F)
-3. *Download [GitHub Desktop app](https://desktop.github.com/)
-  - [GitHub for Mac](https://central.github.com/mac/latest)
-  - [GitHub for PC](https://github-windows.s3.amazonaws.com/GitHubSetup.exe)
-
-**The GitHub Desktop app should already be installed on the KOA 103 studio classroom computers.*
 
 ### GitHub development workflow
 
@@ -210,14 +210,14 @@ Create your opening and closing `<head>` and `<body>` tags.
 The `<head>` tag must include a title for the document. The head is also where you will include your stylesheets, scripts and meta tags. In your `<head>` tag, you will need to declare what type of character set you will be using for the document.
 
 ```html
-<meta charset=”UTF-8”>
+<meta charset="UTF-8">
 ```
 
 The `<body>` tag will define the document’s body and where your HTML will be.
 
 ```html
 <head>
-  <meta charset=”UTF-8”>
+  <meta charset="UTF-8">
   <title>My First In Class Assignment</title>
 </head>
 <body>
@@ -229,7 +229,7 @@ All together now.
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset=”UTF-8”>
+  <meta charset="UTF-8">
   <title>My First In Class Assignment</title>
 </head>
 <body>
@@ -258,7 +258,7 @@ Let’s think about every section as a separate element and divide them accordin
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset=”UTF-8”>
+  <meta charset="UTF-8">
   <title>My First In Class Assignment</title>
 </head>
 <body>
@@ -308,29 +308,29 @@ An element can have both an `id` and a `class`, so start with a `class`. If you 
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset=”UTF-8”>
+  <meta charset="UTF-8">
   <title>My First In Class Assignment</title>
 </head>
 <body>
 
   <!-- Header Section -->
-  <header class=”main-header”>
+  <header class="main-header">
   </header>
 
   <!-- Search Section -->
-  <section class=”search”>
+  <section class="search">
   </section>
 
   <!-- Hero Section -->
-  <section class=”hero”>
+  <section class="hero">
   </section>
 
   <!-- Info Section -->
-  <section class=”site-info”>
+  <section class="site-info">
   </section>
 
   <!-- Footer Section -->
-  <footer class=”main-footer”>
+  <footer class="main-footer">
   </footer>
 
 </body>
@@ -351,7 +351,7 @@ In your `index.html`, link your stylesheet in the `<head>` of your document as s
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset=”UTF-8”>
+  <meta charset="UTF-8">
   <title>My First In Class Assignment</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -422,14 +422,14 @@ This new file should be declared before our `style.css` file so we start with a 
 
 ```html
 <head>
-  <meta charset=”UTF-8”>
+  <meta charset="UTF-8">
   <title>My First In Class Assignment</title>
-  <link rel="stylesheet” href="styles/reset.css">
+  <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 ```
 
-There are also other CSS resets avaialble, including:
+There are also other CSS resets available, including:
 - [normalize.css](https://github.com/necolas/normalize.css/)
 - [HTML5 Doctor reset](http://html5doctor.com/html-5-reset-stylesheet/)
 - [Yahoo's YUI3 reset](https://github.com/yui/yui3/blob/master/src/cssreset/css/cssreset.css)
@@ -441,31 +441,31 @@ Let’s add content areas in each section and give it a width, add a background 
 **index.html**
 ```html
 <!-- Header Section -->
-<header class=”main-header”>
+<header class="main-header">
 	<div class=content>
 	</div>
 </header>
 
 <!-- Search Section -->
-<section class=”search”>
+<section class="search">
 	<div class=content>
 	</div>
 </section>
 
 <!-- Hero Section -->
-<section class=”hero”>
+<section class="hero">
 	<div class=content>
 	</div>
 </section>
 
 <!-- Info Section -->
-<section class=”site-info”>
+<section class="site-info">
   <div class=content>
 	</div>
 </section>
 
 <!-- Footer Section -->
-<footer class=”main-footer”>
+<footer class="main-footer">
 	<div class=content>
 	</div>
 </footer>
@@ -495,12 +495,12 @@ Why can’t we see the background color we added? What do we need to do?
 Within our header, add one `<div>` element and one `<nav>` element. One will be your logo and one will be your main navigation. Give them a class.
 
 ```html
-<header class=”main-header”>
-  <div class=”content”>
-  	<div class=”logo”>
+<header class="main-header">
+  <div class="content">
+  	<div class="logo">
   	</div>
 
-  	<nav class="main-nav”>
+  	<nav class="main-nav">
   	</nav>
 	</div>
 </header>
@@ -555,15 +555,15 @@ How do we bring the two elements (logo and main nav) back into the container?
 #### Create columns
 Let’s skip the search bar row and move on to the next HTML section. Create three `<div>` within the proper wrapper.
 ```html
-<section class=”hero”>
-  <div class=”inner”>
-  	<div class=”hero-01 columns”>
+<section class="hero">
+  <div class="content">
+  	<div class="hero-01 columns">
   	</div>
-    <div class=”hero-02 columns”>
+    <div class="hero-02 columns">
   	</div>
-    <div class=”hero-03 columns”>
+    <div class="hero-03 columns">
   	</div>
-	</div>
+  </div>
 </section>
 ```
 How wide should each column be? Add a `width: 50%;` to `.hero-01` and `width:25%;` to `.hero-02` and `.hero-03`, a `height: 100px` to each one, and a unique background color to each element.
