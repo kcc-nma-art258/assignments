@@ -64,6 +64,17 @@ GitHub also provides access control and several collaboration features such as b
 - [Git: The advantages of Git compared to other source control systems](https://git-scm.com/about/)
 - [Git: Getting started - Git basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
 
+### GitHub setup
+
+1. Sign up for a [free GitHub account](https://github.com/join)
+  - Setup [Two Factor Authentication (2FA)](https://github.com/blog/1614-two-factor-authentication) as an additional security measure
+2. Complete [ART258 GitHub account form](http://goo.gl/forms/QubL6AJy0F)
+3. *Download [GitHub Desktop app](https://desktop.github.com/)
+  - [GitHub for Mac](https://central.github.com/mac/latest)
+  - [GitHub for PC](https://github-windows.s3.amazonaws.com/GitHubSetup.exe)
+
+**The GitHub Desktop app should already be installed on the KOA 103 studio classroom computers.*
+
 #### Repository
 A Git repository is nothing more than a directory (ie. folder) on a computer. Any file in your 'repo' will be tracked and a history of the changes will be recorded (unless [explicitly ignored](http://git-scm.com/docs/gitignore), which we'll talk about a bit later).
 
@@ -81,17 +92,6 @@ In the *[GitHub development workflow](#github-development-workflow)*, theres a `
 
 #### Merge
 In Git, merging brings the changes in two branches together. A pull request is a request to merge a set of commits from one branch in to another. Merges can be performed on your local machine to combine changes from two feature branches before syncing, and making a pull request to the `master` branch on Github.
-
-### GitHub setup
-
-1. Sign up for a [free GitHub account](https://github.com/join)
-  - Setup [Two Factor Authentication (2FA)](https://github.com/blog/1614-two-factor-authentication) as an additional security measure
-2. Complete [ART258 GitHub account form](http://goo.gl/forms/QubL6AJy0F)
-3. *Download [GitHub Desktop app](https://desktop.github.com/)
-  - [GitHub for Mac](https://central.github.com/mac/latest)
-  - [GitHub for PC](https://github-windows.s3.amazonaws.com/GitHubSetup.exe)
-
-**The GitHub Desktop app should already be installed on the KOA 103 studio classroom computers.*
 
 ### GitHub development workflow
 
