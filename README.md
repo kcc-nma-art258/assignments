@@ -2,10 +2,10 @@
 Assignments for [Interface Programming 2 course](https://github.com/kcc-nma-art258) at KCC-NMA
 
 - [Week 1: Intro to Course & Front-end Tools](week-1/README.md)
-- [Week 2: CSS Authoring (Sass)](week-2/README.md)
-- [Week 3: CSS Architecture & Frameworks](week-3/README.md)
-- [Week 4: HTML Prototyping](week-4/README.md)
-- [Week 5: Marketing Websites](week-5/README.md)
+- Week 2: CSS Authoring (Sass)
+- Week 3: CSS Architecture & Frameworks
+- Week 4: HTML Prototyping
+- Week 5: Marketing Websites
 - Week 6-7: Studio (Midterm Project)
 - Week 8: Midterm Due & Critique
 - Week 9: JavaScript Part 1
