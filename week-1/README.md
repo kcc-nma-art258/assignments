@@ -170,6 +170,16 @@ Along with the above features, Atom also includes [integration with Git](https:/
 
 Students may use any text editor they prefer for this course, however Atom will assist in learning the Git concepts and can be configured to fit any particular workflow. It is recommended to atleast try the editor for the initial few weeks, since it will be used for presenting the exercises and should be easier to follow along with.
 
+### Quiz #1: HTML/CSS Assessment
+
+Render the pricing table image in HTML/CSS, including the product title, prices, details, and action items (buttons).
+
+The styling of the page and pricing table should match the following screenshot:
+
+[Pricing Table  (PNG)](https://d13yacurqjgara.cloudfront.net/users/25867/screenshots/842947/attachments/210494/pricing-table-01.jpg)
+
+Fork the below project: [CodePen - Pricing Table](http://codepen.io/micjamking/pen/669f0200762bd219b2d26e9864de80d7/)
+
 ## Day 2: HTML/CSS Review
 
 ### Creating a basic HTML page
