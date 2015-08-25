@@ -1,5 +1,7 @@
 # Week 1: Intro to Course & Front-end Tools
 
+> _Design is not just what it looks like and feels like. Design is how it works. –Steve Jobs_
+
 ## Day 1: Getting setup
 
 In this course, we'll be focusing on intermediate-to-advanced front-end web development techniques and best practices. We'll be introducing the following concepts, tools, and technologies:
