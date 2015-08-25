@@ -1,12 +1,8 @@
 # Week 1: Intro to Course & Front-end Tools
 
-In this course, we'll be focusing on intermediate-to-advanced front-end web development techniques and best practices. We'll be introducing the following tools and concepts:
+## Day 1: Getting setup
 
-### Tools
-- _**Git & GitHub**_ for version control & collaboration
-- _**Prepros**_ for CSS compiling and build processing
-- _**Chrome DevTools**_ for advanced CSS/JavaScript debugging
-- _**Atom**_ for text editing with built-in Git integration
+In this course, we'll be focusing on intermediate-to-advanced front-end web development techniques and best practices. We'll be introducing the following concepts, tools, and technologies:
 
 ### Concepts
 - **Responsive web design** (cross-device)
@@ -14,6 +10,13 @@ In this course, we'll be focusing on intermediate-to-advanced front-end web deve
 - **CSS architecture/frameworks** (DRY/SMACSS)
 - **HTML prototyping** (usability testing)
 - **JavaScript** (interactive programming)
+
+### Tools & Technologies
+- _**Git & GitHub**_ for version control & collaboration
+- _**Prepros**_ for CSS compiling and build processing
+- _**Chrome DevTools**_ for advanced CSS/JavaScript debugging
+- _**Atom**_ for text editing with built-in Git integration
+- _**Codepen**_ for in-browser, front-end demonstrations and inspiration
 
 The goal for this course is for each student to have a basic grasp of the tooling, yet a thorough understanding of the concepts as presented and their necessity in the web design & development process.
 
@@ -167,7 +170,7 @@ Along with the above features, Atom also includes [integration with Git](https:/
 
 Students may use any text editor they prefer for this course, however Atom will assist in learning the Git concepts and can be configured to fit any particular workflow. It is recommended to atleast try the editor for the initial few weeks, since it will be used for presenting the exercises and should be easier to follow along with.
 
-## HTML/CSS Review
+## Day 2: HTML/CSS Review
 
 ### Creating a basic HTML page
 
