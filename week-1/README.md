@@ -48,7 +48,6 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
 ## Day 1: Getting setup
 In this course, we'll be focusing on intermediate-to-advanced front-end web development techniques and best practices. We'll be introducing the following concepts, tools, and technologies:
 
@@ -85,7 +84,7 @@ The styling of the page and pricing table should match the following screenshot:
 
 [Pricing Table  (PNG)](https://d13yacurqjgara.cloudfront.net/users/25867/screenshots/842947/attachments/210494/pricing-table-01.jpg)
 
-Fork the below project: [CodePen - Pricing Table](http://codepen.io/micjamking/pen/669f0200762bd219b2d26e9864de80d7/)
+Fork the following project: [CodePen - Pricing Table](http://codepen.io/micjamking/pen/669f0200762bd219b2d26e9864de80d7/)
 
 Post link to [Gitter](https://gitter.im/kcc-nma-art258)
 
@@ -235,6 +234,7 @@ Students may use any text editor they prefer for this course, however Atom will 
 
 - Create a local repository called `hello-world` and add a `README.md` file. In the file, add a link to something that inspires you online. Sync this with your GitHub account online by 11:59pm Monday night.
 - Read the [GitHub Guides](https://guides.github.com/) _(approx. 1 hr 23 min of reading)_
+- Review links from Day 1 outline (above)
 
 ## Day 2: HTML/CSS Review
 
