@@ -222,10 +222,15 @@ This is where all your HTML will go.
 ```
 
 Create your opening and closing `<head>` and `<body>` tags.
-The `<head>` tag must include a title for the document. The head is also where you will include your stylesheets, scripts and meta tags. In your `<head>` tag, you will need to declare what type of character set you will be using for the document.
+The `<head>` tag must include a title for the document. The head is also where you will include your stylesheets (ie. `<link />`) and meta tags (ie. `<meta />`) for the site. You can also include scripts in the `<head>` tag, however it's highly recommended that you place your scripts just above your closing `</body>` tag for performance reasons. In your `<head>` tag, you will need to declare what type of character set you will be using for the document.
 
 ```html
 <meta charset="UTF-8">
+```
+You will need to also give your page a `<title>` tag.
+
+```html
+<title>My First In Class Assignment</title>
 ```
 
 The `<body>` tag will define the document’s body and where your HTML will be.
