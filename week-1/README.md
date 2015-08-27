@@ -11,6 +11,7 @@
   - [Tools & Technologies](#tools--technologies)
   - [Themes](#themes)
   - [Quiz 1: HTML/CSS Assessment](#quiz-1-htmlcss-assessment)
+- [Day 2: Continue setup/tool introduction](#day-2-continue-setuptool-introduction)
   - [Intro to Version Control](#intro-to-version-control)
     - [What is Git/GitHub?](#what-is-gitgithub)
     - [GitHub Setup](#github-setup)
