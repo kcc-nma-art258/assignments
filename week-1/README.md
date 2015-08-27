@@ -27,7 +27,7 @@
   - [Atom](#atom)
   - [Homework: Getting familiar with GitHub](#homework-getting-familiar-with-github)
 - [Day 2: HTML/CSS Review](#day-2-htmlcss-review)
-  - [Fork [kcc-nma-art258/assignments](https://github.com/kcc-nma-art258/assignments)](#fork-kcc-nma-art258assignmentshttpsgithubcomkcc-nma-art258assignments)
+  - [Fork kcc-nma-art258/assignments](#fork-kcc-nma-art258assignments)
   - [Creating a basic HTML page](#creating-a-basic-html-page)
     - [Declare your !DOCTYPE](#declare-your-doctype)
     - [Create your opening and closing HTML tags.](#create-your-opening-and-closing-html-tags)
