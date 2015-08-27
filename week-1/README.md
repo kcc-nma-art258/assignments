@@ -2,6 +2,30 @@
 
 > _Design is not just what it looks like and feels like. Design is how it works. –Steve Jobs_
 
+## Table of Contents
+<!-- START doctoc -->
+- [Day 1: Getting setup](#day-1--getting-setup)
+  - [Concepts](#concepts)
+  - [Tools & Technologies](#tools-and-technologies)
+  - [Themes](#themes)
+  - [Quiz 1: HTML/CSS Assessment](#quiz-1--html-css-assessment)
+  - [Intro to Version Control](#intro-to-version-control)
+    - [What is Git/GitHub?](#what-is-git-github)
+    - [GitHub Setup](#github-setup)
+    - [Git Concepts](#git-concepts)
+      - [Repository](#repository)
+      - [Branch](#branch)
+      - [Commit](#commit)
+      - [Push/Pull (Sync)](#push-pull--sync)
+      - [Pull Request](#pull-request)
+      - [Merge](#merge)
+    - [GitHub Development Workflow](#github-development-workflow)
+  - [Prepros](#prepros)
+  - [Chrome DevTools](#chrome-devtools)
+  - [Atom](#atom)
+  - [Homework](#homework)
+<!-- END doctoc -->
+
 ## Day 1: Getting setup
 
 In this course, we'll be focusing on intermediate-to-advanced front-end web development techniques and best practices. We'll be introducing the following concepts, tools, and technologies:
@@ -31,9 +55,21 @@ You'll also notice a few over-arching themes being repeated throughout the cours
 - **Open-source software**
 - **Contribution/Attribution** (on the web)
 
+### Quiz 1: HTML/CSS Assessment
+
+Render the pricing table image in HTML/CSS, including the product title, prices, details, and action items (buttons).
+
+The styling of the page and pricing table should match the following screenshot:
+
+[Pricing Table  (PNG)](https://d13yacurqjgara.cloudfront.net/users/25867/screenshots/842947/attachments/210494/pricing-table-01.jpg)
+
+Fork the below project: [CodePen - Pricing Table](http://codepen.io/micjamking/pen/669f0200762bd219b2d26e9864de80d7/)
+
+Post link to [Gitter](https://gitter.im/kcc-nma-art258)
+
 Let's get started by introducing the foundational concept that will help us track and share our code, **version control**.
 
-## Version Control
+## Intro to Version Control
 
 **Version control** (also known as **source control management**) is a system that records changes to a file or set of files over time so that you can recall specific versions later. Many popular systems include aspects of version control built-in to the software like word processors (ie. Google Docs, etc) and content management systems (ie. WordPress, etc).
 
@@ -65,11 +101,7 @@ Unlike Git, which is strictly a command-line (CLI) tool, GitHub provides a web-b
 
 GitHub also provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
 
-### Git concepts
-- [Git: The advantages of Git compared to other source control systems](https://git-scm.com/about/)
-- [Git: Getting started - Git basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
-
-### GitHub setup
+### GitHub Setup
 
 1. Sign up for a [free GitHub account](https://github.com/join)
   - Setup [Two Factor Authentication (2FA)](https://github.com/blog/1614-two-factor-authentication) as an additional security measure
@@ -79,6 +111,10 @@ GitHub also provides access control and several collaboration features such as b
   - [GitHub for PC](https://github-windows.s3.amazonaws.com/GitHubSetup.exe)
 
 **The GitHub Desktop app should already be installed on the KOA 103 studio classroom computers.*
+
+### Git Concepts
+- [Git: The advantages of Git compared to other source control systems](https://git-scm.com/about/)
+- [Git: Getting started - Git basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
 
 #### Repository
 A Git repository is nothing more than a directory (ie. folder) on a computer. Any file in your 'repo' will be tracked and a history of the changes will be recorded (unless [explicitly ignored](http://git-scm.com/docs/gitignore), which we'll talk about a bit later).
@@ -172,15 +208,9 @@ Along with the above features, Atom also includes [integration with Git](https:/
 
 Students may use any text editor they prefer for this course, however Atom will assist in learning the Git concepts and can be configured to fit any particular workflow. It is recommended to atleast try the editor for the initial few weeks, since it will be used for presenting the exercises and should be easier to follow along with.
 
-### Quiz #1: HTML/CSS Assessment
-
-Render the pricing table image in HTML/CSS, including the product title, prices, details, and action items (buttons).
-
-The styling of the page and pricing table should match the following screenshot:
-
-[Pricing Table  (PNG)](https://d13yacurqjgara.cloudfront.net/users/25867/screenshots/842947/attachments/210494/pricing-table-01.jpg)
-
-Fork the below project: [CodePen - Pricing Table](http://codepen.io/micjamking/pen/669f0200762bd219b2d26e9864de80d7/)
+### Homework: HTML/CSS Assessment
+- Review the [GitHub Guides](https://guides.github.com/) _(approx. 1 hr 23 min of reading)_
+- Post 1 link to Gitter of something that inspires you online before Tuesday's class
 
 ## Day 2: HTML/CSS Review
 
@@ -203,6 +233,10 @@ Fork the below project: [CodePen - Pricing Table](http://codepen.io/micjamking/p
   - `:first-child`/`:last-child`
   - `:nth-child()`
 
+#### Fork kcc-nma-art258/assignments
+- Forking the
+- [Cloning a repository from GitHub Desktop](https://help.github.com/desktop/guides/contributing/cloning-a-repository-from-github-desktop/)
+- Open Atom (or your text editor) and the assignments
 
 #### Declare your !DOCTYPE
 This tells the browser what version of HTML you are using and must come before the HTML tag. The HTML5 doctype is the simplest to remember:
@@ -257,8 +291,6 @@ All together now.
 </body>
 </html>
 ```
-
-Save your file in an appropriate place as `index.html`. This will be the home page for the site we're creating.
 
 #### Break your down page structure
 
