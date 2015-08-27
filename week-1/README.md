@@ -26,7 +26,7 @@
   - [Prepros](#prepros)
   - [Chrome DevTools](#chrome-devtools)
   - [Atom](#atom)
-  - [Homework: Getting familiar with GitHub](#homework-getting-familiar-with-github)
+ - [Homework: Getting familiar with GitHub](#homework-getting-familiar-with-github)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -214,7 +214,7 @@ Along with the above features, Atom also includes [integration with Git](https:/
 
 Students may use any text editor they prefer for this course, however Atom will assist in learning the Git concepts and can be configured to fit any particular workflow. It is recommended to atleast try the editor for the initial few weeks, since it will be used for presenting the exercises and should be easier to follow along with.
 
-### Homework: Getting familiar with GitHub
+## Homework: Getting familiar with GitHub
 
 - Create a local repository called `hello-world` and add a `README.md` file. In the file, add a link to something that inspires you online. Sync this with your GitHub account online by 11:59pm Monday night.
 - Read the [GitHub Guides](https://guides.github.com/) _(approx. 1 hr 23 min of reading)_
