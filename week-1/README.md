@@ -8,7 +8,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 - [Day 1: Getting setup](#day-1-getting-setup)
   - [Concepts](#concepts)
-  - [Tools & Technologies](#tools-&-technologies)
+  - [Tools & Technologies](#tools--technologies)
   - [Themes](#themes)
   - [Quiz 1: HTML/CSS Assessment](#quiz-1-htmlcss-assessment)
   - [Intro to Version Control](#intro-to-version-control)
