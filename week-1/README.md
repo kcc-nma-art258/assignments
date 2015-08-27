@@ -2,8 +2,54 @@
 
 > _Design is not just what it looks like and feels like. Design is how it works. –Steve Jobs_
 
-## Day 1: Getting setup
+## Table of Contents
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+- [Day 1: Getting setup](#day-1-getting-setup)
+  - [Concepts](#concepts)
+  - [Tools & Technologies](#tools-&-technologies)
+    - [Themes](#themes)
+  - [Quiz 1: HTML/CSS Assessment](#quiz-1-htmlcss-assessment)
+  - [Intro to Version Control](#intro-to-version-control)
+    - [What is Git/GitHub?](#what-is-gitgithub)
+    - [GitHub Setup](#github-setup)
+    - [Git Concepts](#git-concepts)
+      - [Repository](#repository)
+      - [Branch](#branch)
+      - [Commit](#commit)
+      - [Push/Pull (Sync)](#pushpull-sync)
+      - [Pull Request](#pull-request)
+      - [Merge](#merge)
+    - [GitHub development workflow](#github-development-workflow)
+  - [Prepros](#prepros)
+  - [Chrome DevTools](#chrome-devtools)
+  - [Atom](#atom)
+  - [Homework: HTML/CSS Assessment](#homework-htmlcss-assessment)
+- [Day 2: HTML/CSS Review](#day-2-htmlcss-review)
+  - [Creating a basic HTML page](#creating-a-basic-html-page)
+    - [Fork kcc-nma-art258/assignments](#fork-kcc-nma-art258assignments)
+    - [Declare your !DOCTYPE](#declare-your-doctype)
+    - [Create your opening and closing HTML tags.](#create-your-opening-and-closing-html-tags)
+    - [Break your down page structure](#break-your-down-page-structure)
+    - [IDs vs Classes (ie. serial number vs barcodes)](#ids-vs-classes-ie-serial-number-vs-barcodes)
+    - [Let’s start to style](#let%E2%80%99s-start-to-style)
+    - [Linking your stylesheet](#linking-your-stylesheet)
+    - [Testing](#testing)
+    - [Styling sections](#styling-sections)
+    - [Reset browser default styling](#reset-browser-default-styling)
+    - [Content Area and Centering](#content-area-and-centering)
+    - [Adding a logo and navigation](#adding-a-logo-and-navigation)
+    - [Absolute positioning elements](#absolute-positioning-elements)
+    - [Create columns](#create-columns)
+    - [Floating](#floating)
+    - [Clearing](#clearing)
+    - [More Pseudos](#more-pseudos)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+## Day 1: Getting setup
 In this course, we'll be focusing on intermediate-to-advanced front-end web development techniques and best practices. We'll be introducing the following concepts, tools, and technologies:
 
 ### Concepts
@@ -24,16 +70,28 @@ The goal for this course is for each student to have a basic grasp of the toolin
 
 You'll also notice a few over-arching themes being repeated throughout the course that, while not core to curriculum, will provide a better understanding of how the development process works at large.
 
-#### Themes
+### Themes
 - **Marketing vs product design** (website vs web-app)
 - **Craftsmanship** (hacking)
 - **Agile development**
 - **Open-source software**
 - **Contribution/Attribution** (on the web)
 
+### Quiz 1: HTML/CSS Assessment
+
+Render the pricing table image in HTML/CSS, including the product title, prices, details, and action items (buttons).
+
+The styling of the page and pricing table should match the following screenshot:
+
+[Pricing Table  (PNG)](https://d13yacurqjgara.cloudfront.net/users/25867/screenshots/842947/attachments/210494/pricing-table-01.jpg)
+
+Fork the below project: [CodePen - Pricing Table](http://codepen.io/micjamking/pen/669f0200762bd219b2d26e9864de80d7/)
+
+Post link to [Gitter](https://gitter.im/kcc-nma-art258)
+
 Let's get started by introducing the foundational concept that will help us track and share our code, **version control**.
 
-## Version Control
+### Intro to Version Control
 
 **Version control** (also known as **source control management**) is a system that records changes to a file or set of files over time so that you can recall specific versions later. Many popular systems include aspects of version control built-in to the software like word processors (ie. Google Docs, etc) and content management systems (ie. WordPress, etc).
 
@@ -48,7 +106,7 @@ There's multiple types of version control systems available, including [CVS](htt
 **Video: [Git Basics: What is Version Control?](https://vimeo.com/41027679)**
 [![What is Version Control](images/git/what-is-version-control.png)](https://vimeo.com/41027679)
 
-### What is Git/GitHub?
+#### What is Git/GitHub?
 [![Git SCM Logo](images/git/git-logo.png)](https://git-scm.com/)
 
 **[Git](https://git-scm.com/) is the fastest growing and most popular version control system used to track and share documents today.**
@@ -65,11 +123,7 @@ Unlike Git, which is strictly a command-line (CLI) tool, GitHub provides a web-b
 
 GitHub also provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
 
-### Git concepts
-- [Git: The advantages of Git compared to other source control systems](https://git-scm.com/about/)
-- [Git: Getting started - Git basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
-
-### GitHub setup
+#### GitHub Setup
 
 1. Sign up for a [free GitHub account](https://github.com/join)
   - Setup [Two Factor Authentication (2FA)](https://github.com/blog/1614-two-factor-authentication) as an additional security measure
@@ -80,25 +134,30 @@ GitHub also provides access control and several collaboration features such as b
 
 **The GitHub Desktop app should already be installed on the KOA 103 studio classroom computers.*
 
-#### Repository
+#### Git/GitHub Concepts
+- [Git: The advantages of Git compared to other source control systems](https://git-scm.com/about/)
+- [Git: Getting started - Git basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
+- [GitHub Help](https://help.github.com/)
+
+##### Repository
 A Git repository is nothing more than a directory (ie. folder) on a computer. Any file in your 'repo' will be tracked and a history of the changes will be recorded (unless [explicitly ignored](http://git-scm.com/docs/gitignore), which we'll talk about a bit later).
 
-#### Branch
+##### Branch
 A Git branch is a working copy of your code, *in a specific state*. When you're working on a project, you're going to have a bunch of different features or ideas in progress at any given time – some of which are ready to go, and others which are not. Branching exists to help you manage this workflow.
 
-#### Commit
+##### Commit
 A commit saves your current changes to your current branch. Once you start making changes in a repository, Git will start tracking those changes. Whenever you add, edit, or delete a file, you're making a commit, and adding them to your branch. This process of adding commits keeps track of your progress as you work on a feature branch.
 
-#### Push/Pull (Sync)
+##### Push/Pull (Sync)
 A good practice in web development is to create backups of your projects. This is where _**GitHub**_ comes in, as a central repository hosting service for Git projects. Once you've wrapped up with your coding session, it's a good idea to sync your local repository with GitHub so all of your code changes are archived. If you're working on a team or between multiple machines, it's also a good idea to sync your local repository before you start working as well.
 
-#### Pull Request
+##### Pull Request
 In the *[GitHub development workflow](#github-development-workflow)*, theres a `master` branch that keeps the final record of the code ready for deployment. To get code from our feature branches in to our master branch, we need to make a pull request.
 
-#### Merge
+##### Merge
 In Git, merging brings the changes in two branches together. A pull request is a request to merge a set of commits from one branch in to another. Merges can be performed on your local machine to combine changes from two feature branches before syncing, and making a pull request to the `master` branch on Github.
 
-### GitHub development workflow
+#### GitHub development workflow
 
 As we go through the semester, we'll cover different aspects of Git & GitHub within our workflow. At a [high-level](https://en.wikipedia.org/wiki/High-_and_low-level), we'll be following the [GitHub-Flow]() methodology for development with some slight adjustments for this course.
 
@@ -111,7 +170,7 @@ As we go through the semester, we'll cover different aspects of Git & GitHub wit
   - If your classmates find any issues, make the fixes locally and push the changes to the same remote branch
   - Once your code has been reviewed by 2 classmates and your code is ready to turn in, create a new comment on your pull request with the words `@micjamking: Final Submission`; this will send me a notification that your assignment is ready to be graded.
 
-## Prepros
+### Prepros
 [![Prepros Logo](images/prepros/prepros-logo.png)](https://prepros.io/)
 
 One of the bigger concepts of the semester will be authoring CSS using [Sass](http://sass-lang.com/). Sass (Syntactically Awesome Stylesheets) is a scripting language that preprocesses (ie. compiles in to) CSS. Sass extends CSS, providing features that are not yet available like variables, nesting of rules, mixins/functions, and operators to simplify our styling process and make our code more modular, scalable, and maintainable.
@@ -130,7 +189,7 @@ Along with Sass compiling, Prepros will also help out in other aspects of our we
 
 We'll be diving in to this tool starting Week 2 and will cover each of the features above in detail in the subsequent weeks.
 
-## Chrome DevTools
+### Chrome DevTools
 [![Chrome Devtools Logo](images/devtools/chrome-devtools-logo.png)](https://developers.google.com/web/tools/chrome-devtools/)
 
 When developing a website or application using web technologies, it's necessary to be able to debug the site for issues while viewing it in the browser or on a device. [Google Chrome's Developer Tools](https://developers.google.com/web/tools/chrome-devtools/) (ie. Chrome DevTools) are a set of built-in authoring and debugging tools for web technologies (HTML/CSS/JavaScript).
@@ -148,7 +207,7 @@ If you're completely unfamiliar with the concept of debugging or have used other
 
 We'll be covering different aspects and topics on Chrome DevTools throughout the semester as we go through the web development process.
 
-## Atom
+### Atom
 [![Atom Logo](images/atom/atom-logo.png)](https://atom.io/)
 
 **[Atom](https://atom.io/) is a "hackable text editor for the 21st century".** Similar to *[Adobe Dreamweaver](http://www.adobe.com/products/dreamweaver.html)*, *[Brackets](http://brackets.io/)*, *[Sublime Text](http://www.sublimetext.com/)*, and *[Textmate](https://macromates.com/) (for OSX)*, Atom is a standalone text editor built for coding/programming. However, unlike the above editors, Atom comes with [built-in Git integration](https://atom.io/docs/v1.0.7/using-atom-version-control-in-atom), is [completely customizable](https://atom.io/docs/v1.0.7/hacking-atom-tools-of-the-trade) through JavaScript & CSS, and best of all, is [open-source](http://blog.atom.io/2014/05/06/atom-is-now-open-source.html) (ie. free).
@@ -172,17 +231,18 @@ Along with the above features, Atom also includes [integration with Git](https:/
 
 Students may use any text editor they prefer for this course, however Atom will assist in learning the Git concepts and can be configured to fit any particular workflow. It is recommended to atleast try the editor for the initial few weeks, since it will be used for presenting the exercises and should be easier to follow along with.
 
-### Quiz #1: HTML/CSS Assessment
+### Homework: Getting familiar with GitHub
 
-Render the pricing table image in HTML/CSS, including the product title, prices, details, and action items (buttons).
-
-The styling of the page and pricing table should match the following screenshot:
-
-[Pricing Table  (PNG)](https://d13yacurqjgara.cloudfront.net/users/25867/screenshots/842947/attachments/210494/pricing-table-01.jpg)
-
-Fork the below project: [CodePen - Pricing Table](http://codepen.io/micjamking/pen/669f0200762bd219b2d26e9864de80d7/)
+- Create a local repository called `hello-world` and add a `README.md` file. In the file, add a link to something that inspires you online. Sync this with your GitHub account online by 11:59pm Monday night.
+- Read the [GitHub Guides](https://guides.github.com/) _(approx. 1 hr 23 min of reading)_
 
 ## Day 2: HTML/CSS Review
+
+### Fork [kcc-nma-art258/assignments](https://github.com/kcc-nma-art258/assignments)
+- [Forking a repository on GitHub](https://help.github.com/articles/fork-a-repo/)
+- [Cloning a repository from GitHub Desktop](https://help.github.com/desktop/guides/contributing/cloning-a-repository-from-github-desktop/)
+- Open Atom (or your text editor) and add the **assignments** folder to your project tree view by clicking _'File > Add Project Folder...'_ or using the `cmd-shift-o` keyboard shortcut.
+- Navigate to **week-1/exercise/** and open the `index.html` and `style.css` files
 
 ### Creating a basic HTML page
 
@@ -203,7 +263,6 @@ Fork the below project: [CodePen - Pricing Table](http://codepen.io/micjamking/p
   - `:first-child`/`:last-child`
   - `:nth-child()`
 
-
 #### Declare your !DOCTYPE
 This tells the browser what version of HTML you are using and must come before the HTML tag. The HTML5 doctype is the simplest to remember:
 
@@ -222,10 +281,15 @@ This is where all your HTML will go.
 ```
 
 Create your opening and closing `<head>` and `<body>` tags.
-The `<head>` tag must include a title for the document. The head is also where you will include your stylesheets, scripts and meta tags. In your `<head>` tag, you will need to declare what type of character set you will be using for the document.
+The `<head>` tag must include a title for the document. The head is also where you will include your stylesheets (ie. `<link />`) and meta tags (ie. `<meta />`) for the site. You can also include scripts in the `<head>` tag, however it's highly recommended that you place your scripts just above your closing `</body>` tag for performance reasons. In your `<head>` tag, you will need to declare what type of character set you will be using for the document.
 
 ```html
 <meta charset="UTF-8">
+```
+You will need to also give your page a `<title>` tag.
+
+```html
+<title>My First In Class Assignment</title>
 ```
 
 The `<body>` tag will define the document’s body and where your HTML will be.
@@ -252,8 +316,6 @@ All together now.
 </body>
 </html>
 ```
-
-Save your file in an appropriate place as `index.html`. This will be the home page for the site we're creating.
 
 #### Break your down page structure
 
