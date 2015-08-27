@@ -68,7 +68,7 @@ The styling of the page and pricing table should match the following screenshot:
 
 Fork the following project: [CodePen - Pricing Table](http://codepen.io/micjamking/pen/669f0200762bd219b2d26e9864de80d7/)
 
-Post link to [Gitter](https://gitter.im/kcc-nma-art258)
+Post link to GitHub in the  [Quiz 1 discussion](https://github.com/kcc-nma-art258/assignments/issues/24)
 
 Let's get started by introducing the foundational concept that will help us track and share our code, **version control**.
 
