@@ -26,7 +26,7 @@
   - [Prepros](#prepros)
   - [Chrome DevTools](#chrome-devtools)
   - [Atom](#atom)
- - [Homework: Getting familiar with GitHub](#homework-getting-familiar-with-github)
+- [Homework: Getting familiar with GitHub](#homework-getting-familiar-with-github)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
