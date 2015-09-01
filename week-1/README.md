@@ -216,9 +216,9 @@ Students may use any text editor they prefer for this course, however Atom will 
 
 ## Homework: Getting familiar with GitHub
 
-- Create a local repository called `hello-world` and add a `README.md` file. In the file, add a link to something that inspires you online. Sync this with your GitHub account online by 11:59pm Monday night.
+- Create a local repository called `something` (it can be whatever you want) and add a `README.md` file. In the file, add a link to something that inspires you online. Sync this with your GitHub account online by 11:59pm Wednesday night.
 - Read the [GitHub Guides](https://guides.github.com/) _(approx. 1 hr 23 min of reading)_. Specifically:
   - [GitHub Flow](https://guides.github.com/introduction/flow/)
   - [Hello World](https://guides.github.com/activities/hello-world/)
   - [Getting your project on GitHub](https://guides.github.com/introduction/getting-your-project-on-github/)
-- Review links from Day 1 outline (above)
+- Review links from Day 2 outline (above)
