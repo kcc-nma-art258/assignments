@@ -142,7 +142,7 @@ In Git, merging brings the changes in two branches together. A pull request is a
 
 #### GitHub development workflow
 
-As we go through the semester, we'll cover different aspects of Git & GitHub within our workflow. At a [high-level](https://en.wikipedia.org/wiki/High-_and_low-level), we'll be following the [GitHub-Flow]() methodology for development with some slight adjustments for this course.
+As we go through the semester, we'll cover different aspects of Git & GitHub within our workflow. At a [high-level](https://en.wikipedia.org/wiki/High-_and_low-level), we'll be following the [GitHub-Flow](https://guides.github.com/introduction/flow/) methodology for development with some slight adjustments for this course.
 
 - Anything in the `master` branch is deployable
 - To work on something new, create a descriptively named branch off of `master` (ie: `home-page-bug-fix`)
