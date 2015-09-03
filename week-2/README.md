@@ -344,30 +344,17 @@ Let’s add container area around all of the sections and give it a width, add a
   background: white;
 }
 ```
-**Question:**
-Why can’t we see the background color we added? What do we need to do?
-
-```css
-.container {
-  width: 960px;
-  height: inherit;
-  margin: 0 auto;
-  background: white;
-}
-```
 
 #### Adding a logo and navigation
 Within our header, add one `<div>` element and one `<nav>` element. One will be your logo and one will be your main navigation. Give them a class.
 
 ```html
 <header class="main-header">
-  <div class="content">
-  	<div class="logo">
-  	</div>
+  <div class="logo">
+  </div>
 
-  	<nav class="main-nav">
-  	</nav>
-	</div>
+  <nav class="main-nav">
+  </nav>
 </header>
 ```
 
@@ -420,18 +407,16 @@ How do we bring the two elements (logo and main nav) back into the container?
 #### Create columns
 Let’s skip the search bar row and move on to the next HTML section. Create three `<div>` within the proper wrapper.
 ```html
-<section class="hero">
-  <div class="content">
-  	<div class="hero-01 columns">
-  	</div>
-    <div class="hero-02 columns">
-  	</div>
-    <div class="hero-03 columns">
-  	</div>
+<section class="site-info">
+  <div class="info-01 columns">
+  </div>
+  <div class="info-02 columns">
+  </div>
+  <div class="info-03 columns">
   </div>
 </section>
 ```
-How wide should each column be? Add a `width: 50%;` to `.hero-01` and `width:25%;` to `.hero-02` and `.hero-03`, a `height: 100px` to each one, and a unique background color to each element.
+How wide should each column be? Add a `width: 50%;` to `.info-01` and `width:25%;` to `.info-02` and `.info-03`, a `height: 100px` to each one, and a unique background color to each element.
 
 #### Floating
 To make all items display inline to each other in a row, we need to float them. In layman's terms, floating takes an element out of normal flow and moves them either to the far left or far right (depending on how you float the element).
@@ -440,34 +425,34 @@ To make all items display inline to each other in a row, we need to float them. 
 - Float all elements left
 - Float all elements right. Wha
 - Change the widths to all three elements to 60% and keep the float right. What happens?
-- Change everything back to the original widths (50% and 25%) and make `.hero-01` `float: left` and `.hero-02` and `.hero-03` `float: right`.
+- Change everything back to the original widths (50% and 25%) and make `.info-01` `float: left` and `.info-02` and `.info-03` `float: right`.
 
 Resources:
 - [CSS Trick: All About Floats](http://css-tricks.com/all-about-floats/)
 
 #### Clearing
 Any time you float an element, it takes it out of normal flow and will position it according to how you specify it. To reset the flow of content, you need to clear your floats.
-In the past, a common technique would be to add an empty element at after all of the floats and in your css put `clear:both;` to remove all floats. That  createa unnecessary markup and isn't scalable.
+In the past, a common technique would be to add an empty element after all of the floats and in your css put `clear:both;` to remove all floats. That  createa unnecessary markup and isn't scalable.
 
-On your main section `.hero`, add the element `height: auto;`. Let’s say we don’t know how tall the content area will be. What happens?
+On your main section `.site-info`, add the element `height: auto;`. Let’s say we don’t know how tall the content area will be. What happens?
 Because the content is removed from normal flow, the main div thinks there is nothing in it, so it collapses the height to 0.
 
 How do we display the two sections that just disappeared? We need to clear our floats.
 
 Most frameworks or other coders add a special rule to their CSS. We will add a rule in the beginning of our CSS document as follows:
 ```css
-.container:after {
+.site-info:after {
   content: "";
   display: table;
   clear: both;
 }
 ```
-This selector `.container:after` may look unfamiliar, but it reads as follow
-> _All pseudo `:after` elements belonging to a `.container` element._
+This selector `.site-info:after` may look unfamiliar, but it reads as follow
+> _All pseudo `:after` elements belonging to an element with the class `.site-info`._
 
 The `:after` is known as a CSS _pseudo-class_. This type of pseudo class is only available in IE8+ and other modern browsers.
 
-Now, if you have floats in anything with the class of `.container`, it will automatically clear it and you don’t have to worry about setting a height.
+Now, if you have floats in anything with the class of `.site-info`, it will automatically clear it and you don’t have to worry about setting a height.
 
 _Note: Clearing only works on floats, not elements positioned absolutely._
 
@@ -476,21 +461,21 @@ Let’s clean up our HTML and how everything looks. Each column should have some
 
 Let’s give each column a left margin of 2% by adding it to our `.column` class.
 ```css
-.hero-01 {
+.info-01 {
   background: brown;
   float: left;
   height: 460px;
   width: 74%;
 }
 
-.hero-02 {
+.info-02 {
   background: pink;
   float: right;
   height: 230px;
   width: 24%;
 }
 
-.hero-03 {
+.info-03 {
   background: blue;
   float: right;
   height: 230px;
