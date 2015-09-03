@@ -54,7 +54,7 @@
   - `:nth-child()`
 
 #### Declare your !DOCTYPE
-This tells the browser what version of HTML you are using and must come before the HTML tag. The HTML5 doctype is the simplest to remember:
+This tells the browser what version of HTML you are using and must come before the HTML tag. The HTML5 !DOCTYPE is the simplest to remember:
 
 ```html
 <!DOCTYPE html>
