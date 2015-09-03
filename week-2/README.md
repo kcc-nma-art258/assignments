@@ -109,7 +109,11 @@ All together now.
 
 #### Break your down page structure
 
-Study your page structure and understand how things can be broken down into sections. By keeping everything simple, we can grasp the general layout and work on the details later.
+[Kahala Mall Center](http://www.kahalamallcenter.com/)
+
+Study this page structure and understand how things can be broken down into sections. By keeping everything simple, we can grasp the general layout and work on the details later.
+
+![Kahala Page Wireframe](images/wireframe.png)
 
 Our website has 5 main sections:
 
@@ -158,7 +162,7 @@ Let’s think about every section as a separate element and divide them accordin
 
 `id`: unique identifiers _(serial number)_
 - Only one ID per element
-- Only only ID of that kind per page
+- Only one ID of that kind per page
 - Browser will navigate (scroll to) element with ID in url (ie. http://yourdomain.com#comments)
 
 `class`: reusable classifiers _(barcodes)_
@@ -167,7 +171,7 @@ Let’s think about every section as a separate element and divide them accordin
 
 **When should you use an ID versus a Class?**
 
-**Rule of thumb:** us id's for behavior and classes for styling
+**Rule of thumb:** use id's for behavior and classes for styling
 
 An element can have both an `id` and a `class`, so start with a `class`. If you need something to be unique for a specific behavior (like navigation), add a unique `id` for that page.
 
@@ -206,7 +210,7 @@ An element can have both an `id` and a `class`, so start with a `class`. If you 
 
 #### Let’s start to style
 
-Create your stylesheet and save it in a folder called `styles`. The folder should live in the same directory as your home page `index.html`. However you name it is up to you, but let’s keep it simple and call it `style.css`.
+Create your stylesheet and save it in a folder called `styles`. The folder should live in the same directory as your home page `index.html`. What you name your stylesheets is up to you, but let’s keep it simple and call it `style.css`.
 
 You should now have a folder named `styles` with a file called `style.css` within it.
 
@@ -244,48 +248,50 @@ Let’s add more styling to the page. Since there is no content yet, none of the
 ```css
 .main-header {
   height: 60px;
-  background: green;
+  background-color: green;
 }
 
 .search {
   height: 60px;
-  background: orange;
+  background-color: orange;
 }
 
 .hero {
   height: 460px;
-  background: red;
+  background-color: red;
 }
 
 .site-info {
   height: 260px;
-  background: purple;
+  background-color: purple;
 }
 
 .main-footer {
   height: 200px;
-  background: blue;
+  background-color: blue;
 }
 
 ```
 **Question:**
-What would be the best way (most effecicient/fastest) way if I wanted to apply the same styling to multiple elements?
+What would be the best way (most efficient/fastest) way if I wanted to apply the same styling to multiple elements?
 
 #### Reset browser default styling
 All browsers will apply a default styling to elements thats slightly different from each other so we need to 'reset' the styles so we can start from a consistent place cross-browser.
 
 A very simple reset can be something like this:
 ```css
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
 }
 ```
-However, this can be over simplistic and incomplete. There are additional CSS resets avaialble which also supply a handy set of defaults for things like typography and form controls. Let take a look at [Eric Meyer's CSS Reset](http://meyerweb.com/eric/tools/css/reset/).
-A copy is included in this repo here: [reset.css](styles/reset.css)
+However, this can be over simplistic and incomplete. There are additional CSS resets avaialble which also supply a handy set of defaults for things like typography and form controls. Lets take a look at [Eric Meyer's CSS Reset](http://meyerweb.com/eric/tools/css/reset/).
+A copy is included in this repo here: [reset.css](reset.css)
 
 
-This new file should be declared before our `style.css` file so we start with a clean document, free of any default browser styling.
+Let's move the reset to our `styles` directory. This new file should be declared before our `style.css` file so we start with a clean document, free of any default browser styling.
 
 ```html
 <head>
@@ -303,44 +309,36 @@ There are also other CSS resets available, including:
 
 #### Content Area and Centering
 
-Let’s add content areas in each section and give it a width, add a background color, and center it. Make the width 960px.
+Let’s add container area around all of the sections and give it a width, add a background color, and center it. Make the width 960px.
 
 **index.html**
 ```html
-<!-- Header Section -->
-<header class="main-header">
-	<div class=content>
-	</div>
-</header>
+<div class="container">
+  <!-- Header Section -->
+  <header class="main-header">
+  </header>
 
-<!-- Search Section -->
-<section class="search">
-	<div class=content>
-	</div>
-</section>
+  <!-- Search Section -->
+  <section class="search">
+  </section>
 
-<!-- Hero Section -->
-<section class="hero">
-	<div class=content>
-	</div>
-</section>
+  <!-- Hero Section -->
+  <section class="hero">
+  </section>
 
-<!-- Info Section -->
-<section class="site-info">
-  <div class=content>
-	</div>
-</section>
+  <!-- Info Section -->
+  <section class="site-info">
+  </section>
 
-<!-- Footer Section -->
-<footer class="main-footer">
-	<div class=content>
-	</div>
-</footer>
+  <!-- Footer Section -->
+  <footer class="main-footer">
+  </footer>
+</div>
 ```
 
 **style.css**
 ```css
-.content {
+.container {
   width: 960px;
   margin: 0 auto;
   background: white;
@@ -350,7 +348,7 @@ Let’s add content areas in each section and give it a width, add a background 
 Why can’t we see the background color we added? What do we need to do?
 
 ```css
-.content {
+.container {
   width: 960px;
   height: inherit;
   margin: 0 auto;
@@ -458,18 +456,18 @@ How do we display the two sections that just disappeared? We need to clear our f
 
 Most frameworks or other coders add a special rule to their CSS. We will add a rule in the beginning of our CSS document as follows:
 ```css
-.content:after {
+.container:after {
   content: "";
   display: table;
   clear: both;
 }
 ```
-This selector `.content:after` may look unfamiliar, but it reads as follow
-> _All pseudo `:after` elements belonging to a `.content` element._
+This selector `.container:after` may look unfamiliar, but it reads as follow
+> _All pseudo `:after` elements belonging to a `.container` element._
 
 The `:after` is known as a CSS _pseudo-class_. This type of pseudo class is only available in IE8+ and other modern browsers.
 
-Now, if you have floats in anything with the class of `.content`, it will automatically clear it and you don’t have to worry about setting a height.
+Now, if you have floats in anything with the class of `.container`, it will automatically clear it and you don’t have to worry about setting a height.
 
 _Note: Clearing only works on floats, not elements positioned absolutely._
 
