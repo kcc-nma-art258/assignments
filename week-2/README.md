@@ -208,9 +208,9 @@ An element can have both an `id` and a `class`, so start with a `class`. If you 
 </html>
 ```
 
-*Question: What is the style of a `<header id="main-header" class="main-header"></header>` element with the following CSS rules?*
+*Question:* What is the style of a `<header id="main-header" class="main-header"></header>` element with the following CSS rules?*
 
-```
+```css
  #main-header {
    background-color: green;
  }
@@ -539,3 +539,4 @@ element:nth-child(6n) {
 **References:**
 - [Mozilla: Writing Efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
 - [CSS Specificity](http://www.standardista.com/wp-content/uploads/2012/01/specificity3.pdf)
+
