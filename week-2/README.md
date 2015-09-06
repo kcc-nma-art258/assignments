@@ -208,6 +208,22 @@ An element can have both an `id` and a `class`, so start with a `class`. If you 
 </html>
 ```
 
+*Question: What is the style of a `<header id="main-header" class="main-header"></header>` element with the following CSS rules?*
+
+```
+ #main-header {
+   background-color: green;
+ }
+
+ .main-header {
+   background-color: blue;
+ }
+
+ header {
+   background-color: purple;
+ }
+```
+
 #### Let’s start to style
 
 Create your stylesheet and save it in a folder called `styles`. The folder should live in the same directory as your home page `index.html`. What you name your stylesheets is up to you, but let’s keep it simple and call it `style.css`.
