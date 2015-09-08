@@ -32,7 +32,7 @@
 - [Forking a repository on GitHub](https://help.github.com/articles/fork-a-repo/)
 - [Cloning a repository from GitHub Desktop](https://help.github.com/desktop/guides/contributing/cloning-a-repository-from-github-desktop/)
 - Open Atom (or your text editor) and add the **assignments** folder to your project tree view by clicking _'File > Add Project Folder...'_ or using the `cmd-shift-o` keyboard shortcut.
-- Navigate to **week-1/exercise/** and open the `index.html` and `style.css` files
+- Navigate to __week-1/exercise/__ and open the `index.html` and `style.css` files
 - In GitHub Desktop, create a new branch called `week-2-assignments`; we'll be working off of this branch for this week.
 
 ### Creating a basic HTML page
@@ -307,7 +307,7 @@ A very simple reset can be something like this:
 }
 ```
 However, this can be over simplistic and incomplete. There are additional CSS resets avaialble which also supply a handy set of defaults for things like typography and form controls. Lets take a look at [Eric Meyer's CSS Reset](http://meyerweb.com/eric/tools/css/reset/).
-A copy is included in this repo here: [reset.css](reset.css)
+A copy is included in this repo here: [reset.css](exercise/reset.css)
 
 
 Let's move the reset to our `styles` directory. This new file should be declared before our `style.css` file so we start with a clean document, free of any default browser styling.
