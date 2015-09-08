@@ -33,6 +33,7 @@
 - [Cloning a repository from GitHub Desktop](https://help.github.com/desktop/guides/contributing/cloning-a-repository-from-github-desktop/)
 - Open Atom (or your text editor) and add the **assignments** folder to your project tree view by clicking _'File > Add Project Folder...'_ or using the `cmd-shift-o` keyboard shortcut.
 - Navigate to **week-1/exercise/** and open the `index.html` and `style.css` files
+- In GitHub Desktop, create a new branch called `week-2-assignments`; we'll be working off of this branch for this week.
 
 ### Creating a basic HTML page
 
