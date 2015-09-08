@@ -376,7 +376,6 @@ Within our header, add one `<div>` element and one `<nav>` element. One will be 
   </nav>
 </header>
 ```
-
 Once these items have been added, give each one a width, height and background color in your css.
 
 ```css
@@ -392,7 +391,7 @@ Once these items have been added, give each one a width, height and background c
   background: purple;
 }
 ```
-Add content or text within each element.
+Add content or text within each element. For the `.main-nav` element, you will need to add an unordered list of items to replicate the navigation.
 
 #### Absolute positioning elements
 We need to practice different positioning. Under the normal circumstances, you will probably not want to position items absolute unless you need them to be in a very specific location.
@@ -435,15 +434,15 @@ Let’s skip the search bar row and move on to the next HTML section. Create thr
   </div>
 </section>
 ```
-How wide should each column be? Add a `width: 50%;` to `.info-01` and `width:25%;` to `.info-02` and `.info-03`, a `height: 100px` to each one, and a unique background color to each element.
+How wide should each column be? Add a `width: 25%;` to `.info-01` and `.info-02` and `width:50%;` to `.info-03`, a `height: 100px` to each one, and a unique background color to each element.
 
 #### Floating
 To make all items display inline to each other in a row, we need to float them. In layman's terms, floating takes an element out of normal flow and moves them either to the far left or far right (depending on how you float the element).
 
 **Try this:**
 - Float all elements left
-- Float all elements right. Wha
-- Change the widths to all three elements to 60% and keep the float right. What happens?
+- Float all elements right.
+- Change the widths to all three elements to 60% and keep the float right.
 - Change everything back to the original widths (50% and 25%) and make `.info-01` `float: left` and `.info-02` and `.info-03` `float: right`.
 
 Resources:
@@ -451,23 +450,33 @@ Resources:
 
 #### Clearing
 Any time you float an element, it takes it out of normal flow and will position it according to how you specify it. To reset the flow of content, you need to clear your floats.
-In the past, a common technique would be to add an empty element after all of the floats and in your css put `clear:both;` to remove all floats. That  createa unnecessary markup and isn't scalable.
+In the past, a common technique would be to add an empty element after all of the floats and in your css put `clear:both;` to remove all floats. That creates unnecessary markup and isn't scalable.
 
-On your main section `.site-info`, add the element `height: auto;`. Let’s say we don’t know how tall the content area will be. What happens?
+For your main section `.site-info` element, add a style declaration of `height: auto;`. Let’s say we don’t know how tall the content area will be. What happens?
 Because the content is removed from normal flow, the main div thinks there is nothing in it, so it collapses the height to 0.
 
-How do we display the two sections that just disappeared? We need to clear our floats.
+How do we get our parent element `.site-info` to show up again?
 
-Most frameworks or other coders add a special rule to their CSS. We will add a rule in the beginning of our CSS document as follows:
+Nicolas Gallagher came up with a great [micro clearfix hack](http://nicolasgallagher.com/micro-clearfix-hack/). We will add the rule in the beginning of our CSS document as follows:
 ```css
-.site-info:after {
+.cf:before,
+.cf:after {
   content: "";
   display: table;
+}
+
+.cf:after {
   clear: both;
 }
 ```
-This selector `.site-info:after` may look unfamiliar, but it reads as follow
-> _All pseudo `:after` elements belonging to an element with the class `.site-info`._
+...and add the new `.cf` class to our markup...
+```html
+<section class="site-info cf">
+...
+</section>
+```
+The `.cf:after` selector may look unfamiliar, but it reads as follows
+> _All pseudo `:after` elements belonging to an element with the class `.cf`._
 
 The `:after` is known as a CSS _pseudo-class_. This type of pseudo class is only available in IE8+ and other modern browsers.
 
@@ -476,33 +485,22 @@ Now, if you have floats in anything with the class of `.site-info`, it will auto
 _Note: Clearing only works on floats, not elements positioned absolutely._
 
 #### More Pseudos
-Let’s clean up our HTML and how everything looks. Each column should have some spacing, so let’s change the width from 75% to 74% and 25% to 24%.
+Let’s clean up our HTML and how everything looks. Each column should have some spacing, so let’s change the width from 50% to 49% and 25% to 24%.
 
-Let’s give each column a left margin of 2% by adding it to our `.column` class.
+Let’s give each column a left margin of 1% by adding it to our `.column` class.
 ```css
-.info-01 {
-  background: brown;
-  float: left;
-  height: 460px;
-  width: 74%;
+.site-info .columns {
+  height: 100px;
+  margin: 0 0 0 1%;
 }
 
-.info-02 {
-  background: pink;
-  float: right;
-  height: 230px;
+.site-info .info-01,
+.site-info .info-02 {
   width: 24%;
 }
 
-.info-03 {
-  background: blue;
-  float: right;
-  height: 230px;
-  width: 24%;
-}
-
-.column {
-  margin: 0 0 0 2%;
+.site-info .info-03 {
+  width: 49%;
 }
 ```
 
@@ -516,7 +514,7 @@ Now, we have margin on both elements, but we don’t need a margin on the first 
 }
 ```
 
-_Note: :last-child will not work in early versions of IE8 or lower, so avoid using it._
+_Note: `:last-child` is [not supported](http://caniuse.com/#search=last-child) in early versions of IE8, so confirm your browser support before implementing._
 
 `:nth-child()`
 
@@ -543,15 +541,20 @@ element:nth-child(6n) {
 - [Mozilla: Writing Efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
 - [CSS Specificity](http://www.standardista.com/wp-content/uploads/2012/01/specificity3.pdf)
 
-## Homework: Creating the layouts in HTML/CSS
+## Homework: Creating layouts in HTML/CSS
 
-- Pick a basic marketing website with a simple layout and sketch out the base layout structure, similar to the following structure: [wireframe example (created in [Paper by FiftyThree](https://www.fiftythree.com/paper))](https://github.com/kcc-nma-art258/assignments/blob/master/week-2/images/wireframe.png)
+- In your `assignments` project, create a branch called `gh-pages`
+- In Atom, highlight all of the files in the project **except the `.git` folder** and delete them. **Make sure you are on the gh-pages branch when you do this.** Commit the changes so you start with an empty directory for the assignment.
+- Pick a basic marketing website and sketch out the base layout structure, similar to the following structure: [wireframe example](https://github.com/kcc-nma-art258/assignments/blob/master/week-2/images/wireframe.png) (created in [Paper by FiftyThree](https://www.fiftythree.com/paper))
   - Example sites:
-    - [http://www.apple.com/](http://www.apple.com/)
-    - []()
-- Create a local repository called `something` (it can be whatever you want) and add a `README.md` file. In the file, add a link to something that inspires you online. Sync this with your GitHub account online by 11:59pm Wednesday night.
-- Read the [GitHub Guides](https://guides.github.com/) _(approx. 1 hr 23 min of reading)_. Specifically:
-  - [GitHub Flow](https://guides.github.com/introduction/flow/)
-  - [Hello World](https://guides.github.com/activities/hello-world/)
-  - [Getting your project on GitHub](https://guides.github.com/introduction/getting-your-project-on-github/)
-- Review links from Day 2 outline (above)
+    - [Apple](http://www.apple.com/)
+    - [Google Chrome](https://www.google.com/chrome/)
+    - [Sass](http://sass-lang.com/)
+    - [Bohemian Coding Sketch](http://www.bohemiancoding.com/sketch/)
+    - [Invision App](http://www.invisionapp.com/)
+- Scan or take a photograph of your sketch (or save a png if you created it digitally), and add it to the repository in a folder called `images`.
+- Complete an HTML/CSS wireframe based on the sketch you created like the class example. Your `gh-pages` branch should include:
+  - An `index.html` file
+  - A `style.css` file
+  - An `images` folder with an image of your wireframe
+- Sync this with your GitHub account online by 11:59pm Wednesday night.
