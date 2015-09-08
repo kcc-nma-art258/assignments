@@ -208,7 +208,7 @@ An element can have both an `id` and a `class`, so start with a `class`. If you 
 </html>
 ```
 
-**Question:** What is the style of a `<header id="main-header" class="main-header"></header>` element with the following CSS rules?*
+**Question:** What would be the final background color of our `<header class="main-header"></header>` element if we also added an ID of *main-header*, (ie. `id="main-header"`) with the following CSS rules applied?
 
 ```css
  #main-header {
@@ -223,6 +223,8 @@ An element can have both an `id` and a `class`, so start with a `class`. If you 
    background-color: purple;
  }
 ```
+
+Now is a good point to save what we have in Git & sync with github.com before we continue. It is considered good practice to make frequent commits (ie. save in git) while you're working, but reserve syncing until you complete a feature branch or you're finished working for the moment (whichever comes first).
 
 #### Let’s start to style
 
