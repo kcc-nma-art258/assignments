@@ -208,7 +208,7 @@ An element can have both an `id` and a `class`, so start with a `class`. If you 
 </html>
 ```
 
-*Question:* What is the style of a `<header id="main-header" class="main-header"></header>` element with the following CSS rules?*
+**Question:** What is the style of a `<header id="main-header" class="main-header"></header>` element with the following CSS rules?*
 
 ```css
  #main-header {
@@ -540,3 +540,15 @@ element:nth-child(6n) {
 - [Mozilla: Writing Efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
 - [CSS Specificity](http://www.standardista.com/wp-content/uploads/2012/01/specificity3.pdf)
 
+## Homework: Creating the layouts in HTML/CSS
+
+- Pick a basic marketing website with a simple layout and sketch out the base layout structure, similar to the following structure: [wireframe example (created in [Paper by FiftyThree](https://www.fiftythree.com/paper))](https://github.com/kcc-nma-art258/assignments/blob/master/week-2/images/wireframe.png)
+  - Example sites:
+    - [http://www.apple.com/](http://www.apple.com/)
+    - []()
+- Create a local repository called `something` (it can be whatever you want) and add a `README.md` file. In the file, add a link to something that inspires you online. Sync this with your GitHub account online by 11:59pm Wednesday night.
+- Read the [GitHub Guides](https://guides.github.com/) _(approx. 1 hr 23 min of reading)_. Specifically:
+  - [GitHub Flow](https://guides.github.com/introduction/flow/)
+  - [Hello World](https://guides.github.com/activities/hello-world/)
+  - [Getting your project on GitHub](https://guides.github.com/introduction/getting-your-project-on-github/)
+- Review links from Day 2 outline (above)
