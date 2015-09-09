@@ -108,6 +108,13 @@ body {
   background-color: #673270;
 }
 
+.black-quote {
+  background-color: white;
+  text-align: center;
+  color: red;
+  height: 40px;
+}
+
 .main-footer {
   height: 200px;
   background-color: #9696D2;
