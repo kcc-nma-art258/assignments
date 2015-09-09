@@ -5,6 +5,22 @@
   padding: 0;
 }
 
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+html,
+body {
+  height:100%;
+  width: 100%;
+}
+
 body {
   background-color: #FFCC00;
 }
@@ -13,29 +29,87 @@ body {
   width: 960px;
   margin: 0 auto;
   background: white;
+  height: 100%;
 }
 
 .main-header {
   height: 60px;
-  background-color: green;
+  width: 100%;
+  background-color: #96F296;
+}
+
+.logo,
+.main-nav,
+.search,
+.account {
+ float: left;
+}
+
+.logo {
+  height: 60px;
+  width: 10%;
+  background-color: #D9A9A9;
+}
+
+.main-nav {
+  height: 100%;
+  width: 70%;
+  background-color: #8B6D6D;
 }
 
 .search {
-  height: 60px;
+  height: 100%;
   background-color: orange;
+  width: 10%;
+  background-color: white;
+}
+
+.account {
+  height: 100%;
+  background-color: #D2A450;
+  width: 10%;
 }
 
 .hero {
-  height: 460px;
-  background-color: red;
+  height: 100%;
+  background-color: #A3792C;
 }
 
 .site-info {
   height: 260px;
-  background-color: purple;
+  background-color: #E59292;
+}
+
+/* in order to 4cloumns x 3padding is hard to get 100%, I go with px for acculate */
+.columns {
+  height: 100%;
+  float: left;
+  width: 210px;
+  margin-right: 40px;
+}
+
+.columns:last-child {
+  margin-right: 0;
+}
+
+.info-01 {
+  background-color: #673455;
+}
+
+.info-02 {
+  background-color: #273855;
+}
+
+.info-03 {
+  background-color: #521225;
+}
+
+.info-04 {
+  background-color: #673270;
 }
 
 .main-footer {
   height: 200px;
-  background-color: blue;
+  background-color: #9696D2;
+}
 }
