@@ -2,9 +2,76 @@
 
 ## Review of GitHub & DevTools process and building a basic HTML/CSS site
 
+### Ignore files in Atom
+
+We're going to be building up to more complex sites over the week, so lets configure our editor to ignore some
+files that we don't want to get in our way while we're developing. This is a common practice and a configurable setting within most popular editors.
+
+Copy `(cmd + C)` the list of ignored file types below:
+
+```git
+ *.cfg, .git, .hg, .svn, .DS_Store, ._*, Thumbs.db
+```
+
+Open Atom, and open *Atom > Preferences* from the menu bar.
+
+![Atom Screenshot](images/atom-screenshot-1.png)
+
+Click on the **Settings** menu, and paste the code in the *Ignored Names* list.
+
+![Atom Screenshot 2](images/atom-screenshot-2.png)
+
+Click on the **Packages** menu, and type in `tree-view` in the *Installed Packages* input field. When the **tree-view** package appears under *Core Packages*, click on the settings button.
+
+![Atom Screenshot 3](images/atom-screenshot-3.png)
+
+Under the Settings section, check *Hide Ignored Names*
+
+![Atom Screenshot 4](images/atom-screenshot-4.png)
+
+Now our configuration files won't get in the way!
+
 ### GitHub Review
 
-First thing we want to do is update our local projects to have the latest changes that have been pushed from the parent fork `kcc-nma-art258/assignments`
+To make sure we're all on the same page, let's start by grabbing a fresh copy of our `assignments` project. If you already started one and completed the assignment, you can skip this part. However, if you got stuck or still confused about GitHub, I encourage you to do the following.
+
+First, go to github.com, find your fork of the assignments project, and got to the *Settings* in the bottom right side-bar.
+
+![Github](images/github-1.png)
+
+Scroll down to the bottom where it says **Danger Zone** and click the big red button that says `Delete this repository`.
+
+![Github 2](images/github-2.png)
+
+Click the button and retype the name of the repository (ie. `assignments`) to confirm deletion, then click the button that says `I understand the consequences, delete this repository`.
+
+![Github 3](images/github-3.png)
+
+This might sound scary, but everything will be fine since we still have a local copy on our computers we can send back up to the cloud at any time. For now, let's remove the project from GitHub Desktop as well...
+
+![Github 4](images/github-4.png)
+
+...and rename the file in finder to something else like `assignments_old`.
+
+![Github 5](images/github-5.png)
+
+On github.com, navigate to the [kcc-nma-art258/assigments](https://github.com/kcc-nma-art258/assignments) and fork the repository again.
+
+![Github 6](images/github-6.png)
+
+And then in Github Desktop, clone the project again.
+
+![Github 7](images/github-7.png)
+
+Once the project has finished cloning, create a new branch called `gh-pages`.
+
+![Github 8](images/github-8.png)
+
+Right-click, and open the project in Atom. Once the project has been opened in Atom, highlight all of the files in the folder, then right-click and select DELETE. Confirm `Move to Trash`.
+
+![Github 9](images/github-9.png)
+
+Back in Atom, commit those files and then sync. Now you're ready to start the Homework assignment! If you would like access to your previous projects, I can walk around and assist each of you with copying the resources back in your project from `assignments_old` individually.
 
 ### Setting up Chrome DevTools
 
@@ -85,32 +152,3 @@ The changes you make are also saved to the file system just like a normal editor
 - [Google Developers: Inspect and Tweak Your Pages](https://developers.google.com/web/tools/iterate/inspect-styles/basics)
 - [Google Developers: Set up persistence with DevTools Workspaces](https://developers.google.com/web/tools/setup/workspace/setup-workflow)
 - [Remy Sharp: My workflow - Never having to leave DevTools](https://remysharp.com/2012/12/21/my-workflow-never-having-to-leave-devtools)
-
-### Ignore files in Atom
-
-We're going to be building up to more complex sites over the week, so lets configure our editor to ignore some
-files that we don't want to get in our way while we're developing. This is a common practice and a configurable setting within most popular editors.
-
-Copy `(cmd + C)` the list of ignored file types below:
-
-```git
- *.cfg, .git, .hg, .svn, .DS_Store, ._*, Thumbs.db
-```
-
-Open Atom, and open *Atom > Preferences* from the menu bar.
-
-![Atom Screenshot](images/atom-screenshot-1.png)
-
-Click on the **Settings** menu, and paste the code in the *Ignored Names* list.
-
-![Atom Screenshot 2](images/atom-screenshot-2.png)
-
-Click on the **Packages** menu, and type in `tree-view` in the *Installed Packages* input field. When the **tree-view** package appears under *Core Packages*, click on the settings button.
-
-![Atom Screenshot 3](images/atom-screenshot-3.png)
-
-Under the Settings section, check *Hide Ignored Names*
-
-![Atom Screenshot 4](images/atom-screenshot-4.png)
-
-Now our configuration files won't get in the way!
