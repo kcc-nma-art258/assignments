@@ -1,0 +1,47 @@
+.container {
+  width: 960px;
+  margin: 0 auto;
+  background: white;
+}
+
+.main-header {
+  height: 60px;
+  background-color: green;
+}
+
+.logo {
+  height: 60px;
+  width: 100px;
+  background: gray;
+}
+
+.main-nav {
+  height: 60px;
+  width: 400px;
+  background: purple;
+}
+
+
+.search {
+  height: 60px;
+  background-color: orange;
+}
+
+.hero {
+  height: 460px;
+  background-color: red;
+}
+
+.site-info {
+  height: 260px;
+  background-color: purple;
+}
+
+.main-footer {
+  height: 200px;
+  background-color: blue;
+}
+
+body {
+  background-color: #FFCC00;
+}
