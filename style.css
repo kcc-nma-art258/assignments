@@ -33,7 +33,7 @@ body {
 
 .main-header {
   height: 80px;
-  background-color: #333;
+  background-color: #222F80;
   position: relative;
 }
 
@@ -47,9 +47,6 @@ body {
 }
 
 .main-nav {
-  height: 80px;
-  width: 80px;
-  background: grey;
 }
 
 .main-section {
@@ -58,7 +55,7 @@ body {
 }
 
 .site-info {
-  background-color: #B2C1D9;
+  background-color: #9C9C9C;
   height: auto;
 }
 
@@ -68,21 +65,21 @@ body {
 }
 
 .site-info .info-01 {
-  background: brown;
+  background: grey;
   float: left;
   width: 24%;
   height: 100px;
 }
 
 .site-info .info-02 {
-  background: pink;
+  background: grey;
   float: right;
   width: 24%;
   height: 100px;
 }
 
 .site-info .info-03 {
-  background: yellow;
+  background: grey;
   float: right;
   width: 49%;
 }
@@ -91,11 +88,7 @@ body {
   margin: 0 0 0 2%;
 }
 
-.columns:first-child {
-  margin: 0;
-}
-
 .main-footer {
   height: 100px;
-  background-color: #D7E8DD;
+  background-color: #AFAEAF;
 }
