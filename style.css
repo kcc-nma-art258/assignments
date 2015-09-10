@@ -1,0 +1,101 @@
+body {
+  background-color: white;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+}
+
+.site-info:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    background: white;
+}
+
+.main-header {
+  height: 80px;
+  background-color: #333;
+  position: relative;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+  background: #7F3489;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-nav {
+  height: 80px;
+  width: 80px;
+  background: grey;
+}
+
+.main-section {
+  height: 400px;
+  background-color: #9F86B6;
+}
+
+.site-info {
+  background-color: #B2C1D9;
+  height: auto;
+}
+
+.site-info .columns {
+  height: 100px;
+  margin: 0 0 0 1%;
+}
+
+.site-info .info-01 {
+  background: brown;
+  float: left;
+  width: 24%;
+  height: 100px;
+}
+
+.site-info .info-02 {
+  background: pink;
+  float: right;
+  width: 24%;
+  height: 100px;
+}
+
+.site-info .info-03 {
+  background: yellow;
+  float: right;
+  width: 49%;
+}
+
+.columns {
+  margin: 0 0 0 2%;
+}
+
+.columns:first-child {
+  margin: 0;
+}
+
+.main-footer {
+  height: 100px;
+  background-color: #D7E8DD;
+}
