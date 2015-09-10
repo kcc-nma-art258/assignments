@@ -1,0 +1,134 @@
+body {
+  background-color: black;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  background: pink;
+}
+
+.main-header {
+  height: 60px;
+  background-color: green;
+}
+
+.logo {
+  height: 60px;
+  width: 100px;
+  background: grey;
+  position: relative;
+  float: left;
+}
+
+.main-nav {
+  height: 60px;
+  width: 600px;
+  background-color: lightgrey;
+  position: relative;
+  float: right;
+}
+
+.hero {
+  height: 150px;
+  background-color: pink;
+}
+
+.columns {
+  height: 150px;
+}
+
+.site-info-01 {
+  height: 150px;
+  background-color: purple;
+}
+
+.info-01 {
+  width: 49%;
+  margin: 0 0.5%;
+  position: relative;
+  float: left;
+  background-color: orange;
+}
+
+.info-02 {
+  width: 49%;
+  margin: 0 0.5%;
+  position: relative;
+  float: right;
+  background-color: orange;
+}
+
+.site-info-02 {
+  height: 50px;
+  background-color: pink;
+}
+
+.site-info-03 {
+  height: 150px;
+  background-color: purple;
+}
+
+.info-03 {
+  width: 33%;
+  position: relative;
+  float: left;
+  background-color: yellow;
+}
+
+.info-04 {
+  width: 33%;
+  margin: 0 0.5%;
+  position: relative;
+  float: left;
+  background-color: orange;
+}
+
+.info-05 {
+  width: 33%;
+  position: relative;
+  float: right;
+  background-color: yellow;
+}
+
+.site-info-04 {
+  height: 150px;
+  background-color: red;
+}
+
+.info-06 {
+  width: 33%;
+  position: relative;
+  float: left;
+  background-color: orange;
+}
+
+.info-07 {
+  width: 33%;
+  margin: 0 0.5%;
+  position: relative;
+  float: left;
+  background-color: yellow;
+}
+
+.info-08 {
+  width: 33%;
+  position: relative;
+  float: right;
+  background-color: orange;
+}
+
+.main-footer {
+  height: 60px;
+  background-color: blue;
+}
+
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
