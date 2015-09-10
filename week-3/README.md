@@ -1,8 +1,21 @@
 # Week 3: Continue Review of Basic Web Development Techniques
 
-## Review of GitHub & DevTools process and building a basic HTML/CSS site
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-### Ignore files in Atom
+
+- [Review of GitHub, DevTools and HTML/CSS building blocks](#review-of-github-devtools-and-htmlcss-building-blocks)
+  - [Atom Settings](#atom-settings)
+  - [GitHub Review](#github-review)
+  - [Setting up Chrome DevTools](#setting-up-chrome-devtools)
+    - [Live-editing in Chrome](#live-editing-in-chrome)
+    - [Resources](#resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Review of GitHub, DevTools and HTML/CSS building blocks
+
+### Atom Settings
 
 We're going to be building up to more complex sites over the week, so lets configure our editor to ignore some
 files that we don't want to get in our way while we're developing. This is a common practice and a configurable setting within most popular editors.
@@ -147,7 +160,7 @@ Now when you make edits to your CSS & JS, they'll be reflected live in the brows
 
 The changes you make are also saved to the file system just like a normal editor with the `(cmd + S)` shortcut. You can also edit and make changes to other files including HTML files, however these changes won't be reflected live.
 
-#### Resources:
+#### Resources
 - [Chrome Developer Tools: Authoring and Development Workflow](https://developer.chrome.com/devtools/docs/authoring-development-workflow)
 - [Google Developers: Inspect and Tweak Your Pages](https://developers.google.com/web/tools/iterate/inspect-styles/basics)
 - [Google Developers: Set up persistence with DevTools Workspaces](https://developers.google.com/web/tools/setup/workspace/setup-workflow)
