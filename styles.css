@@ -1,0 +1,65 @@
+body {
+  background-color: #FFFFFF;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  background-color: gray;
+}
+
+.main-header {
+  height: 130px;
+  background-color: green;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  background-color: gray;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.main-nav {
+  height: 40px;
+  width: 400px;
+  background-color: pink;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.hero {
+  height: 260px;
+  background-color: red;
+}
+
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.site-info {
+  height: 460px;
+  width: 100%;
+  background-color: purple;
+}
+
+.site-info .1st-row {
+  background-color: pink;
+  height: 230px;
+  width: 100%;
+
+}
+
+.main-footer {
+  height: 200px;
+  background-color: blue;
+}
