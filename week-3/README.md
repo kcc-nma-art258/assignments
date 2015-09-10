@@ -3,13 +3,13 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Review of GitHub, DevTools and HTML/CSS building blocks](#review-of-github-devtools-and-htmlcss-building-blocks)
   - [Atom Settings](#atom-settings)
   - [GitHub Review](#github-review)
   - [Setting up Chrome DevTools](#setting-up-chrome-devtools)
     - [Live-editing in Chrome](#live-editing-in-chrome)
     - [Resources](#resources)
+- [If you are already done or finish early...](#if-you-are-already-done-or-finish-early)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -166,7 +166,7 @@ The changes you make are also saved to the file system just like a normal editor
 - [Google Developers: Set up persistence with DevTools Workspaces](https://developers.google.com/web/tools/setup/workspace/setup-workflow)
 - [Remy Sharp: My workflow - Never having to leave DevTools](https://remysharp.com/2012/12/21/my-workflow-never-having-to-leave-devtools)
 
-## If your already done or finish early...
+## If you are already done or finish early...
 - Help at least two of your classmates by [reviewing their code](https://help.github.com/articles/using-pull-requests/#reviewing-proposed-changes)
 - [Code School: Discover DevTools (Ch. 1 & 2)](http://discover-devtools.codeschool.com/)
 - [Code School: Assembling Sass (Level 1)](https://www.codeschool.com/courses/assembling-sass)
