@@ -33,7 +33,7 @@ body {
 }
 
 .main-header {
-  height: 60px;
+  height: 10%;
   width: 100%;
   background-color: #96F296;
 }
@@ -71,12 +71,12 @@ body {
 }
 
 .hero {
-  height: 100%;
+  height: 30%;
   background-color: #A3792C;
 }
 
 .site-info {
-  height: 260px;
+  height: 30%;
   background-color: #E59292;
 }
 
@@ -116,7 +116,7 @@ body {
 }
 
 .main-footer {
-  height: 200px;
+  height: 30%;
   background-color: #9696D2;
 }
 }
