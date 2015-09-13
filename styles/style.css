@@ -2,7 +2,6 @@ html,
 body {
   background-color: #fff;
   margin: 0 auto;
-  height: 100%;
 }
 
 .container {
@@ -54,11 +53,11 @@ body {
 }
 
 .main-hero {
-  height: 400px;
+  height: 500px;
   background-color: yellow;
 }
 
 .main-footer {
-  height: 200px;
+  height: 300px;
   background-color: #333;
 }
