@@ -1,14 +1,12 @@
-
+body{
+  background-color: blue;
+  height: 100%;
+}
 
 .container{
   width:960px;
   margin: 0 auto;
   background: white;
-}
-
-body{
-  background-color: blue;
-  height: 100%;
 }
 
 .main-header{
@@ -25,6 +23,7 @@ body{
   top: 10px;
   left: 5px;
 }
+
 
 .main-nav{
   height: 40px;
