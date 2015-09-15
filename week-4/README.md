@@ -8,7 +8,6 @@ The concept of CSS authoring is based on using additional tools (ie. Prepros) an
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Preprocessors](#preprocessors)
 - [*Prepros* as our build tool](#prepros-as-our-build-tool)
   - [Setup](#setup)
@@ -199,12 +198,16 @@ This will output the below CSS:
 }
 ```
 
-Take notice that the parent selector is prepended as an additional selector in the final styles output. This is significant because CSS performance is impacted negatively specifically from multi-selector style rules. So the general rule of nesting at max 3 levels is important to pay attention to.
+Take notice that the parent selector is prepended as an additional selector in the final styles output. This is significant because CSS performance is impacted negatively specifically from multi-selector style rules. This is where the first big rule of Sass comes in:
 
-Continue nesting the stylesheet by thinking in large components (ie. header, hero, info, footer).
+> **The Inception Rule**: don’t go more than three levels deep.
 
 References:
-- [Nested selectors: the inception rule](http://thesassway.com/beginner/the-inception-rule)
+- [The Sass Way - Nested selectors: The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
+- [The Sass Way - Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
+- [Sitepoint - Beware of Selector Nesting in Sass](http://www.sitepoint.com/beware-selector-nesting-sass/)
+
+Continue nesting the stylesheet by thinking in large components (ie. header, hero, info, footer).
 
 ### Mixins
 
