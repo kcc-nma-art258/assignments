@@ -31,6 +31,10 @@ Preprocessors make writing *maintainable* CSS easier. You can get more done, wit
 
 Today, the main thing that differs between the major preprocessors is code syntax and a few built-in functions. In this course we'll be focusing on Sass since it is well established and widely used within the community.
 
+References:
+- [Sass: Basic Guide](http://sass-lang.com/guide)
+- [Sass: Developer Reference](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#parent-selector)
+
 ## *Prepros* as our build tool
 
 There are several tools available to assist with managing the build process and generating our preprocessor's output including [Codekit](http://incident57.com/codekit/), [Scout](http://mhs.github.io/scout-app/), and command-line tools like [GruntJS](http://gruntjs.com/) and [GulpJS](http://gulpjs.com/). In this course, we'll be using Prepros which, along with compiling our Sass, also helps out with the following:
