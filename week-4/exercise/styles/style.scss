@@ -1,15 +1,19 @@
+$site-info-width: 100%;
+
 body {
   background-color: #FFCC00;
 }
 
-.cf:before,
-.cf:after {
-  content: "";
-  display: table;
-}
+@mixin cf {
+  &:before,
+  &:after {
+	content: "";
+	display: table;
+  }
 
-.cf:after {
-  clear: both;
+  &:after {
+	clear: both;
+  }
 }
 
 .container {
@@ -62,6 +66,7 @@ body {
 .site-info {
   height: auto;
   background-color: purple;
+  @include cf;
 }
 
 .site-info .columns {
@@ -75,11 +80,11 @@ body {
 
 .site-info .info-01,
 .site-info .info-02 {
-  width: 24%;
+  width: ($site-info-width / 4) - 1;
 }
 
 .site-info .info-03 {
-  width: 50%;
+  width: ($site-info-width / 2);
 }
 
 .info-01 {

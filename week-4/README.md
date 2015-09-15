@@ -214,6 +214,122 @@ A good example of when you would want to use a mixin from our current stylesheet
 
 With Sass, we can clean up our HTML while also keeping our Sass DRY using a mixin.
 
+```scss
+@mixin cf {
+  &:before,
+  &:after {
+	content: "";
+	display: table;
+  }
+
+  &:after {
+	clear: both;
+  }
+}
+```
+
+Notice that I move the name of my class to the mixin name, and replaced it with `&`. In Sass, `&` has a special meaning, allowing you to reference the parent selector. This will become clearer once you see the output below.
+
+Given our current HTML, let's use our `cf` mixin so we can remove the `cf` class from the HTML.
+
+```scss
+@mixin cf {
+  &:before,
+  &:after {
+	content: "";
+	display: table;
+  }
+
+  &:after {
+	clear: both;
+  }
+}
+
+...
+
+.site-info {
+  height: auto;
+  background-color: purple;
+  @include cf;
+}
+```
+
+This outputs the below CSS:
+
+```css
+.site-info {
+  height: auto;
+  background-color: purple;
+}
+
+.site-info:before,
+.site-info:after {
+  content: "";
+  display: table;
+}
+
+.site-info:after {
+  clear: both;
+}
+```
+
+Notice that because of the parent selector in our mixin, it applied the pseudo-selector classes directly to the parent selector the mixin was applied in.
+
+Mixins aren't used as commonly as variables and nesting in Sass, but they are definitely handy when you need it. Look at your stylesheet and consider if there are 2 or more elements sharing a set of similar styles that could be encapsulated for reuse.
+
 ### Operators
 
+Sometimes you need to do some math in your CSS to get the exact values you need. This becomes extremely handy when working with grids and responsive web design where you're calculating percentages. Sass has a handful of standard math operators like `+`, `-`, `*`, `/`, and `%`. Let's create a dynamic width for our info section using a variable and some basic math.
+
+```css
+$site-info-width: 100%;
+
+...
+
+.site-info .info-01,
+.site-info .info-02 {
+  width: ($site-info-width / 4) - 1;
+}
+
+.site-info .info-03 {
+  width: ($site-info-width / 2);
+}
+```
+
+Which should compile to the CSS we previously had:
+
+```css
+.site-info .info-01,
+.site-info .info-02 {
+  width: 24%;
+}
+
+.site-info .info-03 {
+  width: 50%;
+}
+```
+
+Some things to keep in mind about math operations in Sass:
+- You can't mix value units, ie. `$container-width: 100% - 20px;` will not work compile
+- The `/` symbol already has a special value in CSS (ie. font shorthand), so good practice is to wrap expressions in parenthesis if you want to for sure do division on the values.
+
 ### Functions
+
+Sass comes with an [extensive set of built-in functions](http://sass-lang.com/documentation/Sass/Script/Functions.html) that help you do common tasks really easy. For example, if you have ever wanted to darken a color on the fly while developing, and then opened up PS or Sketch to eyedrop the color and adjust it, Sass has a handy `darken()` function that let's you pass in a color and degree to darken by. Let's darken some of our colors using the handy function:
+
+```css
+body {
+  background-color: darken(#FFCC00, 10%);
+}
+```
+
+Sass also provides users the ability to create their own custom functions in Sass. These are similar to mixins, except instead of outputting a set of styles, functions return a single value like variables. The difference between a function and a variable is that a function can manipulate a value before it returns it. This is extremely handy for performing common calculations (using operators) , ie. calculating dynamic grid widths, creating typographic scales, converting units (px to em).
+
+We'll cover custom functions in more depth in the coming weeks when we work on CSS frameworks; for now just know that built-in functions are available to you and you also have the ability to create custom functions if needed.
+
+## In-Class Exercise
+- Switch back to the `master` branch in your local `<username>/assignments` project in GitHub Desktop
+- Update from `kcc-nma-art258/assignments:master` branch to get the latest changes
+- Create a new branch called `week-4-assignment` and convert the in-class example to Sass
+...
+- Once completed with the in-class exercise, create a new branch **off of** `gh-pages` called `week-4-sass` and begin converting the project to sass
