@@ -332,4 +332,4 @@ We'll cover custom functions in more depth in the coming weeks when we work on C
 - Update from `kcc-nma-art258/assignments:master` branch to get the latest changes
 - Create a new branch called `week-4-assignment` and convert the in-class example to Sass
 ...
-- Once completed with the in-class exercise, create a new branch **off of** `gh-pages` called `week-4-sass` and begin converting the project to sass
+- Once completed with the in-class exercise, create a new branch **off of** `gh-pages` called `week-4-sass` and begin converting the project to sass.
