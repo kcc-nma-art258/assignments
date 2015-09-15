@@ -1,0 +1,111 @@
+body {
+    background-color: white;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+}
+
+.site-info:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    background: white;
+}
+
+
+.main-nav {
+    height: 60px;
+    width: 60%;
+    background: yellowgreen;
+    position: relative;
+    float: right;
+}
+
+
+.main-header {
+    height: 50px;
+    background-color: green;
+    position: relative;
+}
+
+.logo {
+    height: 60px;
+    width: 150px;
+    background: gray;
+    position: absolute;
+    top: 0;
+    left: 10%;
+}
+
+
+.hero {
+    height: 500px;
+    background-color: red;
+}
+
+.site-info {
+    height: 145px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.site-info .columns {
+    height: 150px;
+    margin: 0 0 0 11%;
+    background-color: alicebluegray;
+    position:
+}
+
+.site-info .info-01 {
+    width: 19.5%;
+    background: aquamarine;
+    float: left;
+    height: 145px;
+
+}
+.site-info .info-02 {
+    width: 20%;
+    background: blueviolet;
+    float: left;
+    height: 145px;
+}
+
+.site-info .info-03 {
+    width: 20%;
+    background: yellowgreen;
+    float: left;
+    height: 145px;
+
+}
+
+.columns {
+    margin: 0 0 0 5%;
+}
+
+.main-footer {
+    height: 400px;
+    background-color: blue;
+}
+
+body {
+    background-color: #FFCC00;
+}
