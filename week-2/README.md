@@ -557,4 +557,4 @@ element:nth-child(6n) {
   - An `index.html` file
   - A `style.css` file
   - An `images` folder with an image of your wireframe
-- Sync this with your GitHub account online by 11:59pm Wednesday night.
+- Sync this with your GitHub account online by 11:59pm Monday night.
