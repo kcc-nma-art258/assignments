@@ -19,16 +19,16 @@ body {
   background-color: gray;
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 47%;
 }
 
 .main-nav {
   height: 40px;
   width: 400px;
   background-color: pink;
-  position: absolute;
-  top: 0;
-  left: 50%;
+  position: relative;
+  top: 90px;
+  left: 29%;
 }
 
 .hero {
@@ -46,20 +46,67 @@ body {
   clear: both;
 }
 
-.site-info {
-  height: 460px;
+.site-info1 {
+  height: 200px;
   width: 100%;
   background-color: purple;
 }
 
-.site-info .1st-row {
-  background-color: pink;
-  height: 230px;
+.site-info2 {
+  height: 200px;
   width: 100%;
-
+  background-color: pink;
 }
+
+.columns {
+  height: 100%;
+  float: left;
+  width: 225px;
+  margin-right: 20px;
+}
+
+.columns:last-child {
+  margin-right: 0;
+}
+
+.info-01 {
+  background-color: white;
+}
+
+.info-02 {
+  background-color: gray;
+}
+
+.info-03 {
+  background-color: white;
+}
+
+.info-04 {
+  background-color: gray;
+}
+
+.info-05 {
+  background-color: yellow;
+}
+
+.info-06 {
+  background-color: green;
+}
+
+.info-07 {
+  background-color: yellow;
+}
+
+.info-08 {
+  background-color: green;
+}
+
+
+
+
 
 .main-footer {
   height: 200px;
+  width: 100%;
   background-color: blue;
 }
