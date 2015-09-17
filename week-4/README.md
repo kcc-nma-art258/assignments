@@ -341,7 +341,7 @@ We'll cover custom functions in more depth in the coming weeks when we work on C
 
 ## Homework
 Once completed with the in-class exercise...
-- Rename `gh-pages` to `week-3-basic-site`. Switch back to the `gh-pages` branch. _(We're simply making a copy of `gh-pages` so we can keep working on it, but go back to the previous version if we need)_
+- Rename `gh-pages` to `week-3-basic-site`. Publish the `wwek-3-basic-site` branch. Switch back to the `gh-pages` branch. _(We're simply making a copy of `gh-pages` so we can keep working on it, but go back to the previous version if we need)_
 
 ![Github 1](images/github-1.png)
 
