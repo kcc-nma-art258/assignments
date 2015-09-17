@@ -351,6 +351,6 @@ Once completed with the in-class exercise...
 
 ![Github 2](images/github-2.png)
 
-- Create a pull request with the title `John Doe - Assignment 3: Sass` (replacing *John Doe* with your name) to turn in your project by 11:59pm Monday night.
+- Create a pull request with the title `NMA Bot - Assignment 3: Sass` (replacing *NMA Bot* with your name) to turn in your project by 11:59pm Monday night.
   - Make sure to mention atleast two people in your pull request; try to finish early enough so you can give other students enough time to review your work, not at the last minute.
   - Adding the link to your assignment site in your pull request description will help your classmates review your work in the browser easier.
