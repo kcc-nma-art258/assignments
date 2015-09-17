@@ -338,5 +338,10 @@ We'll cover custom functions in more depth in the coming weeks when we work on C
 - Switch back to the `master` branch in your local `<username>/assignments` project in GitHub Desktop
 - Update from `kcc-nma-art258/assignments:master` branch to get the latest changes
 - Create a new branch called `week-4-assignment` and convert the in-class example to Sass
-...
-- Once completed with the in-class exercise, create a new branch **off of** `gh-pages` called `week-4-sass` and begin converting the project to sass.
+
+## Homework
+- Once completed with the in-class exercise, create a new branch **off of** `gh-pages` called `week-4-sass`
+- Convert your existing CSS in to Sass following the class guide
+- Sync this with your GitHub account online
+  - Create a pull request with the title `John Doe - Assignment 3: Sass` (replacing John Doe with your name) to turn in your project by 11:59pm Monday night.
+  - Make sure to mention atleast two people in your pull request; try to finish early enough so you can give other students enough time to review your work, not at the last minute.
