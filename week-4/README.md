@@ -342,8 +342,15 @@ We'll cover custom functions in more depth in the coming weeks when we work on C
 ## Homework
 Once completed with the in-class exercise...
 - Rename `gh-pages` to `week-3-basic-site` and then create a new `gh-pages` branch **off of** the `week-3-basic-site` branch you just created. _(We're simply making a copy of `gh-pages` so we can keep working on it, but go back to the previous version if we need)_
+
 ![Github 1](images/github-1.png)
+
 - Convert your existing CSS in to Sass following the class guide
 - Make commits to save your changes and sync with your GitHub account online once you are complete
+- Add the link to your assignment site on your GitHub repo pages
+
+![Github 2](images/github-2.png)
+
 - Create a pull request with the title `John Doe - Assignment 3: Sass` (replacing *John Doe* with your name) to turn in your project by 11:59pm Monday night.
-- Make sure to mention atleast two people in your pull request; try to finish early enough so you can give other students enough time to review your work, not at the last minute.
+  - Make sure to mention atleast two people in your pull request; try to finish early enough so you can give other students enough time to review your work, not at the last minute.
+  - Adding the link to your assignment site in your pull request description will help your classmates review your work in the browser easier.
