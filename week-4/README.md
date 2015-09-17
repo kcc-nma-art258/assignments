@@ -340,7 +340,9 @@ We'll cover custom functions in more depth in the coming weeks when we work on C
 - Create a new branch called `week-4-assignment` and convert the in-class example to Sass
 
 ## Homework
-- Once completed with the in-class exercise, create a new branch **off of** `gh-pages` called `week-4-sass`
+Once completed with the in-class exercise...
+- Rename `gh-pages` to `week-3-basic-site` and then create a new `gh-pages` branch **off of** the `week-3-basic-site` branch you just created. _(We're simply making a copy of `gh-pages` so we can keep working on it, but go back to the previous version if we need)_
+![Github 1](images/github-1.png)
 - Convert your existing CSS in to Sass following the class guide
 - Make commits to save your changes and sync with your GitHub account online once you are complete
 - Create a pull request with the title `John Doe - Assignment 3: Sass` (replacing *John Doe* with your name) to turn in your project by 11:59pm Monday night.
