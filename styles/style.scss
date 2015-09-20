@@ -1,3 +1,7 @@
+// Variables
+$header-height: 60px;
+$site-info-width: 100%;
+
 body {
   background-color: black;
 }
@@ -9,29 +13,30 @@ body {
 }
 
 .main-header {
-  height: 60px;
-  background-color: green;
-}
+  height: $header-height;
+  background-color: #ff9999;
 
 .logo {
-  height: 60px;
+  height: $header-height;
   width: 100px;
-  background: grey;
+  background: #ffcccc;
   position: relative;
   float: left;
 }
 
 .main-nav {
-  height: 60px;
+  height: $header-height;
   width: 600px;
-  background-color: lightgrey;
+  background-color: #ff6666;
   position: relative;
   float: right;
 }
 
+}
+
 .hero {
   height: 150px;
-  background-color: pink;
+  background-color: #cccccc;
 }
 
 .columns {
@@ -40,40 +45,40 @@ body {
 
 .site-info-01 {
   height: 150px;
-  background-color: purple;
+  background-color: #ff3333;
 }
 
 .info-01 {
-  width: 49%;
+  width: ($site-info-width / 2) - 1;
   margin: 0 0.5%;
   position: relative;
   float: left;
-  background-color: orange;
+  background-color: #ffcccc;
 }
 
 .info-02 {
-  width: 49%;
+  width: ($site-info-width / 2) - 1;
   margin: 0 0.5%;
   position: relative;
   float: right;
-  background-color: orange;
+  background-color: #ffcccc;
 }
 
 .site-info-02 {
   height: 50px;
-  background-color: pink;
+  background-color: #cccccc;
 }
 
 .site-info-03 {
   height: 150px;
-  background-color: purple;
+  background-color: #0066ff;
 }
 
 .info-03 {
   width: 33%;
   position: relative;
   float: left;
-  background-color: yellow;
+  background-color: #99ccff;
 }
 
 .info-04 {
@@ -81,26 +86,26 @@ body {
   margin: 0 0.5%;
   position: relative;
   float: left;
-  background-color: orange;
+  background-color: #99ccff;
 }
 
 .info-05 {
   width: 33%;
   position: relative;
   float: right;
-  background-color: yellow;
+  background-color: #99ccff;
 }
 
 .site-info-04 {
   height: 150px;
-  background-color: red;
+  background-color: #ff3333;
 }
 
 .info-06 {
   width: 33%;
   position: relative;
   float: left;
-  background-color: orange;
+  background-color: #ffcccc;
 }
 
 .info-07 {
@@ -108,21 +113,22 @@ body {
   margin: 0 0.5%;
   position: relative;
   float: left;
-  background-color: yellow;
+  background-color: #ffcccc;
 }
 
 .info-08 {
   width: 33%;
   position: relative;
   float: right;
-  background-color: orange;
+  background-color: #ffcccc;
 }
 
 .main-footer {
   height: 60px;
-  background-color: blue;
+  background-color: #ff9999;
 }
 
+/*
 .cf:before,
 .cf:after {
   content: "";
@@ -132,3 +138,4 @@ body {
 .cf:after {
   clear: both;
 }
+*/
