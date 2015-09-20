@@ -4,6 +4,7 @@ $height-info: 100px;
 $backgroundcolor-info1: #FFE621;
 $backgroundcolor-info2: #F6F36F;
 $backgroundcolor: lighten(#452045, 10%);
+$color: darken(#7C3A92, 20%);
 
 // Operators
 $site-info-width: 100%;
@@ -55,7 +56,7 @@ body {
 .logo {
   height: $height;
   width: 80px;
-  background: #7F3489;
+  background: $color;
   position: absolute;
   top: 0;
   left: 0;
@@ -76,7 +77,7 @@ body {
   .LibSass {
       height: 80px;
       width: 80px;
-      background-color: lighten(#7C3A92, 10%);
+      background-color: $color;
       float: right;
       margin-left: 20px;
     }
