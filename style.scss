@@ -1,0 +1,148 @@
+// Variables
+$height: 80px;
+$height-info: 100px;
+$backgroundcolor-info1: #FFE621;
+$backgroundcolor-info2: #F6F36F;
+
+// Operators
+$site-info-width: 100%;
+
+
+
+body {
+  background-color: darken(#fff, 20%);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+}
+
+.site-info:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@mixin cf {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    background: white;
+}
+
+.main-header {
+  height: $height;
+  background-color: #222F80;
+  position: relative;
+  @include cf;
+
+
+.logo {
+  height: $height;
+  width: 80px;
+  background: #7F3489;
+  position: absolute;
+  top: 0;
+  left: 0;
+  }
+
+  .main-nav {
+    top: 0;
+    right: 0;
+    height: 80px;
+    width: 600px;
+    float: right;
+
+  .Install,
+  .Learncss,
+  .Blog,
+  .Documentation,
+  .GetInvolved,
+  .LibSass {
+      height: 80px;
+      width: 80px;
+      background-color: lighten(#7C3A92, 10%);
+      float: right;
+      margin-left: 20px;
+    }
+  }
+
+}
+
+.main-section {
+  height: 400px;
+  background-color: #9F86B6;
+  }
+
+
+.site-info {
+  background-color: #9C9C9C;
+  height: auto;
+  @include cf;
+
+.columns {
+  height: $height-info;
+  margin: 0 0 0 1%;
+  }
+
+.info-01,
+.info-02  {
+  background: $backgroundcolor-info1;
+  float: left;
+  width: ($site-info-width / 4) - 1;
+  height: $height-info;
+}
+
+.info-02 {
+  float: right;
+}
+
+.info-03 {
+  background: $backgroundcolor-info1;
+  float: right;
+  width: ($site-info-width / 2) - 1;
+  height: $height-info;
+  }
+
+.info-04,
+.info-05 {
+  background: $backgroundcolor-info2;
+  float: left;
+  width: ($site-info-width / 4) - 1;
+  height: $height-info;
+  }
+
+  .info-05 {
+    float: right;
+  }
+
+.info-06 {
+  background: $backgroundcolor-info2;
+  float: right;
+  width: ($site-info-width / 2) - 1;
+  height: $height-info;
+  }
+}
+
+.columns {
+  margin: 0 0 0 2%;
+}
+
+.main-footer {
+  height: 100px;
+  background-color: lighten(#452045, 10%);
+}
