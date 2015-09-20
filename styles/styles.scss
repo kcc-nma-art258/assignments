@@ -1,0 +1,98 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #ffcc00;
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+    background: white;
+    height: 100%;
+    position: relative;
+}
+
+// Variables
+$header-height: 60px;
+
+  .main-header {
+    position: relative;
+    height: $header-height;
+    background-color: green;
+
+
+  .logo {
+    height: $header-height;
+    width: 100px;
+    background: gray;
+    position: absolute;
+  }
+
+  .main-nav {
+    height: $header-height;
+    width: 400px;
+    background: purple;
+  }
+}
+
+
+.common-height {
+  height: 150px;
+}
+
+.hero {
+  background-color: red;
+}
+
+@mixin cf {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.site-info {
+  background-color: purple;
+  @include cf;
+}
+
+.site-info.common-height {
+  height: 70px;
+
+}
+
+.info-01.columns {
+  background-color: white;
+}
+
+.info-02.columns {
+  background-color: black;
+}
+
+.info-03.columns {
+  background-color: white;
+}
+
+.info-01.columns,
+.info-02.columns,
+.info-03.columns {
+   width: 33%;
+   height: 100%;
+   float: left;
+   margin-right: 0.5%;
+}
+
+.info-03.columns:last-child {
+  margin-right: 0;
+}
+
+
+.main-footer {
+  background-color: blue;
+}

@@ -2,40 +2,41 @@ html,
 body {
   height: 100%;
 }
+
 body {
   background-color: #ffcc00;
 }
+
 .container {
-    width: 960px;
-    margin: 0 auto;
-    background: white;
-    height: 100%;
-    position: relative;
+  width: 960px;
+  margin: 0 auto;
+  background: white;
+  height: 100%;
+  position: relative;
 }
 
-.logo {
+.main-header {
+  position: relative;
+  height: 60px;
+  background-color: green;
+}
+
+.main-header .logo {
   height: 60px;
   width: 100px;
   background: gray;
   position: absolute;
-
 }
 
-.main-nav {
+.main-header .main-nav {
   height: 60px;
   width: 400px;
   background: purple;
 }
 
-
 .common-height {
   height: 150px;
 }
-
-.main-header {
-  background-color: green;
-}
-
 
 .hero {
   background-color: red;
@@ -43,12 +44,20 @@ body {
 
 .site-info {
   background-color: purple;
+}
 
+.site-info:before,
+.site-info:after {
+  content: "";
+  display: table;
+}
+
+.site-info:after {
+  clear: both;
 }
 
 .site-info.common-height {
   height: 70px;
-
 }
 
 .info-01.columns {
@@ -66,17 +75,18 @@ body {
 .info-01.columns,
 .info-02.columns,
 .info-03.columns {
-   width: 33%;
-   height: 100%;
-   float: left;
-   margin-right: 0.5%;
+  width: 33%;
+  height: 100%;
+  float: left;
+  margin-right: 0.5%;
 }
 
 .info-03.columns:last-child {
   margin-right: 0;
 }
 
-
 .main-footer {
   background-color: blue;
 }
+
+/*# sourceMappingURL=styles.css.map */
