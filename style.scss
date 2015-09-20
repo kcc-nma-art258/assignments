@@ -3,6 +3,7 @@ $height: 80px;
 $height-info: 100px;
 $backgroundcolor-info1: #FFE621;
 $backgroundcolor-info2: #F6F36F;
+$backgroundcolor: lighten(#452045, 10%);
 
 // Operators
 $site-info-width: 100%;
@@ -46,7 +47,7 @@ body {
 
 .main-header {
   height: $height;
-  background-color: #222F80;
+  background-color: $backgroundcolor;
   position: relative;
   @include cf;
 
@@ -85,7 +86,7 @@ body {
 
 .main-section {
   height: 400px;
-  background-color: #9F86B6;
+  background-color: #FDFFE2;
   }
 
 
@@ -144,5 +145,5 @@ body {
 
 .main-footer {
   height: 100px;
-  background-color: lighten(#452045, 10%);
+  background-color: $backgroundcolor;
 }
