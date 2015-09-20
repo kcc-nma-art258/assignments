@@ -46,8 +46,6 @@ table {
 	border-spacing: 0;
 }
 /* END OF RESET meyerweb.com/eric/tools/css/reset*/
-
-
 // MIXINS
 @mixin cf {
   &:before,
@@ -69,6 +67,7 @@ table {
 }
 //VARIABLES
 $header-hight: 80px;
+$max-width: 100%;
 
 .container {
   margin: 0 auto;
@@ -76,7 +75,7 @@ $header-hight: 80px;
 }
 header {
   position: relative;
-  width: 100%;
+  width: $max-width;
   height: $header-hight;
   background-color: #EA4335;
 }
@@ -84,7 +83,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80px;
+  width: $max-width/10;
   height: $header-hight;
   background-color: #3375DA;
 }
@@ -93,7 +92,7 @@ header {
   position: absolute;
   top: 0;
   right: 0;
-  width: 70%;
+  width: $max-width - 30%;
   height: $header-hight;
   background-color: #34A853;
 		ul {
@@ -101,7 +100,7 @@ header {
 		}
 		li {
 		  float: left;
-			width: 20%;
+			width: $max-width/5;
 		  margin-right: 6.6%;
 		  height: $header-hight;
 		  background-color: #FBBC05;
@@ -135,7 +134,7 @@ header {
 	@include columns-attributes
 }
 footer {
-  width: 100%;
+  width: $max-width;
   height: 300px;
   background-color: #CECECE;
 }
