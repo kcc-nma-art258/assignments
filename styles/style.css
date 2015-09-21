@@ -8,119 +8,128 @@ body {
   background: pink;
 }
 
+.promotion {
+  height: 50px;
+  background-color: #e6e6fa;
+}
+
 .main-header {
-  height: 60px;
-  background-color: #ff9999;
+  height: 150px;
+  background-color: #ff6666;
+  position: relative;
 }
 
 .main-header .logo {
-  height: 60px;
+  height: 100px;
   width: 100px;
   background: #ffcccc;
-  position: relative;
-  float: left;
+  position: absolute;
+  top: 25px;
+  left: 25px;
 }
 
 .main-header .main-nav {
-  height: 60px;
-  width: 600px;
-  background-color: #ff6666;
-  position: relative;
-  float: right;
+  height: 100px;
+  width: 450px;
+  background-color: #ff9999;
+  position: absolute;
+  top: 25px;
+  right: 25px;
 }
 
 .hero {
   height: 150px;
-  background-color: #cccccc;
+  background-color: #e6e6fa;
 }
 
-.columns {
-  height: 150px;
+.hero-info {
+  height: 200px;
+  background-color: #ffa500;
 }
 
-.site-info-01 {
-  height: 150px;
-  background-color: #ff3333;
-}
-
-.info-01 {
-  width: 49%;
-  margin: 0 0.5%;
-  position: relative;
+.hero-info .hero-info-01 {
+  width: 49.75%;
+  height: 200px;
   float: left;
-  background-color: #ffcccc;
+  background-color: #ffd700;
 }
 
-.info-02 {
-  width: 49%;
-  margin: 0 0.5%;
-  position: relative;
+.hero-info .hero-info-02 {
+  width: 49.75%;
+  height: 200px;
   float: right;
-  background-color: #ffcccc;
+  background-color: #ffd700;
 }
 
-.site-info-02 {
+.site-info {
   height: 50px;
-  background-color: #cccccc;
+  background-color: #e6e6fa;
 }
 
-.site-info-03 {
-  height: 150px;
+.main-info {
+  height: 300px;
   background-color: #0066ff;
 }
 
-.info-03 {
+.main-info:before,
+.main-info:after {
+  content: "";
+  display: table;
+}
+
+.main-info:after {
+  clear: both;
+}
+
+.columns {
   width: 33%;
-  position: relative;
+  height: 150px;
+}
+
+.info-01 {
   float: left;
-  background-color: #99ccff;
+  background-color: #add8e6;
+}
+
+.info-02 {
+  float: left;
+  margin: 0 0.5%;
+  background-color: #add8e6;
+}
+
+.info-03 {
+  float: right;
+  background-color: #add8e6;
 }
 
 .info-04 {
-  width: 33%;
-  margin: 0 0.5%;
-  position: relative;
   float: left;
   background-color: #99ccff;
 }
 
 .info-05 {
-  width: 33%;
-  position: relative;
+  float: left;
+  margin: 0 0.5%;
+  background-color: #99ccff;
+}
+
+.info-06 {
   float: right;
   background-color: #99ccff;
 }
 
-.site-info-04 {
-  height: 150px;
-  background-color: #ff3333;
+.cf:before,
+.cf:after {
+  content: "";
 }
 
-.info-06 {
-  width: 33%;
-  position: relative;
-  float: left;
-  background-color: #ffcccc;
-}
-
-.info-07 {
-  width: 33%;
-  margin: 0 0.5%;
-  position: relative;
-  float: left;
-  background-color: #ffcccc;
-}
-
-.info-08 {
-  width: 33%;
-  position: relative;
-  float: right;
-  background-color: #ffcccc;
+.cf:after {
+  clear: both;
 }
 
 .main-footer {
-  height: 60px;
-  background-color: #ff9999;
+  height: 150px;
+  background-color: #ff6666;
 }
 
 /*
