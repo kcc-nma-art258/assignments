@@ -128,30 +128,3 @@ body {
   float: right;
   background-color: #99ccff;
 }
-
-//Clear Fix
-.cf:before,
-.cf:after {
-  content: "";
-}
-
-.cf:after {
-  clear: both;
-}
-
-.main-footer {
-  height: 150px;
-  background-color: #ff6666;
-}
-
-/*
-.cf:before,
-.cf:after {
-  content: "";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-*/
