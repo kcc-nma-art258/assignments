@@ -1,6 +1,6 @@
 $header-height: 40px;
 $background-color: purple;
-
+$column-width: 25%;
 
 body{
   background-color: blue;
@@ -71,7 +71,7 @@ body{
 
 .info-01.columns {
   height: 200px;
-  width: 25%;
+  width: $column-width;
   background-color: orange;
   margin-left: 0px;
   float:left;
@@ -79,7 +79,7 @@ body{
 
 .info-02.columns {
   height: 200px;
-  width: 25%;
+  width: $column-width;
   background-color: yellow;
   margin-right: 0px;
   float: left;
@@ -87,7 +87,7 @@ body{
 
 .info-03.columns {
   height: 200px;
-  width: 25%;
+  width: $column-width;
   background-color: green;
   margin-right: 0px;
   float: left;
@@ -96,7 +96,7 @@ body{
 
 .info-04.columns {
   height: 200px;
-  width: 25%;
+  width: $column-width;
   background-color: turquoise;
   margin-left: 0px;
   float: left;
