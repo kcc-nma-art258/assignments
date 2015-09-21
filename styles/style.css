@@ -15,7 +15,7 @@ body {
   position: relative;
 }
 
-.logo {
+.main-header .logo {
   height: 40px;
   width: 50px;
   background: gray;
@@ -24,7 +24,7 @@ body {
   left: 5px;
 }
 
-.main-nav {
+.main-header .main-nav {
   height: 40px;
   width: 800px;
   background-color: purple;
