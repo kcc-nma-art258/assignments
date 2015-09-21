@@ -47,6 +47,44 @@ body {
   background-color: red;
 }
 
+.info {
+  height: 200px;
+  background-color: white;
+}
+
+.info-01.columns {
+  height: 200px;
+  width: 25%;
+  background-color: orange;
+  margin-left: 0px;
+  float:left;
+}
+
+.info-02.columns {
+  height: 200px;
+  width: 25%;
+  background-color: yellow;
+  margin-right: 0px;
+  float: left;
+}
+
+.info-03.columns {
+  height: 200px;
+  width: 25%;
+  background-color: green;
+  margin-right: 0px;
+  float: left;
+
+}
+
+.info-04.columns {
+  height: 200px;
+  width: 25%;
+  background-color: turquoise;
+  margin-left: 0px;
+  float: left;
+}
+
 .main-footer {
   height: 300px;
   background-color: purple;
