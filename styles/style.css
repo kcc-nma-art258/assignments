@@ -3,6 +3,16 @@ body {
   height: 100%;
 }
 
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
 .container {
   width: 960px;
   margin: 0 auto;
@@ -44,12 +54,12 @@ body {
 
 .hero {
   height: 700px;
-  background-color: red;
+  background-color: white;
 }
 
 .info {
   height: 200px;
-  background-color: white;
+  background-color: red;
 }
 
 .info-01.columns {
@@ -57,7 +67,7 @@ body {
   width: 25%;
   background-color: orange;
   margin-left: 0px;
-  float:left;
+  float: left;
 }
 
 .info-02.columns {
@@ -74,7 +84,6 @@ body {
   background-color: green;
   margin-right: 0px;
   float: left;
-
 }
 
 .info-04.columns {
