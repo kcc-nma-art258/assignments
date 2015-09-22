@@ -16,28 +16,19 @@ body {
 }
 
 .main-header .logo {
-  height: 40px;
   width: 50px;
   background: gray;
-  position: absolute;
-  top: 10px;
   left: 5px;
 }
 
 .main-header .main-nav {
-  height: 40px;
   width: 800px;
   background-color: purple;
-  position: absolute;
-  top: 10px;
   right: 90px;
 }
 
 .search {
-  height: 38px;
   width: 60px;
-  position: absolute;
-  top: 11px;
   right: 15px;
   background-color: orange;
 }
@@ -62,36 +53,24 @@ body {
   clear: both;
 }
 
-.info-01.columns {
-  height: 200px;
-  width: 25%;
+.info-01-columns {
   background-color: orange;
   margin-left: 0px;
-  float: left;
 }
 
-.info-02.columns {
-  height: 200px;
-  width: 25%;
+.info-02-columns {
   background-color: yellow;
   margin-right: 0px;
-  float: left;
 }
 
-.info-03.columns {
-  height: 200px;
-  width: 25%;
+.info-03-columns {
   background-color: green;
   margin-right: 0px;
-  float: left;
 }
 
-.info-04.columns {
-  height: 200px;
-  width: 25%;
+.info-04-columns {
   background-color: turquoise;
   margin-left: 0px;
-  float: left;
 }
 
 .main-footer {
