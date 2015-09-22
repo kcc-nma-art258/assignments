@@ -1,0 +1,115 @@
+body {
+  background-color: white;
+  font: normal normal 300 16px/1.5 "Open Sans", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.logo,
+.main-nav,
+.search,
+.hero,
+.columns,
+.main-footer {
+  background-color: #FCFCFC;
+  border: 1px solid #333;
+  border-radius: 1px;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.main-header,
+.search,
+.hero,
+.site-info,
+.main-footer {
+  margin-bottom: 1rem;
+}
+
+.main-header {
+  position: relative;
+  height: 60px;
+}
+
+.main-header .logo,
+.main-header .main-nav {
+  position: absolute;
+  line-height: 60px;
+}
+
+.main-header .logo {
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100px;
+}
+
+.main-header .main-nav {
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 400px;
+}
+
+.main-header .main-nav li {
+  display: inline-block;
+}
+
+.search {
+  height: 100px;
+}
+
+.hero {
+  height: 200px;
+}
+
+.site-info {
+  height: auto;
+}
+
+.site-info:before,
+.site-info:after {
+  content: "";
+  display: table;
+}
+
+.site-info:after {
+  clear: both;
+}
+
+.site-info .columns {
+  height: 100px;
+  margin: 0 0 0 1%;
+}
+
+.site-info .columns:first-child {
+  margin: 0;
+}
+
+.site-info .info-01,
+.site-info .info-02 {
+  width: 24%;
+}
+
+.site-info .info-03 {
+  width: 49%;
+}
+
+.info-01 {
+  float: left;
+}
+
+.info-02,
+.info-03 {
+  float: right;
+}
+
+.main-footer {
+  height: 200px;
+}
+
+/*# sourceMappingURL=style.css.map */
