@@ -4,7 +4,7 @@ $header-position: absolute;
 $header-top: 5px;
 
 // Mixins
-@mixins header {
+@mixin header {
   height:$header-height;
   position:$header-position;
   top:$header-top;
