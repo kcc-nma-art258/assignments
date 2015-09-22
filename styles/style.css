@@ -3,6 +3,16 @@ body {
   height: 100%;
 }
 
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
 .container {
   width: 960px;
   margin: 0 auto;
@@ -16,19 +26,28 @@ body {
 }
 
 .main-header .logo {
+  height: 40px;
   width: 50px;
   background: gray;
+  position: absolute;
+  top: 10px;
   left: 5px;
 }
 
 .main-header .main-nav {
+  height: 40px;
   width: 800px;
   background-color: purple;
+  position: absolute;
+  top: 10px;
   right: 90px;
 }
 
 .search {
+  height: 38px;
   width: 60px;
+  position: absolute;
+  top: 11px;
   right: 15px;
   background-color: orange;
 }
@@ -43,34 +62,36 @@ body {
   background-color: red;
 }
 
-.info:before,
-.info:after {
-  content: "";
-  display: table;
-}
-
-.info:after {
-  clear: both;
-}
-
-.info-01-columns {
+.info-01.columns {
+  height: 200px;
+  width: 25%;
   background-color: orange;
   margin-left: 0px;
+  float: left;
 }
 
-.info-02-columns {
+.info-02.columns {
+  height: 200px;
+  width: 25%;
   background-color: yellow;
   margin-right: 0px;
+  float: left;
 }
 
-.info-03-columns {
+.info-03.columns {
+  height: 200px;
+  width: 25%;
   background-color: green;
   margin-right: 0px;
+  float: left;
 }
 
-.info-04-columns {
+.info-04.columns {
+  height: 200px;
+  width: 25%;
   background-color: turquoise;
   margin-left: 0px;
+  float: left;
 }
 
 .main-footer {

@@ -1,32 +1,21 @@
-
-@mixin header{
-  $header-height: 40px;
-  $header-top: 10px;
-  $header-position: absolute;
-}
-
-@mixin column{
-  $column-width: 25%;
-  $column-height: 200px;
-  $column-float: left;
-}
-
+$header-height: 40px;
+$column-width: 25%;
 
 body{
   background-color: blue;
   height: 100%;
 }
-@mixin cf {
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
 
-  &:after {
-    clear: both;
-  }
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
 }
+
+.cf:after {
+  clear: both;
+}
+
 
 .container{
   width:960px;
@@ -40,25 +29,31 @@ body{
   position: relative;
 
 .logo{
+  height: $header-height;
   width: 50px;
   background: gray;
+  position: absolute;
+  top: 10px;
   left: 5px;
-  @include header;
 }
 
 .main-nav{
+  height:40px;
   width:800px;
   background-color:purple;
+  position:absolute;
+  top:10px;
   right:90px;
-  @include header;
   }
 }
 
 .search{
+  height:38px;
   width: 60px;
+  position: absolute;
+  top: 11px;
   right: 15px;
   background-color: orange;
-  @include header;
 }
 
 
@@ -71,34 +66,42 @@ body{
 .info {
   height: 200px;
   background-color: red;
-  @include cf;
 }
 
-.info-01-columns {
+.info-01.columns {
+  height: 200px;
+  width: $column-width;
   background-color: orange;
   margin-left: 0px;
-  @include header;
+  float:left;
 }
 
-.info-02-columns {
+.info-02.columns {
+  height: 200px;
+  width: $column-width;
   background-color: yellow;
   margin-right: 0px;
-  @include header;
+  float: left;
 }
 
-.info-03-columns {
+.info-03.columns {
+  height: 200px;
+  width: $column-width;
   background-color: green;
   margin-right: 0px;
-  @include header;
+  float: left;
+
 }
 
-.info-04-columns {
+.info-04.columns {
+  height: 200px;
+  width: $column-width;
   background-color: turquoise;
   margin-left: 0px;
-  @include header;
+  float: left;
 }
 
 .main-footer{
   height: 300px;
-  background-color:purple;
+  background-color: purple;
 }
