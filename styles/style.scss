@@ -73,7 +73,7 @@ header {
 .info-01 {
 	float: left;
   background-color: #B3CEB3;
-	@include columns-attributes
+	@include columns-attributes;
 }
 .info-02 {
 	float: left;
