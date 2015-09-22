@@ -3,16 +3,6 @@ body {
   height: 100%;
 }
 
-.cf:before,
-.cf:after {
-  content: "";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
 .container {
   width: 960px;
   margin: 0 auto;
@@ -60,6 +50,16 @@ body {
 .info {
   height: 200px;
   background-color: red;
+}
+
+.info:before,
+.info:after {
+  content: "";
+  display: table;
+}
+
+.info:after {
+  clear: both;
 }
 
 .info-01.columns {
