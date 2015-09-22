@@ -42,13 +42,13 @@ html {
 }
 
 .main-header {
-  $header-height: 60px;
+  height: $header-height;
   background-color: green;
   position: relative;
 }
 
 .main-header .main-nav {
-  $header-height: 60px;
+  height: $header-height;
   width: 60%;
   background: yellowgreen;
   position: relative;
@@ -56,7 +56,7 @@ html {
 }
 
 .main-header .logo {
-  $header-height: 60px;
+  height: $header-height;
   width: 150px;
   background: gray;
   position: absolute;
