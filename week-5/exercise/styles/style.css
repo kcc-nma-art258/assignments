@@ -2,16 +2,6 @@ body {
   background-color: #FFCC00;
 }
 
-cf:before,
-cf:after {
-  content: "";
-  display: table;
-}
-
-cf:after {
-  clear: both;
-}
-
 .container {
   width: 960px;
   margin: 0 auto;
@@ -34,7 +24,7 @@ cf:after {
   left: 0;
   height: 60px;
   width: 100px;
-  background-color: gray;
+  background-color: grey;
 }
 
 .main-nav {
@@ -64,6 +54,16 @@ cf:after {
   background-color: purple;
 }
 
+.site-info:before,
+.site-info:after {
+  content: "";
+  display: table;
+}
+
+.site-info:after {
+  clear: both;
+}
+
 .site-info .columns {
   height: 100px;
   margin: 0 0 0 1%;
@@ -88,7 +88,7 @@ cf:after {
 }
 
 .info-02 {
-  background-color: gainsboro;
+  background-color: grey;
 }
 
 .info-03 {
@@ -104,3 +104,5 @@ cf:after {
   height: 200px;
   background-color: blue;
 }
+
+/*# sourceMappingURL=style.css.map */
