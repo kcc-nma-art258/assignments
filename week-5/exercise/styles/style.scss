@@ -1,6 +1,4 @@
-body {
-  background-color: #FFCC00;
-}
+$full-height: 100%;
 
 @mixin cf {
   &:before,
@@ -14,88 +12,106 @@ body {
   }
 }
 
+// Mixins
+@mixin frame {
+  background-color: #FCFCFC;
+  border: 1px solid #333;
+  border-radius: 1px;
+  height: $full-height;
+  vertical-align: middle;
+  text-align: center;
+}
+
+body {
+  background-color: white;
+  font: normal normal 300 16px/1.5 'Open Sans', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
 .container {
   width: 960px;
   margin: 0 auto;
-  background-color: white;
+}
+
+.logo,
+.main-nav,
+.search,
+.hero,
+.columns,
+.main-footer {
+  @include frame;
+}
+
+.main-header,
+.search,
+.hero,
+.site-info,
+.main-footer {
+  margin-bottom: 1rem;
 }
 
 .main-header {
   position: relative;
   height: 60px;
-  background-color: green;
-}
 
-.logo,
-.main-nav {
-  position: absolute;
-}
+  .logo,
+  .main-nav {
+    position: absolute;
+    line-height: 60px;
+  }
 
-.logo {
-  top: 0;
-  left: 0;
-  height: 60px;
-  width: 100px;
-  background-color: grey;
-}
+  .logo {
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100px;
+  }
 
-.main-nav {
-  top: 0;
-  right: 0;
-  height: 60px;
-  width: 400px;
-  background-color: grey;
-}
+  .main-nav {
+    top: 0;
+    right: 0;
+    height: 60px;
+    width: 400px;
 
-.main-nav li {
-  display: inline-block;
+    li {
+      display: inline-block;
+    }
+  }
 }
 
 .search {
   height: 100px;
-  background-color: green;
 }
 
 .hero {
   height: 200px;
-  background-color: white;
 }
 
 .site-info {
   height: auto;
-  background-color: purple;
   @include cf;
-}
 
-.site-info .columns {
-  height: 100px;
-  margin: 0 0 0 1%;
-}
 
-.columns:first-child {
-  margin: 0;
-}
+  .columns {
+    height: 100px;
+    margin: 0 0 0 1%;
+  }
 
-.site-info .info-01,
-.site-info .info-02 {
-  width: 24%;
-}
+  .columns:first-child {
+    margin: 0;
+  }
 
-.site-info .info-03 {
-  width: 50%;
+  .info-01,
+  .info-02 {
+    width: 24%;
+  }
+
+  .info-03 {
+    width: 49%;
+  }
 }
 
 .info-01 {
-  background-color: grey;
   float: left;
-}
-
-.info-02 {
-  background-color: grey;
-}
-
-.info-03 {
-  background-color: darkgray;
 }
 
 .info-02,
@@ -105,5 +121,4 @@ body {
 
 .main-footer {
   height: 200px;
-  background-color: blue;
 }
