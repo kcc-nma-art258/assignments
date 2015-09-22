@@ -52,8 +52,8 @@ header {
 		}
 		li {
 		  float: left;
+      margin-right: 6.6%;
 			width: $max-width/5;
-		  margin-right: 6.6%;
 		  height: $header-height;
 		  background-color: #FBBC05;
 				&:last-child {
@@ -78,15 +78,15 @@ header {
 .info-02 {
 	float: left;
   background-color: #8EB18E;
-	@include columns-attributes
+	@include columns-attributes;
 }
 .info-03 {
 	float: right;
   background-color: #689C68;
-	@include columns-attributes
+	@include columns-attributes;
 }
 footer {
-  width: $max-width;
   height: 300px;
+  width: $max-width;
   background-color: #CECECE;
 }
