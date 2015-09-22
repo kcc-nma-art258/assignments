@@ -1,0 +1,124 @@
+$full-height: 100%;
+
+@mixin cf {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+ }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Mixins
+@mixin frame {
+  background-color: #FCFCFC;
+  border: 1px solid #333;
+  border-radius: 1px;
+  height: $full-height;
+  vertical-align: middle;
+  text-align: center;
+}
+
+body {
+  background-color: white;
+  font: normal normal 300 16px/1.5 'Open Sans', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.logo,
+.main-nav,
+.search,
+.hero,
+.columns,
+.main-footer {
+  @include frame;
+}
+
+.main-header,
+.search,
+.hero,
+.site-info,
+.main-footer {
+  margin-bottom: 1rem;
+}
+
+.main-header {
+  position: relative;
+  height: 60px;
+
+  .logo,
+  .main-nav {
+    position: absolute;
+    line-height: 60px;
+  }
+
+  .logo {
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100px;
+  }
+
+  .main-nav {
+    top: 0;
+    right: 0;
+    height: 60px;
+    width: 400px;
+
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.search {
+  height: 100px;
+}
+
+.hero {
+  height: 200px;
+}
+
+.site-info {
+  height: auto;
+  @include cf;
+
+
+  .columns {
+    height: 100px;
+    margin: 0 0 0 1%;
+  }
+
+  .columns:first-child {
+    margin: 0;
+  }
+
+  .info-01,
+  .info-02 {
+    width: 24%;
+  }
+
+  .info-03 {
+    width: 49%;
+  }
+}
+
+.info-01 {
+  float: left;
+}
+
+.info-02,
+.info-03 {
+  float: right;
+}
+
+.main-footer {
+  height: 200px;
+}
