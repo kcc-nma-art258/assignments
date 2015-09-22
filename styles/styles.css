@@ -7,6 +7,20 @@ body {
   background-color: #ffcc00;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+.main-header,
+.hero,
+.site-info,
+.main-footer {
+  height: 150px;
+}
+
 .container {
   width: 960px;
   margin: 0 auto;
@@ -44,6 +58,7 @@ body {
 
 .site-info {
   background-color: purple;
+  height: 70px;
 }
 
 .site-info:before,
@@ -56,32 +71,26 @@ body {
   clear: both;
 }
 
-.site-info.common-height {
-  height: 70px;
-}
-
-.info-01.columns {
+.info-01 {
   background-color: white;
 }
 
-.info-02.columns {
+.info-02 {
   background-color: black;
 }
 
-.info-03.columns {
+.info-03 {
   background-color: white;
 }
 
-.info-01.columns,
-.info-02.columns,
-.info-03.columns {
+.columns {
   width: 33%;
   height: 100%;
   float: left;
   margin-right: 0.5%;
 }
 
-.info-03.columns:last-child {
+.columns:last-child {
   margin-right: 0;
 }
 
