@@ -1,3 +1,19 @@
+// Variables
+$header-height: 60px;
+
+@mixin cf {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
 *,
 *:before,
 *:after {
@@ -11,14 +27,13 @@ html {
 }
 
 .frame {
-  background-color: #FCFCFC;
-  border: 5px solid #333;
-  border-radius: 1px;
-  height: 100%;
-  vertical-align: middle;
-  text-align: center;
+    background-color: #FCFCFC;
+    border: 5px solid #333;
+    border-radius: 1px;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
 }
-
 .container {
   width: 960px;
   margin: 0 auto;
@@ -27,11 +42,13 @@ html {
 }
 
 .main-header {
+  $header-height: 60px;
   background-color: green;
   position: relative;
 }
 
 .main-header .main-nav {
+  $header-height: 60px;
   width: 60%;
   background: yellowgreen;
   position: relative;
@@ -39,6 +56,7 @@ html {
 }
 
 .main-header .logo {
+  $header-height: 60px;
   width: 150px;
   background: gray;
   position: absolute;
@@ -60,6 +78,7 @@ html {
   height: 4em;
   border-left: 0 none;
   border-right: 0 none;
+
   /* Scrolling section */
   overflow-y: hidden;
   overflow-x: scroll;
@@ -76,6 +95,7 @@ html {
   line-height: 31.25rem;
 }
 
+
 .main-footer {
   height: 350px;
   background-color: blue;
@@ -85,7 +105,6 @@ body {
   background-color: #FFCC00;
 }
 
-/*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
