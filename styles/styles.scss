@@ -1,5 +1,6 @@
+// Variables
 $full-width: 100%;
-$full-height: 200px;
+$section-height: 200px;
 
 body {
   background-color: #FFFFFF;
@@ -23,6 +24,7 @@ body {
   position: absolute;
   top: 0;
   left: 47%;
+  border-radius: 50%;
 }
 
 .main-nav {
@@ -48,21 +50,21 @@ body {
 .cf:after {
   clear: both;
 }
-
+@mixin site {
+  height: $section-height;
+  width: $full-width;
+}
 .site-info1 {
-  height: 200px;
-  $full-width: 100%;
-  background-color: purple;
-}
-
-.site-info2 {
-  height: 200px;
-  $full-width: 100%;
+    @include site;
+   background-color: purple;
+ }
+ .site-info2 {
+   @include site;
   background-color: pink;
-}
+ }
 
 .columns {
-  height: 100%;
+  height: $section-height;
   float: left;
   width: 225px;
   margin-right: 20px;
@@ -103,13 +105,8 @@ body {
 .info-08 {
   background-color: green;
 }
-
-
-
-
-
 .main-footer {
-  height: 200px;
   $full-width: 100%;
+  $section-height: 200px;
   background-color: blue;
 }
