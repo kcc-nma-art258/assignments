@@ -385,8 +385,9 @@ We just need to do a little bit of CSS magic to get our layout to render as expe
 
 The negative margins on the parent row will counteract the left padding and right padding of the first and last column, respectively.
 
-**Now we have our basic grid:**
+**Now we have a basic grid:**
 
+**grid.html**
 ```html
 <div class="container">
     <div class="row">
@@ -459,6 +460,38 @@ Now that we have our grid, making it accommodate smaller screens is relatively s
 The first thing we did is give all elements matching the `.col-` class name scheme a `width: 100;`. This gives us the styling we need, but we only want it to apply when we're on small screens. In our `@for` loop, we've wrapped our width styles in a media query that is applied on screens **larger than 600px width**. 
 
 So... if the screen size is less than 600px, our columns are 100% width; anything larger than 600px gets our specific `.col-` class width sizes.
+
+#### Our complete grid
+
+**layouts/_grid.scss**
+```scss
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.row {
+  margin-left: -1em;
+  margin-right: -1em;
+  @include cf;
+}
+
+[class^="col-"] {
+  width: 100%;
+  float: left;
+  min-height: 1px; 
+  padding: 0 1em;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} { 
+    @media screen only and (min-width: 600px){
+      width: 100% / $i; 
+    }
+  }
+}
+```
 
 ## Homework
 - Rename `gh-pages` to `assignment-4`. Publish the `assignment-4` branch. Switch back to the `gh-pages` branch. _(We're simply making a copy of `gh-pages` so we can keep working on it, but go back to the previous version if we need)_
