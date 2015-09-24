@@ -10,6 +10,7 @@ Replicating visual designs perfectly in code is just one side and challenge of w
 By focusing on good CSS architecture, we can answer yes to the above questions and have confidence that our code will stand the test of time.
 
 **Table of Contents**
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
@@ -23,6 +24,15 @@ By focusing on good CSS architecture, we can answer yes to the above questions a
   - [Connecting them all together](#connecting-them-all-together)
 - [General guidelines for CSS architecture:](#general-guidelines-for-css-architecture)
 - [Resources](#resources)
+- [CSS Frameworks](#css-frameworks)
+  - [Grids](#grids)
+    - [Container](#container)
+    - [Rows](#rows)
+    - [Columns](#columns)
+      - [Column widths](#column-widths)
+      - [Column gutters](#column-gutters)
+  - [Responsive grids](#responsive-grids)
+- [Homework](#homework)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -166,7 +176,7 @@ Since we broke everything out in to separate files, our `style.scss` (and subseq
 ```scss
 // Base
 @import "base/reset";
-@import "base/reset";
+@import "base/utilities";
 
 // Layout
 @import "layout/header";
@@ -199,8 +209,270 @@ Now we're ready to grow our CSS with our site! However, this is simply one recom
   - used multiple times + a big section == `layout/`
   - used multiple times + smaller section == `module/`
   - only used for one page, no matter the size == `pages/`
-- If you are including files from other sources, ie. `bootstrap.scss`, you can add a `vendor/` directory to organize code from vendor sources.
+- If you are including files from other sources, ie. `animate.scss`, you can add a `vendor/` directory to organize code from vendor sources.
 
 ## Resources
 - [How to structure a Sass project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
 - [Sitepoint: Architecture for a Sass Project](http://www.sitepoint.com/architecture-sass-project/)
+
+## CSS Frameworks
+
+When developing websites, especially in the early stages of prototyping, it can be helpful to reuse code to solve common problems.
+
+> “[Framework is] a set of tools, libraries, conventions, and best practices that attempt to **abstract routine tasks into generic modules that can be reused**. The goal here is to allow the designer or developer to focus on tasks that are unique to a given project, rather than reinventing the wheel each time around.” [[Framework For Designers](http://www.alistapart.com/articles/frameworksfordesigners), by _Jeff Croft_] 
+
+While popular frameworks like [Foundation](http://foundation.zurb.com) and [Bootstrap](http://getbootstrap.com) are a great base, they have their own generic design opinion and may not match your own particular coding style. A few reasons why creating your own custom framework is a good idea:
+
+- Increase your productivity and avoid common mistakes.
+- Develop a common set of styles which match more closely to your own design style. 
+- Tailor specific CSS to your needs. If you need specific elements (like footers, widgets, comments, feeds etc.), style your own commonly used web elements
+- Write minimal-to-no code while prototyping; write only unique code while developing
+
+At a hight level, the basic building blocks involved in a CSS framework are:
+- Grid
+- Typography
+- Base layout
+- Form elements & controls
+
+We can always add more styles to our framework, but this is a good place to start.
+
+### Grids
+
+The first and most important part of creating your own framework is developing a grid. Grids help us establish a consistent rhythm and create proper proportions throughout our design.
+
+CSS grids contain a few common elements which should look and feel familiar:
+
+![basic grid](images/basic-grid.png)
+
+A CSS grid contains the following components, similar to a print grid:
+- container
+- rows
+- columns
+- gutters (space inbetween columns)
+
+#### Container
+Grids start with a wrapping container, which we already have. Below are the changes we need to make:
+
+**layouts/_grid.scss**
+
+```css
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+```
+We're essentially saying that our grid should be 100% width on screens equal to or less than 960px.
+
+#### Rows
+
+A row is essentially our container for columns and structuring vertical rhythm on the page. We'll be floating our columns, so we need to make sure that our rows are cleared (using our clearfix mixin).
+
+```scss
+.row {
+  @include cf;
+}
+```
+
+#### Columns
+
+Columns are the tricky part! While there are many ways to position things in CSS, the `float` property is actually the most straight-forward and bulletproof way of creating column layouts.
+
+```css
+[class^='col-'] {
+  float: left;
+  min-height: 1px; 
+}
+```
+
+That fancy selector up there is known as an [_attribute selector_](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors), and it essentially lets us style elements in CSS using more sophisticated targeting. Here we are saying _"style any element with a class name that **starts with** `col-`"_. That naming structure will make sense here shortly.
+
+##### Column widths
+
+Column widths can be calculated using some basic math. Since our `.container` has a `width: 100%`, then our column classes are just **100 divided by the number of columns**. We're going to start with a 12 column grid and use Sass to generate our grid columns widths automatically.
+
+```scss
+@for $i from 1 through 12 {
+  .col-#{$i} { 
+    width: 100% / $i; 
+  }
+}
+```
+
+That fancy piece of code up there is called a _"for loop"_ using Sass's [`@for` directive](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#_10). What it does is repeat the code inside the outer brackets as many times as the number after "through". Let's see what it outputs:
+
+
+```css
+
+
+.col-1 {
+  width: 100%;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+.col-3 {
+  width: 33.33333%;
+}
+
+.col-4 {
+  width: 25%;
+}
+
+.col-5 {
+  width: 20%;
+}
+
+.col-6 {
+  width: 16.66667%;
+}
+
+.col-7 {
+  width: 14.28571%;
+}
+
+.col-8 {
+  width: 12.5%;
+}
+
+.col-9 {
+  width: 11.11111%;
+}
+
+.col-10 {
+  width: 10%;
+}
+
+.col-11 {
+  width: 9.09091%;
+}
+
+.col-12 {
+  width: 8.33333%;
+}
+```
+
+**So how did that work?**
+
+In our `@for` loop, `$i` represents the current number in the loop, so each time it loops, it increments the current number, and we can use that to give our columns class names a unique postfix and within our math expression to create the appropriate grid widths. Pretty awesome right?!
+
+##### Column gutters
+
+This is where `box-sizing: border-box` is extremely helpful. Since the `border-box` setting means that our padding will not affect the width, we can add padding to our main `.col-` class and everything should remain intact.
+
+```css
+[class^='col-'] {
+  float: left;
+  min-height: 1px; 
+  padding: 0 1em;
+}
+```
+This almost perfect, except are columns technically don't reach the edge, so our layout _appears_ `940px` wide instead of `960px`.
+
+![basic grid 2](images/basic-grid-2.png)
+
+We just need to do a little bit of CSS magic to get our layout to render as expected.
+
+```scss
+.row {
+  margin-left: -1em;
+  margin-right: -1em;
+  @include cf;
+}
+```
+
+The negative margins on the parent row will counteract the left padding and right padding of the first and last column, respectively.
+
+**Now we have our basic grid:**
+
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-12">12</div>  
+    </div> 
+    <div class="row">
+        <div class="col-6">6</div> 
+        <div class="col-6">6</div> 
+    </div> 
+    <div class="row">
+        <div class="col-4">4</div> 
+        <div class="col-4">4</div> 
+        <div class="col-4">4</div> 
+    </div> 
+    <div class="row">
+        <div class="col-3">3</div> 
+        <div class="col-3">3</div> 
+        <div class="col-3">3</div> 
+        <div class="col-3">3</div> 
+    </div> 
+    <div class="row">
+        <div class="col-2">2</div> 
+        <div class="col-2">2</div> 
+        <div class="col-2">2</div> 
+        <div class="col-2">2</div>
+        <div class="col-2">2</div> 
+        <div class="col-2">2</div> 
+    </div> 
+    <div class="row">
+        <div class="col-1">1</div> 
+        <div class="col-1">1</div> 
+        <div class="col-1">1</div> 
+        <div class="col-1">1</div>
+        <div class="col-1">1</div> 
+        <div class="col-1">1</div> 
+        <div class="col-1">1</div> 
+        <div class="col-1">1</div> 
+        <div class="col-1">1</div> 
+        <div class="col-1">1</div>
+        <div class="col-1">1</div> 
+        <div class="col-1">1</div> 
+    </div> 
+</div>
+```
+Now that we have our grid, let's make it responsive!
+
+### Responsive grids
+
+Now that we have our grid, making it accommodate smaller screens is relatively simple and straightforward from here. For simplicity, general best practice for smaller screens is to make your columns `width: 100%;` and to stack them up:
+
+```scss
+[class^='col-'] {
+  width: 100%;
+  float: left;
+  min-height: 1px; 
+  padding: 0 1em;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} { 
+    @media screen only and (min-width: 600px){
+      width: 100% / $i; 
+    }
+  }
+}
+```
+
+**What's going on here?**
+
+The first thing we did is give all elements matching the `.col-` class name scheme a `width: 100;`. This gives us the styling we need, but we only want it to apply when we're on small screens. In our `@for` loop, we've wrapped our width styles in a media query that is applied on screens **larger than 600px width**. 
+
+So... if the screen size is less than 600px, our columns are 100% width; anything larger than 600px gets our specific `.col-` class width sizes.
+
+## Homework
+- Rename `gh-pages` to `assignment-4`. Publish the `assignment-4` branch. Switch back to the `gh-pages` branch. _(We're simply making a copy of `gh-pages` so we can keep working on it, but go back to the previous version if we need)_
+
+![Github 1](../week-4/images/github-1.png)
+
+- Structure your existing SCSS following the class guide
+- Make commits to save your changes and sync with your GitHub account online once you are complete
+- Add the link to your assignment site on your GitHub repo pages
+
+![Github 2](../week-4/images/github-2.png)
+
+- Create a pull request with the title `NMA Bot - Assignment 4: CSS Architecture` (replacing *NMA Bot* with your name) to turn in your project by 11:59pm Monday night.
+  - Make sure to mention atleast two people in your pull request; try to finish early enough so you can give other students enough time to review your work, not at the last minute.
+  - Adding the link to your assignment site in your pull request description will help your classmates review your work in the browser easier.
+
+ - The assignment will use the following grading requirements: site should include `base/`, `layout/`, `modules/`, and `pages/` directories with atleast one example of a sass file in each. Your main `style.scss` file should include multiple imports, and the final output `style.css` should be relatively similar to the previous homework, barring file reordering.

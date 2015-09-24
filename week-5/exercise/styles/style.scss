@@ -28,7 +28,8 @@ body {
 }
 
 .container {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -121,4 +122,8 @@ body {
 
 .main-footer {
   height: 200px;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} { width: 100% / $i; }
 }
