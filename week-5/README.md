@@ -557,7 +557,7 @@ So... if the screen size is less than 600px, our columns are 100% width; anythin
 
 @for $i from 1 through 12 {
   .col-#{$i} { 
-    @media screen only and (min-width: 600px){
+    @media screen and (min-width: 600px){
       width: 100% / $i; 
     }
   }
