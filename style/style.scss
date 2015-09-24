@@ -20,6 +20,26 @@ body {
 
 // Nesting
 
+.logo {
+  height: $header-height;
+  width: 150px;
+  background: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  h1 {
+    color: blue;
+    text-align: center;
+
+  }
+
+}
+
+.main-header {
+  background-color: green;
+}
+
 .container {
   width: 960px;
   margin: 0 auto;
@@ -86,14 +106,7 @@ body {
   height: $header-height;
 
 }
-.logo {
-  height: $header-height;
-  width: 150px;
-  background: red;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
+
 
 .main-nav {
   height: $header-height;
