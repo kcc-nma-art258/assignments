@@ -388,6 +388,8 @@ We just need to do a little bit of CSS magic to get our layout to render as expe
 
 The negative margins on the parent row will counteract the left padding and right padding of the first and last column, respectively.
 
+![basic grid 3](images/basic-grid-3.png)
+
 **Now we have a basic grid:**
 
 **grid.html**
