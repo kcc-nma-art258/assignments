@@ -32,6 +32,7 @@ By focusing on good CSS architecture, we can answer yes to the above questions a
       - [Column widths](#column-widths)
       - [Column gutters](#column-gutters)
   - [Responsive grids](#responsive-grids)
+    - [Our complete grid](#our-complete-grid)
 - [Homework](#homework)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
