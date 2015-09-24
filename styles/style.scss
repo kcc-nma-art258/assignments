@@ -59,6 +59,8 @@ body {
   background: yellowgreen;
   position: relative;
   float: right;
+  @include cf;
+
 }
 
 .main-header .logo {
