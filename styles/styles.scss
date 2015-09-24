@@ -13,28 +13,7 @@ body {
     position: relative;
 }
 
-// Variables
-$header-height: 60px;
 
-  .main-header {
-    position: relative;
-    height: $header-height;
-    background-color: green;
-
-
-  .logo {
-    height: $header-height;
-    width: 100px;
-    background: gray;
-    position: absolute;
-  }
-
-  .main-nav {
-    height: $header-height;
-    width: 400px;
-    background: purple;
-  }
-}
 
 
 .common-height {
@@ -45,17 +24,7 @@ $header-height: 60px;
   background-color: red;
 }
 
-@mixin cf {
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
 
-  &:after {
-    clear: both;
-  }
-}
 
 .site-info {
   background-color: purple;
