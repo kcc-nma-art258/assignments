@@ -33,6 +33,7 @@ body {
   line-height: 1;
 }
 
+<<<<<<< HEAD
 ol, ul {
   list-style: none;
 }
@@ -50,6 +51,12 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+=======
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+>>>>>>> kcc-nma-art258/master
 }
 
 .logo,
@@ -153,4 +160,61 @@ table {
   float: right;
 }
 
+<<<<<<< HEAD
+=======
+.main-footer {
+  height: 200px;
+}
+
+.col-1 {
+  width: 100%;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+.col-3 {
+  width: 33.33333%;
+}
+
+.col-4 {
+  width: 25%;
+}
+
+.col-5 {
+  width: 20%;
+}
+
+.col-6 {
+  width: 16.66667%;
+}
+
+.col-7 {
+  width: 14.28571%;
+}
+
+.col-8 {
+  width: 12.5%;
+}
+
+.col-9 {
+  width: 11.11111%;
+}
+
+.col-10 {
+  width: 10%;
+}
+
+.col-11 {
+  width: 9.09091%;
+}
+
+.col-12 {
+  width: 8.33333%;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+>>>>>>> kcc-nma-art258/master
 /*# sourceMappingURL=style.css.map */
