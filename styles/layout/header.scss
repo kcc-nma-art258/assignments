@@ -1,0 +1,22 @@
+.main-header {
+  height: $header-height;
+  background-color: green;
+  position: relative;
+}
+
+.main-header .main-nav {
+  height: $header-height;
+  width: 60%;
+  background: yellowgreen;
+  position: relative;
+  float: right;
+}
+
+.main-header .logo {
+  height: $header-height;
+  width: 150px;
+  background: gray;
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
