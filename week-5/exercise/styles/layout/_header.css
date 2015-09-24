@@ -1,0 +1,38 @@
+.main-header,
+.search,
+.hero,
+.site-info,
+.main-footer {
+  margin-bottom: 1rem;
+}
+
+.main-header {
+  position: relative;
+  height: 60px;
+}
+
+.main-header .logo,
+.main-header .main-nav {
+  position: absolute;
+  line-height: 60px;
+}
+
+.main-header .logo {
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100px;
+}
+
+.main-header .main-nav {
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 400px;
+}
+
+.main-header .main-nav li {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=_header.css.map */
