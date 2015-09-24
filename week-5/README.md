@@ -399,46 +399,108 @@ The negative margins on the parent row will counteract the left padding and righ
 **grid.html**
 ```html
 <div class="container">
+  <div class="row">
+        <div class="col-1">1</div>  
+    </div> 
     <div class="row">
-        <div class="col-12">12</div>  
+        <div class="col-2">2</div> 
+        <div class="col-2">2</div> 
+    </div> 
+    <div class="row">
+        <div class="col-3">3</div> 
+        <div class="col-3">3</div> 
+        <div class="col-3">3</div> 
+    </div> 
+    <div class="row">
+        <div class="col-4">4</div> 
+        <div class="col-4">4</div> 
+        <div class="col-4">4</div> 
+        <div class="col-4">4</div> 
+    </div> 
+    <div class="row">
+        <div class="col-5">5</div> 
+        <div class="col-5">5</div> 
+        <div class="col-5">5</div> 
+        <div class="col-5">5</div> 
+        <div class="col-5">5</div> 
     </div> 
     <div class="row">
         <div class="col-6">6</div> 
         <div class="col-6">6</div> 
+        <div class="col-6">6</div> 
+        <div class="col-6">6</div> 
+        <div class="col-6">6</div>
+        <div class="col-6">6</div>
+    </div>  
+    <div class="row">
+        <div class="col-7">7</div> 
+        <div class="col-7">7</div> 
+        <div class="col-7">7</div> 
+        <div class="col-7">7</div> 
+        <div class="col-7">7</div>
+        <div class="col-7">7</div> 
+        <div class="col-7">7</div> 
+    </div>
+    <div class="row">
+        <div class="col-8">8</div> 
+        <div class="col-8">8</div> 
+        <div class="col-8">8</div> 
+        <div class="col-8">8</div> 
+        <div class="col-8">8</div>
+        <div class="col-8">8</div> 
+        <div class="col-8">8</div> 
+        <div class="col-8">8</div> 
     </div> 
     <div class="row">
-        <div class="col-4">4</div> 
-        <div class="col-4">4</div> 
-        <div class="col-4">4</div> 
+        <div class="col-9">9</div> 
+        <div class="col-9">9</div> 
+        <div class="col-9">9</div> 
+        <div class="col-9">9</div> 
+        <div class="col-9">9</div>
+        <div class="col-9">9</div> 
+        <div class="col-9">9</div> 
+        <div class="col-9">9</div> 
+        <div class="col-9">9</div> 
     </div> 
     <div class="row">
-        <div class="col-3">3</div> 
-        <div class="col-3">3</div> 
-        <div class="col-3">3</div> 
-        <div class="col-3">3</div> 
+        <div class="col-10">10</div> 
+        <div class="col-10">10</div> 
+        <div class="col-10">10</div> 
+        <div class="col-10">10</div> 
+        <div class="col-10">10</div>
+        <div class="col-10">10</div> 
+        <div class="col-10">10</div> 
+        <div class="col-10">10</div> 
+        <div class="col-10">10</div> 
+        <div class="col-10">10</div> 
     </div> 
     <div class="row">
-        <div class="col-2">2</div> 
-        <div class="col-2">2</div> 
-        <div class="col-2">2</div> 
-        <div class="col-2">2</div>
-        <div class="col-2">2</div> 
-        <div class="col-2">2</div> 
+        <div class="col-11">11</div> 
+        <div class="col-11">11</div> 
+        <div class="col-11">11</div> 
+        <div class="col-11">11</div> 
+        <div class="col-11">11</div>
+        <div class="col-11">11</div> 
+        <div class="col-11">11</div> 
+        <div class="col-11">11</div> 
+        <div class="col-11">11</div> 
+        <div class="col-11">11</div> 
+        <div class="col-11">11</div> 
     </div> 
     <div class="row">
-        <div class="col-1">1</div> 
-        <div class="col-1">1</div> 
-        <div class="col-1">1</div> 
-        <div class="col-1">1</div>
-        <div class="col-1">1</div> 
-        <div class="col-1">1</div> 
-        <div class="col-1">1</div> 
-        <div class="col-1">1</div> 
-        <div class="col-1">1</div> 
-        <div class="col-1">1</div>
-        <div class="col-1">1</div> 
-        <div class="col-1">1</div> 
-    </div> 
+        <div class="col-12">12</div> 
+        <div class="col-12">12</div> 
+        <div class="col-12">12</div> 
+        <div class="col-12">12</div>
+        <div class="col-12">12</div> 
+        <div class="col-12">12</div> 
+        <div class="col-12">12</div> 
+        <div class="col-12">12</div> 
+        <div class="col-12">12</div> 
+        <div class="col-12">12</div>
+        <div class="col-12">12</div> 
+        <div class="col-12">12</div> 
+    </div>
 </div>
 ```
 Now that we have our grid, let's make it responsive!
@@ -457,7 +519,7 @@ Now that we have our grid, making it accommodate smaller screens is relatively s
 
 @for $i from 1 through 12 {
   .col-#{$i} { 
-    @media screen only and (min-width: 600px){
+    @media screen and (min-width: 600px){
       width: 100% / $i; 
     }
   }
