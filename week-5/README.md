@@ -288,6 +288,8 @@ Columns are the tricky part! While there are many ways to position things in CSS
 
 That fancy selector up there is known as an [_attribute selector_](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors), and it essentially lets us style elements in CSS using more sophisticated targeting. Here we are saying _"style any element with a class name that **starts with** `col-`"_. That naming structure will make sense here shortly.
 
+We also want to give our columns a `min-height: 1px` so they don't overlap if there is no content.
+
 ##### Column widths
 
 Column widths can be calculated using some basic math. Since our `.container` has a `width: 100%`, then our column classes are just **100 divided by the number of columns**. We're going to start with a 12 column grid and use Sass to generate our grid columns widths automatically.
