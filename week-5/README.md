@@ -256,11 +256,15 @@ Grids start with a wrapping container, which we already have. Below are the chan
 
 **layouts/_grid.scss**
 
-```css
+```scss
 .container {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
+
+  * {
+    box-sizing: border-box;
+  }
 }
 ```
 We're essentially saying that our grid should be 100% width on screens equal to or less than 960px.
