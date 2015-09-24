@@ -1,0 +1,19 @@
+// Variables
+$full-width: 100%;
+$section-height: 200px;
+
+@mixin site {
+  height: $section-height;
+  width: $full-width;
+}
+@mixin cf {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

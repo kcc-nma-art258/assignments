@@ -1,0 +1,51 @@
+.site-info1 {
+    @include site;
+   background-color: purple;
+   @include cf;
+ }
+ .site-info2 {
+   @include site;
+  background-color: pink;
+  @include cf;
+ }
+ .columns {
+   height: $section-height;
+   float: left;
+   width: 225px;
+   margin-right: 20px;
+ }
+
+ .columns:last-child {
+   margin-right: 0;
+ }
+ .info-01 {
+   background-color: white;
+ }
+
+ .info-02 {
+   background-color: gray;
+ }
+
+ .info-03 {
+   background-color: white;
+ }
+
+ .info-04 {
+   background-color: gray;
+ }
+
+ .info-05 {
+   background-color: yellow;
+ }
+
+ .info-06 {
+   background-color: green;
+ }
+
+ .info-07 {
+   background-color: yellow;
+ }
+
+ .info-08 {
+   background-color: green;
+ }
