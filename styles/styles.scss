@@ -1,67 +1,17 @@
-html,
-body {
-  height: 100%;
-}
-body {
-  background-color: #ffcc00;
-}
-.container {
-    width: 960px;
-    margin: 0 auto;
-    background: white;
-    height: 100%;
-    position: relative;
-}
+// Base
+@import "base/reset";
+@import "base/utilities";
 
+// Layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/grid";
+// ...
 
+// Modules
+@import "modules/hero";
+@import "modules/search-bar";
+@import "modules/site-info";
 
-
-.common-height {
-  height: 150px;
-}
-
-.hero {
-  background-color: red;
-}
-
-
-
-.site-info {
-  background-color: purple;
-  @include cf;
-}
-
-.site-info.common-height {
-  height: 70px;
-
-}
-
-.info-01.columns {
-  background-color: white;
-}
-
-.info-02.columns {
-  background-color: black;
-}
-
-.info-03.columns {
-  background-color: white;
-}
-
-.info-01.columns,
-.info-02.columns,
-.info-03.columns {
-   width: 33%;
-   height: 100%;
-   float: left;
-   margin-right: 0.5%;
-}
-
-.info-03.columns:last-child {
-  margin-right: 0;
-}
-
-
-.main-footer {
-  background-color: blue;
-}
+// Pages
+// ...

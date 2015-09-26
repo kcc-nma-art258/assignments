@@ -1,0 +1,36 @@
+
+
+.site-info {
+  background-color: purple;
+  @include cf;
+}
+
+.site-info.common-height {
+  height: 70px;
+
+}
+
+.info-01.columns {
+  background-color: white;
+}
+
+.info-02.columns {
+  background-color: black;
+}
+
+.info-03.columns {
+  background-color: white;
+}
+
+.info-01.columns,
+.info-02.columns,
+.info-03.columns {
+   width: 33%;
+   height: 100%;
+   float: left;
+   margin-right: 0.5%;
+}
+
+.info-03.columns:last-child {
+  margin-right: 0;
+}
