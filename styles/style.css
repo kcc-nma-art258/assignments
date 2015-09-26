@@ -1,9 +1,3 @@
-.header-style, .main-header .logo, .main-header .search, .main-header .account {
-  height: 100%;
-  width: 10%;
-  text-align: center;
-}
-
 *,
 *:before,
 *:after {
@@ -11,21 +5,10 @@
   padding: 0;
 }
 
-html,
-body {
+.header-style, .main-header .logo, .main-header .search, .main-header .account {
   height: 100%;
-  width: 100%;
-}
-
-body {
-  background-color: #FFCC00;
-}
-
-.container {
-  width: 960px;
-  margin: 0 auto;
-  background: white;
-  height: 100%;
+  width: 10%;
+  text-align: center;
 }
 
 .main-header {
@@ -69,9 +52,43 @@ body {
   background-color: #D2A450;
 }
 
+.main-footer {
+  height: 10%;
+  background-color: #9696D2;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #FFCC00;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  background: white;
+  height: 100%;
+}
+
+.container * {
+  box-sizing: border-box;
+}
+
 .hero {
   height: 50%;
   background-color: #A3792C;
+}
+
+.black-quote {
+  background-color: white;
+  text-align: center;
+  color: red;
+  height: 10%;
 }
 
 .site-info {
@@ -116,18 +133,6 @@ body {
 
 .site-info .info-04 {
   background-color: #cb9bd3;
-}
-
-.black-quote {
-  background-color: white;
-  text-align: center;
-  color: red;
-  height: 10%;
-}
-
-.main-footer {
-  height: 10%;
-  background-color: #9696D2;
 }
 
 /*# sourceMappingURL=style.css.map */

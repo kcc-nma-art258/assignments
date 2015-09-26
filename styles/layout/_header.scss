@@ -1,0 +1,34 @@
+.main-header {
+  height: $height-min;
+  width: $full-width;
+  background-color: #96F296;
+  @include cf;
+
+  .logo,
+  .main-nav,
+  .search,
+  .account {
+   float: left;
+  }
+
+  .logo {
+    @extend .header-style;
+    background-color: transparentize(#D9A9A9, .3);
+  }
+
+  .main-nav {
+    height: $header-height;
+    background-color: #8B6D6D;
+    width: 70%;
+  }
+
+  .search {
+    @extend .header-style;
+    background-color: orange;
+  }
+
+  .account {
+    @extend .header-style;
+    background-color: #D2A450;
+  }
+}

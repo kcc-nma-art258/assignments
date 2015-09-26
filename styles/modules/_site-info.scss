@@ -1,0 +1,35 @@
+.site-info {
+  height: $header-height / 5;
+  background-color: #E59292;
+  @include cf;
+
+  .columns {
+    /* in order to 4cloumns x 3padding is hard to get 100%, I go with px for acculate */
+    /* But then I relized I could do the point you idiot. */
+    height: $header-height;
+    float: left;
+    width: 210px;
+    margin-right: 40px;
+  }
+
+  .columns:last-child {
+    margin-right: 0;
+  }
+
+  .info-01 {
+    background-color: rgba(0.15, 0.22, 0.33, .4);
+  }
+
+  .info-02 {
+    background-color: lighten(#273855, 10%);
+  }
+
+  .info-03 {
+    background-color: grayscale(#521225);
+  }
+
+  .info-04 {
+    background-color: lighten(#673270, 40%);
+  }
+
+}

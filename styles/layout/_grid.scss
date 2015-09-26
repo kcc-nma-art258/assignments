@@ -1,0 +1,22 @@
+
+html,
+body {
+  height: $header-height;
+  width: $full-width;
+}
+
+body {
+  background-color: #FFCC00;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  background: white;
+  height: $header-height;
+
+  * {
+    box-sizing: border-box;
+  }
+}
