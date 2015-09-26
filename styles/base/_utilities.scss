@@ -1,0 +1,22 @@
+//VARIABLES
+$header-height: 80px;
+$max-width: 100%;
+//Mixins
+@mixin cf {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+@mixin columns-attributes {
+  width: 30%;
+	height: 150px;
+  margin-right: 5%;
+			&:last-child {
+	  	margin-right: 0;
+	}
+}

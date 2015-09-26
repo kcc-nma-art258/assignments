@@ -1,92 +1,13 @@
-// MIXINS
-@mixin cf {
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
-@mixin columns-attributes {
-  width: 30%;
-	height: 150px;
-  margin-right: 5%;
-			&:last-child {
-	  	margin-right: 0;
-	}
-}
-//VARIABLES
-$header-height: 80px;
-$max-width: 100%;
+//Base
+@import"base/reset";
+@import"base/utilities";
 
-.container {
-  margin: 0 auto;
-	max-width: 960px;
-}
-header {
-  position: relative;
-  width: $max-width;
-  height: $header-height;
-  background-color: #EA4335;
-}
-.logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: $max-width/10;
-  height: $header-height;
-  background-color: #3375DA;
-}
+//Layout
+@import"layout/header";
+@import"layout/footer";
+@import"layout/grid";
 
-.main-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: $max-width - 30%;
-  height: $header-height;
-  background-color: #34A853;
-		ul {
-			@include cf;
-		}
-		li {
-		  float: left;
-      margin-right: 6.6%;
-			width: $max-width/5;
-		  height: $header-height;
-		  background-color: #FBBC05;
-				&:last-child {
-		  	margin-right: 0;
-		}
-	}
-}
-.hero {
-  height: 600px;
-  background-color: #B7EAEA;
-}
-.info {
-	@include cf;
-  height: auto;
-  background-color: #E6D4B0;
-}
-.info-01 {
-	float: left;
-  background-color: #B3CEB3;
-	@include columns-attributes;
-}
-.info-02 {
-	float: left;
-  background-color: #8EB18E;
-	@include columns-attributes;
-}
-.info-03 {
-	float: right;
-  background-color: #689C68;
-	@include columns-attributes;
-}
-footer {
-  height: 300px;
-  width: $max-width;
-  background-color: #CECECE;
-}
+//Modules
+@import"modules/hero";
+@import"modules/main-nav";
+@import"modules/site-info";
