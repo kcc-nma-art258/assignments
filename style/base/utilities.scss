@@ -1,0 +1,25 @@
+//Variables
+$header-height: 100%;
+$full-width: 100%;
+$header-width: 10%;
+$height-min: 10%;
+
+//mixin
+@mixin cf {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+//extended
+.header-style {
+  height: $header-height;
+  width: $header-width;
+  text-align: center;
+}
