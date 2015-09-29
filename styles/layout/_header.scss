@@ -1,0 +1,33 @@
+.main-header {
+  height: 60px;
+  background-color: aqua;
+  position: relative;
+
+    .logo {
+      width: 60px;
+      background: green;
+      left: 5px;
+      @include header;
+    }
+
+    .main-nav {
+      width: 400px;
+      background: purple;
+      left: 250px;
+      @include header;
+    }
+
+    .main-search {
+      width: 100px;
+      background: blue;
+      right: 80px;
+      @include header;
+    }
+
+    .shopping-cart {
+      width: 60px;
+      background-color: beige;
+      right: 5px;
+      @include header;
+    }
+}
