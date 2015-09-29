@@ -1,0 +1,87 @@
+/**
+ * Utilities
+ */
+/**
+ * @section Functions
+ */
+/**
+ * rem/em Calculator
+ *
+ * target / context = result
+ * @param {$target}  Target size in pixels (ie. 32px)
+ * @param {$context} Font size providing context for proportion, defaults to $base-font)
+ * @param {$unit} unit for rem/em output, defaults to 'em'
+ */
+/**
+ * Exponent Calculator
+ *
+ * https://gist.github.com/scottkellum/1160816
+ * @param {$base} base number
+ * @param {$exponent} exponent/power number
+ */
+/**
+ * Type Scale Calculator
+ * 
+ * Create typographic scales
+ * @param {$i} increment of scale; 0 is base
+ * @param {$scale} scale ratio; defaults to 1.25
+ */
+/**
+ * Typography
+ */
+html {
+  font-size: 14px;
+}
+
+body {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5;
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1.618em;
+  }
+}
+
+/**
+ * @section Headings
+ */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Neuton", serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 6.85353em;
+}
+
+h2 {
+  font-size: 4.2358em;
+}
+
+h3 {
+  font-size: 2.61792em;
+}
+
+h4 {
+  font-size: 1.618em;
+}
+
+/**
+ * @section Inline
+ */
+p {
+  margin: 0 0 1em;
+  text-align: justify;
+}
+
+/*# sourceMappingURL=style.css.map */

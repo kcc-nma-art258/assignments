@@ -60,65 +60,69 @@ _You'll notice that for `line-height` you can use a unitless value, ie. it doesn
 
 Line height and width are always going to be relative to the typeface you are using, so use what you have learned and do your best to select the proper measurements.
 
-Vertical Rhythm
+References:
+- [CodePen: Line Height](http://codepen.io/micjamking/pen/c7f6cd1fb7923199add507a14b4e5ee4)
+
+### Vertical Rhythm
 Just as important and your vertical grid for layout, a baseline grid is essential for your type layout. This allows your readers to easily follow the flow of text by creating a continuous rhythm. This is very important to keep text on a consistent grid and I feel this is often the most difficult to achieve.
 
+![typography image 4](images/typography-4.jpg)
+_Credit: [Smashing Magazine](http://www.smashingmagazine.com/2009/04/03/8-simple-ways-to-improve-typography-in-your-designs/)_
 
-Credit: http://www.smashingmagazine.com/2009/04/03/8-simple-ways-to-improve-typography-in-your-designs/
+![typography image 5](images/typography-5.png)
+_Credit: [Code Tuts](http://code.tutsplus.com/tutorials/6-ways-to-improve-your-web-typography--net-6248 )_
 
+To be consistent with vertical rhythm, vertical spacing (margins) between elements and your `line-height` should be the same. ie. Set your body's `line-height`, paragraph's, and heading's bottom margin to be the same final value.
 
-Credit: http://code.tutsplus.com/tutorials/6-ways-to-improve-your-web-typography--net-6248 
+```css
+// 16px = 1rem = 100% = default font size
+body {
+  line-height: 1.5;
+}
 
-To be consistent with vertical rhythm, spacing between elements and your line height should equal to the size of your baseline grid. Ie. If you baseline grid has a space of 20px, then your body line height to be 20px, your paragraph bottom margin should be set to be 20px, and your bottom margin for your headings should be equally measured.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 1.5rem;
+}
+```
+_**Question:** How can we improve this with Sass?_
 
 Need help? Try these tools:
+- [http://www.gridlover.net/app/ 
+- https://drewish.com/tools/vertical-rhythm/
 
-http://www.gridlover.net/app/ 
-https://drewish.com/tools/vertical-rhythm/
+### Text Emphasis
+Giving emphasis to a word or phrase without interrupting the reader is also important to think about. Italicized and bolded text, different colors, weights, sizes, and typefaces are all different ways to emphasize text. However, much like in print, you should exercise restraint and use as few as possible to effectively communicate your message.
 
-Text Emphasis
-Giving emphasis to a word or phrase without interrupting the reader is also important to think about. Italics, bolds, colors, small caps, sizes, underlines, and different typefaces are all different ways to emphasize text. Limit yourself to only using one at a time however.
+![typography images 6](images/typography-6.jpg)
 
+_Remember, when setting italics, use `em` for emphasis (not `i` tags) and `strong` for bold text (not `b` tags)._
 
+### Typographic Scales
+You may have heard about the [golden ratio](https://en.wikipedia.org/wiki/Golden_ratio) and how using it in your designs can help create more harmonious proportions. This is due to using a mathematical scale or multiplier which establishes a rhythm. In web design, a modular scale helps establish a consistent rhythm to govern the size of our type and other elements.
 
-Remember, when setting italics, use em for emphasis (not i tags) and strong for bold text (not b tags).
+![typography images 7](images/typography-7.png)
 
-Text Rendering
-Different browsers render type differently, even operating systems render your fonts differently. Although we can’t control every scenario, here are are some tips to help you if you are a stickler for details.
+Creating scales is fairly simple; you pick a base size (ie. 16px or 1em) and a scale multiplier (ie. 1.618). Multiply the result once to get your first size, then multiply that result by your multiplier to get your second size, and so on.
 
-Optimize Legibility - Special characters and kerning are applied. Ligatures are also applied to words under 20px in size, if the font family has the proper characters. Although this is nice, it is cautioned when and where to use it because it will consume browser resources and may affect rendering time (think about your mobile users!)
+```
+1em // Base font size
+1em * 1.618     = 1.618em // h6
+1.618em * 1.618 = 2.618em // h5
+2.618em * 1.618 = 4.236em // h4
+...
+```
+Setting up these calculations can be repititious and tedious, so this is where working with Sass can help, through it's variables, functions, and mixins.
 
+**In-Class Example**
 
-Credit: http://css-tricks.com/almanac/properties/t/text-rendering/ 
-
-
-Credit: http://css-tricks.com/almanac/properties/t/text-rendering/ 
-
-Optimize Speed - Doing the opposite of the above, the browser emphasizes speed over legibility and disregards kerning or ligatures.
-
-Samples:
-p { text-rendering: optimizeLegibility; }
-p { text-rendering: optimizeSpeed; }
-
-Font Smoothing - This will help smooth out your fonts so they do not look bulky in your browser. These properties can only be applied in Google Chrome or Mozilla Firefox. If you are viewing your sites in Google Chrome or Mozilla Firefox, you will notice a significant change in your font weight when applying this.
-
-Sample:
-body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-
-
-With vs. Without
-
-Other optional hacks to make your text render smoother is to use a faint 1px text shadow or apply a text stroke. They are barely noticeable but they are worth experimenting with if you want.
-
-My CodePen Examples
-
-Other Items
-Widows and orphans, hanging quotes, and rags are also items you may learn in typography class, but I feel that these are harder to control because of the type or amount of content your client may give you. Although not covered, you should be aware of it.
-
-Sources:
-http://www.smashingmagazine.com/2009/04/03/8-simple-ways-to-improve-typography-in-your-designs/ 
-http://www.fonts.com/content/learning/fontology/level-2/text-typography/length-column-width
-http://code.tutsplus.com/tutorials/6-ways-to-improve-your-web-typography--net-6248 
-http://www.smashingmagazine.com/2012/04/24/a-closer-look-at-font-rendering/ 
-http://blog.typekit.com/2010/10/15/type-rendering-operating-systems/
-http://css-tricks.com/almanac/properties/t/text-rendering/
+**References:**
+- [A List Apart: More Meaningful Typography](http://alistapart.com/article/more-meaningful-typography)
+- [Typecast: A More Modern Scale for Web Typography](http://typecast.com/blog/a-more-modern-scale-for-web-typography)
+- [Web Design Tuts: How to Establish a Modular Typographic Scale](http://webdesign.tutsplus.com/articles/how-to-establish-a-modular-typographic-scale--webdesign-14927)
+- [Type Scale](http://type-scale.com/)
