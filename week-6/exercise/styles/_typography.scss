@@ -8,7 +8,7 @@ html {
 
 body{
   // Shorthand
-  // font: normal normal 300 #{type-scale(0)} 'Libre Baskerville', serif;
+  // font: normal normal 300 #{type-scale(0)} $sans-serif;
   font-style: normal;
   font-variant: normal;
   font-weight: 300;
@@ -53,6 +53,6 @@ h4 {
  * @section Inline
  */
 p {
-  margin: 0 0 1em;
+  margin-bottom: 0 0 em-calc($base-font);
   text-align: justify;
 }

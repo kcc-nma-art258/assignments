@@ -10,7 +10,12 @@ Visual communication is the most important aspect of any design including web, a
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-- [Optimal line length](#optimal-line-length)
+  - [Line length](#line-length)
+  - [Leading (line height)](#leading-line-height)
+  - [Vertical Rhythm](#vertical-rhythm)
+  - [Text Emphasis](#text-emphasis)
+  - [Typographic Scales](#typographic-scales)
+- [In-Class Exercise](#in-class-exercise)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -110,16 +115,26 @@ You may have heard about the [golden ratio](https://en.wikipedia.org/wiki/Golden
 
 Creating scales is fairly simple; you pick a base size (ie. 16px or 1em) and a scale multiplier (ie. 1.618). Multiply the result once to get your first size, then multiply that result by your multiplier to get your second size, and so on.
 
+```css
+/**
+ * 1em   = 16px = base font size
+ *
+ * 1.618 = golden ratio scale
+ *
+ * Modular Scale
+ * 1em * 1.618     = 1.618em // h4
+ * 1.618em * 1.618 = 2.618em // h3
+ * 2.618em * 1.618 = 4.236em // h2
+ * 4.236em * 1.618 = 6.854em // h1
+*/
 ```
-1em // Base font size
-1em * 1.618     = 1.618em // h6
-1.618em * 1.618 = 2.618em // h5
-2.618em * 1.618 = 4.236em // h4
-...
-```
-Setting up these calculations can be repititious and tedious, so this is where working with Sass can help, through it's variables, functions, and mixins.
+Setting up these calculations can be repititious and tedious, so this is where working with Sass can help, through it's variables, functions, and mixins. Let's take a look at the [in-class exercise files](https://github.com/kcc-nma-art258/assignments/tree/master/week-6/exercise/styles).
 
-**In-Class Example**
+## In-Class Exercise
+- Switch back to the `master` branch in your local `<username>/assignments` project in GitHub Desktop
+- Update from `kcc-nma-art258/assignments:master` branch to get the latest changes
+- Create a new branch called `week-6-exercise` and style your typography page
+
 
 **References:**
 - [A List Apart: More Meaningful Typography](http://alistapart.com/article/more-meaningful-typography)
