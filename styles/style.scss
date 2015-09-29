@@ -1,3 +1,21 @@
+// Base
+@import "base/reset";
+@import "base/utilities";
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/grid";
+// ...
+
+// Modules
+@import "modules/hero";
+@import "modules/search-bar";
+@import "modules/site-info";
+
+// pages
+@import "pages/home";
+
 // Variables
 $header-height: 100px;
 $info-width: 100%;
