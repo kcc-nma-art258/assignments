@@ -1,32 +1,14 @@
 // Variables
 $header-height: 60px;
-  .main-header {
-    position: relative;
-    height: $header-height;
-    background-color: green;
 
-
-  .logo {
-    height: $header-height;
-    width: 100px;
-    background: gray;
-    position: absolute;
-  }
-
-  .main-nav {
-    height: $header-height;
-    width: 400px;
-    background: purple;
-  }
-}
 @mixin cf {
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
+&:before,
+&:after {
+  content: "";
+  display: table;
+}
 
-  &:after {
-    clear: both;
-  }
+&:after {
+  clear: both;
+}
 }

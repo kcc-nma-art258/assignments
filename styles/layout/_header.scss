@@ -1,3 +1,18 @@
-.common-height {
-  height: 150px;
+.main-header {
+  position: relative;
+  height: $header-height;
+  background-color: green;
+
+.logo {
+  height: $header-height;
+  width: 100px;
+  background: gray;
+  position: absolute;
+}
+
+.main-nav {
+  height: $header-height;
+  width: 400px;
+  background: purple;
+}
 }
