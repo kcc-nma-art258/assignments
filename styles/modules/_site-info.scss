@@ -1,0 +1,37 @@
+.info {
+  height: 200px;
+  background-color: red;
+}
+
+.info-01.columns {
+  height: $column-height;
+  width: $column-width;
+  background-color: orange;
+  margin-left: 0px;
+  float:left;
+}
+
+.info-02.columns {
+  height: $column-height;
+  width: $column-width;
+  background-color: yellow;
+  margin-right: 0px;
+  float: left;
+}
+
+.info-03.columns {
+  height: $column-height;
+  width: $column-width;
+  background-color: green;
+  margin-right: 0px;
+  float: left;
+
+}
+
+.info-04.columns {
+  height: $column-height;
+  width: $column-width;
+  background-color: turquoise;
+  margin-left: 0px;
+  float: left;
+}
