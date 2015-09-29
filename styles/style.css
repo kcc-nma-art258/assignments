@@ -81,6 +81,12 @@ table {
   right: 25px;
 }
 
+.container {
+  width: 960px;
+  margin: 0 auto;
+  background: pink;
+}
+
 .hero {
   height: 150px;
   background-color: #e6e6fa;
@@ -164,12 +170,6 @@ table {
 
 body {
   background-color: black;
-}
-
-.container {
-  width: 960px;
-  margin: 0 auto;
-  background: pink;
 }
 
 /*# sourceMappingURL=style.css.map */
