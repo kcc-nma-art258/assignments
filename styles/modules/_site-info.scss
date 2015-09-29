@@ -2,6 +2,9 @@
 	@include cf;
   height: auto;
   background-color: #E6D4B0;
+	&:last-child{
+		margin-right:0;
+	}
 }
 .info-01 {
 	float: left;

@@ -60,6 +60,15 @@ header {
   background-color: #EA4335;
 }
 
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 80px;
+  background-color: #3375DA;
+}
+
 footer {
   height: 300px;
   width: 100%;
@@ -74,15 +83,6 @@ footer {
 .hero {
   height: 600px;
   background-color: #B7EAEA;
-}
-
-.logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10%;
-  height: 80px;
-  background-color: #3375DA;
 }
 
 .main-nav {
@@ -131,16 +131,16 @@ footer {
   clear: both;
 }
 
+.info:last-child {
+  margin-right: 0;
+}
+
 .info-01 {
   float: left;
   background-color: #B3CEB3;
   width: 30%;
   height: 150px;
   margin-right: 5%;
-}
-
-.info-01:last-child {
-  margin-right: 0;
 }
 
 .info-02 {
@@ -151,20 +151,12 @@ footer {
   margin-right: 5%;
 }
 
-.info-02:last-child {
-  margin-right: 0;
-}
-
 .info-03 {
   float: right;
   background-color: #689C68;
   width: 30%;
   height: 150px;
   margin-right: 5%;
-}
-
-.info-03:last-child {
-  margin-right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
