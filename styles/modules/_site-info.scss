@@ -1,1 +1,47 @@
+.site-info {
+  height: 50px;
+  background-color: #e6e6fa;
+}
 
+.main-info {
+  height: 300px;
+  background-color: #0066ff;
+  @include cf;
+}
+
+.columns {
+  width: 33%;
+  height: 150px;
+}
+
+.info-01 {
+  float: left;
+  background-color: #add8e6;
+}
+
+.info-02 {
+  float: left;
+  margin: 0 0.5%;
+  background-color: #add8e6;
+}
+
+.info-03 {
+  float: right;
+  background-color: #add8e6;
+}
+
+.info-04 {
+  float: left;
+  background-color: #99ccff;
+}
+
+.info-05 {
+  float: left;
+  margin: 0 0.5%;
+  background-color: #99ccff;
+}
+
+.info-06 {
+  float: right;
+  background-color: #99ccff;
+}

@@ -1,0 +1,29 @@
+.promotion {
+  height: 50px;
+  background-color: #e6e6fa;
+}
+
+//Nesting
+.main-header {
+  height: 150px;
+  background-color: #ff6666;
+  position: relative;
+
+.logo {
+  height: $header-height;
+  width: 100px;
+  background: #ffcccc;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.main-nav {
+  height: $header-height;
+  width: 450px;
+  background-color: #ff9999;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+}

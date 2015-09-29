@@ -1,8 +1,8 @@
-//Mixins
 // Variables
 $header-height: 100px;
 $info-width: 100%;
 
+//Mixins
 @mixin cf {
   &:before,
   &:after {

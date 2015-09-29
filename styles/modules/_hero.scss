@@ -1,0 +1,24 @@
+//Nesting
+.hero {
+  height: 150px;
+  background-color: #e6e6fa;
+}
+
+.hero-info {
+  height: 200px;
+  background-color: #ffa500;
+
+.hero-info-01 {
+  width: ($info-width / 2) - 0.25;
+  height: 200px;
+  float: left;
+  background-color: #ffd700;
+}
+
+.hero-info-02 {
+  width: ($info-width / 2) - 0.25;
+  height: 200px;
+  float: right;
+  background-color: #ffd700;
+}
+}

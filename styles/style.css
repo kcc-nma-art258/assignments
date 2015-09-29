@@ -52,16 +52,6 @@ table {
   border-spacing: 0;
 }
 
-body {
-  background-color: black;
-}
-
-.container {
-  width: 960px;
-  margin: 0 auto;
-  background: pink;
-}
-
 .promotion {
   height: 50px;
   background-color: #e6e6fa;
@@ -170,6 +160,16 @@ body {
 .info-06 {
   float: right;
   background-color: #99ccff;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  background: pink;
 }
 
 /*# sourceMappingURL=style.css.map */
