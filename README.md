@@ -6,7 +6,7 @@ Assignments for [Interface Programming 2 course](https://github.com/kcc-nma-art2
 - [Week 3: Continue Review of Web Development Practices](week-3/README.md)
 - [Week 4: CSS Authoring (Sass)](week-4/README.md)
 - [Week 5: CSS Architecture & Frameworks](week-5/README.md)
-- Week 6: Marketing Websites
+- [Week 6: Enhancing Framework UI/UX](week-6/README.md)
 - Week 7-8: Studio (Midterm Project)
 - Week 9: Midterm Due & Critique
 - Week 10: JavaScript Part 1
