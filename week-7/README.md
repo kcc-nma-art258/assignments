@@ -11,7 +11,6 @@ Your frameworks styling should have enough styling to look consistent across dev
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Forms](#forms)
 - [Buttons](#buttons)
 - [Utility Classes](#utility-classes)
@@ -160,9 +159,39 @@ There are also other common form elements you can also include in your framework
 **References:**
 - [Codepen: Form Styling Demo](http://codepen.io/micjamking/pen/7a1cbe390e4fe22315b0bd5dd08b3da2)
 
-<!-- 
 ## Buttons
 
+For our button styles, we want to create a general styling to serve as a good baseline to further create any polished button style we may need in the future.
+
+Similar to our forms, we'll set up a base style rule that will target all of our button styles and then apply specific button type styles later.
+
+**styles/modules/_buttons.scss**
+
+```scss
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  ...
+}
+```
+
+Noticed that we also included a `.button` class; this will come in handy when you want to style anchor tags (`<a>`) to look like buttons.
+
+Similar to the form input types, we want to first remove the default styling Webkit _(Safari/Chrome; iOS/Android)_ browsers apply to buttons
+
+**styles/modules/_buttons.scss**
+
+```scss
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  appearance: none;
+}
+```
 
 **References:**
 - [CSS Tricks: Link Pseudo Classes in Order](https://css-tricks.com/snippets/css/link-pseudo-classes-in-order/)
@@ -171,4 +200,3 @@ There are also other common form elements you can also include in your framework
 ## Utility Classes
 
 **References:**
--->
