@@ -542,7 +542,7 @@ We just need to change the math for calculating the width in our `.col-` class l
 }
 ```
 
-Now our layout will support asymmetrical layouts, _**as long as the column total equals our maximum number of columns, which in this case is 12** (ie. `col-4` + `col-8`, `col-3` + `col-9`, etc)_.
+Now our layout will support asymmetrical proportions, _**as long as the column total equals our maximum number of columns, which in this case is 12** (ie. `col-4` + `col-8`, `col-3` + `col-9`, etc)_.
 
 **grid.html**
 ```html
