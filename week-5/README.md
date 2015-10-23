@@ -509,7 +509,7 @@ The negative margins on the parent row will counteract the left padding and righ
 
 This is a great start to our basic grid, however the grid is constrained; each row must include the same `col-` class, evenly divided. That is to say, the grid does not support asymmetrical layouts, like 1-to-2 column ratios, which is common for layouts with sidebars. So how do we change our grid to accommodate asymmetrical layouts? 
 
-Rather than dividing `100%` evenly by the number of columns we want (ie. `100% width / 1 column = 100%`), _**individual column widths are based on a fraction of the maximum number of columns (ie. `12 columns / 1 column = 1/12 or 8.33%`)**_.
+Rather than dividing `100%` evenly by the number of columns we want (ie. `100% width / 1 column = 100%`), _**individual column widths are based on a fraction of the maximum number of columns (ie. `1 column / 12 columns = 1/12 or 8.33%`)**_.
 
 Instead of...
 ```css
