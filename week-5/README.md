@@ -505,7 +505,7 @@ The negative margins on the parent row will counteract the left padding and righ
 </div>
 ```
 
-### Asymmetrical grids
+#### Asymmetrical Layouts
 
 This is a great start to our basic grid, however the grid is constrained; each row must include the same `col-` class, evenly divided. That is to say, the grid does not support asymmetrical layouts, like 1-to-2 column ratios, which is common for layouts with sidebars. So how do we change our grid to accommodate asymmetrical layouts? 
 
@@ -596,7 +596,7 @@ Now our layout will support asymmetrical proportions, _**as long as the column t
 
 Now that we have a solid grid, let's make it responsive!
 
-### Responsive grids
+#### Responsive Layouts
 
 Now that we have our grid, making it accommodate smaller screens is relatively simple and straightforward from here. For simplicity, general best practice for smaller screens is to make your columns `width: 100%;` and to stack them up:
 
