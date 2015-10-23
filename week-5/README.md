@@ -31,8 +31,8 @@ By focusing on good CSS architecture, we can answer yes to the above questions a
     - [Columns](#columns)
       - [Column widths](#column-widths)
       - [Column gutters](#column-gutters)
-  - [Asymmetrical grids](#asymmetrical-grids)
-  - [Responsive grids](#responsive-grids)
+    - [Asymmetrical Layouts](#asymmetrical-layouts)
+    - [Responsive Layouts](#responsive-layouts)
     - [Our complete grid](#our-complete-grid)
 - [Homework](#homework)
 
