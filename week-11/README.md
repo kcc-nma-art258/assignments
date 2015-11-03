@@ -36,7 +36,7 @@ Since JavaScript was developed and is primarily used for the web, there are addi
 ## Part 1: Initial Concepts
   - Browser developer console
   - Variables
-  - Operations
+  - Operators
 
 ### Browser developer console
 
@@ -125,6 +125,72 @@ var foo = {
 foo.cities; // ['Tokyo', 'Honolulu', 'San Francisco']
 ```
 
-### Operations
+### Operators
+
+An operator is a mathematical symbol that produces a result based on two values (or variables). Below are some of the simplest operators, along with some examples to try out in the JavaScript console.
+
+#### Add/concatenation
+- **Symbol(s):** `+`
+- Used to add two numbers together, or glue two strings together.
+
+**Example:**
+```js
+6 + 9; // 15
+"Hello " + "world!"; // "Hello world!"
+```
+
+#### Subtract, Multiply, Divide
+- **Symbol(s):** `-, *, /`
+- These do what you'd expect them to do in basic math.
+
+**Example:**
+```js
+9 - 3; // 6
+8 * 2; // 16
+9 / 3; // 3
+```
+
+#### Assignment
+- **Symbol(s):** `=`
+- You've seen this already: it assigns a value to a variable.
+
+**Example:**
+```js
+var myVariable = 'Bob';
+myVariable; // 'Bob';
+```
+
+#### Identity (equals)
+- **Symbol(s):** `===`
+- Does a test to see if two values are equal to one another, and returns a true/false (Boolean) result.
+
+**Example:**
+```js
+var myVariable = 3;
+myVariable === 4; // false
+```
+#### Negation, Not equal
+- **Symbol(s):** `!, !==`
+- Returns the logically opposite value of what it preceeds; it turns  a true into a false, etc. When it is used alongside the Equality operator, the negation operator tests whether two values are not equal.
+
+**Example:**
+```js
+// Negate, or return the opposite of, the value
+var myVariable = 3;
+!(myVariable === 3); // false
+
+// Test whether "myVariable is NOT equal to 3"
+var myVariable = 3;
+myVariable !== 3; // false
+```
 
 #### Comparators
+
+##### Greater than
+- **Symbol(s):** `>`
+- The greater than operator returns true if the left operand is greater than the right operand.
+
+**Example:**
+```js
+3 > 5; // false
+```
