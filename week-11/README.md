@@ -117,8 +117,12 @@ Basically, anything. Everything in JavaScript is an object, and can be stored in
 
 ```js
 var foo = {
-
+   cities: ['Tokyo', 'Honolulu', 'San Francisco'],
+   currentlyInCity: true,
+   friendsInCities: 7 
 };
+
+foo.cities; // ['Tokyo', 'Honolulu', 'San Francisco']
 ```
 
 ### Operations
