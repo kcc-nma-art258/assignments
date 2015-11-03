@@ -13,9 +13,15 @@ JavaScript is used to create a wide variety of functionality on the web, from ba
 - [Getting started with JavaScript Web Programming](#getting-started-with-javascript-web-programming)
 - [Part 1: Initial Concepts](#part-1-initial-concepts)
   - [Browser developer console](#browser-developer-console)
-  - [Operations](#operations)
   - [Variables](#variables)
     - [Data Types](#data-types)
+      - [String](#string)
+      - [Number](#number)
+      - [Boolean](#boolean)
+      - [Array](#array)
+      - [Objects](#objects)
+  - [Operations](#operations)
+    - [Comparators](#comparators)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -71,6 +77,8 @@ A string of text. To signify that the variable is a string, you should enclose i
 
 ```js
 var foo = 'Yo';
+
+foo; // Yo
 ```
 
 ##### Number
@@ -79,6 +87,8 @@ A number. Numbers don't have quotes around them.
 
 ```js
 var foo = 7;
+
+foo; // 7
 ```
 
 ##### Boolean
@@ -87,6 +97,8 @@ A True/False value. The words true and false are special keywords in JS, and don
 
 ```js
 var foo = true;
+
+foo; // true
 ```
 
 ##### Array
@@ -95,6 +107,8 @@ A structure that allows you to store multiple values in one single reference.
 
 ```js
 var foo = ['Tokyo', 'Honolulu', 'San Francisco'];
+
+foo; // ['Tokyo', 'Honolulu', 'San Francisco']
 ```
 
 ##### Objects
@@ -102,7 +116,9 @@ var foo = ['Tokyo', 'Honolulu', 'San Francisco'];
 Basically, anything. Everything in JavaScript is an object, and can be stored in a variable. Keep this in mind as you learn.
 
 ```js
-var foo = ['Tokyo', 'Honolulu', 'San Francisco'];
+var foo = {
+
+};
 ```
 
 ### Operations
