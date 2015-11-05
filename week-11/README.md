@@ -20,8 +20,20 @@ JavaScript is used to create a wide variety of functionality on the web, from ba
       - [Boolean](#boolean)
       - [Array](#array)
       - [Objects](#objects)
-  - [Operations](#operations)
+  - [Operators](#operators)
+    - [Add/concatenation](#addconcatenation)
+    - [Subtract, Multiply, Divide](#subtract-multiply-divide)
+    - [Assignment](#assignment)
+    - [Identity (equals)](#identity-equals)
+    - [Negation, Not equal](#negation-not-equal)
     - [Comparators](#comparators)
+      - [Greater than](#greater-than)
+      - [Greater than or equal](#greater-than-or-equal)
+      - [Less than](#less-than)
+      - [Less than or equal](#less-than-or-equal)
+    - [Order of Operations: P.E.M.D.A.S.](#order-of-operations-pemdas)
+  - [console.log](#consolelog)
+  - [Keywords and reserved words](#keywords-and-reserved-words)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -192,5 +204,65 @@ myVariable !== 3; // false
 
 **Example:**
 ```js
-3 > 5; // false
+4 > 3; // true
 ```
+
+##### Greater than or equal
+- **Symbol(s):** `>=`
+- The greater than or equal operator returns true if the left operand is greater than or equal to the right operand.
+
+**Example:**
+```js
+4 >= 3; // true
+3 >= 3; // true
+```
+
+##### Less than
+- **Symbol(s):** `<`
+- The less than operator returns true if the left operand is less than the right operand.
+
+**Example:**
+```js
+3 < 4 // true
+```
+
+##### Less than or equal
+- **Symbol(s):** `<=`
+- The less than or equal operator returns true if the left operand is less than or equal to the right operand.
+
+**Example:**
+```js
+3 <= 4 // true
+```
+
+#### Order of Operations: P.E.M.D.A.S.
+- Group expressions in JavaScript
+
+**Example:**
+```js
+(5 + 7) * 3 // 36
+```
+
+### console.log
+
+When you're actually working with JavaScript, you'll be most likely writing it within and linking it on your page. In this instance, it's helpful to ouput content to the console to understand whats going on in your script or program. This is where console.log comes in.
+- In Chrome DevTools, select the `Sources > Snippets` tab, right-click inside of the sidebar, and create a new file called `ex-1.js`
+
+**Example:**
+```js
+console.log('yo!');
+```
+
+### Keywords and reserved words
+
+Words with a special meaning, such as var, are keywords, and they may not be used as variable names. There are also a number of words that are “reserved for use” in future versions of JavaScript. These are also officially not allowed to be used as variable names, though some JavaScript environments do allow them. The full list of keywords and reserved words is rather long.
+
+```js
+break case catch class const continue debugger
+default delete do else enum export extends false
+finally for function if implements import in
+instanceof interface let new null package private
+protected public return static super switch this
+throw true try typeof var void while with yield
+```
+Don’t worry about memorizing these, but remember that this might be the problem when a variable definition does not work as expected.
