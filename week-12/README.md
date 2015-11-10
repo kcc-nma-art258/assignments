@@ -48,7 +48,7 @@ JavaScript files can also be organized in their own folders, just like CSS/Sass.
 
 In the above example, your script tag would need to reference the script in its **relative location** to the index.html, ie. `<script src="scripts/app.js"></script>`.
 
-This week, we'll work on controlling the flow of our code inside a JavaScript file. See the [exercise files here](exercise)
+This week, we'll work on controlling the flow of our code inside a JavaScript file. See the [exercise files here](exercise). Download the exercise files, open up the the `index.html` file in your browser, and open the `script.js` file in your editor.
 
 ## Part 2: Controlling Flow
   - Conditional logic
