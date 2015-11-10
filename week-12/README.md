@@ -16,6 +16,7 @@ We'll also discuss start diving a bit deeper in to the browser environment, and 
     - [`if...else` statement](#ifelse-statement)
   - [Loops and iteration](#loops-and-iteration)
     - [`for` statement](#for-statement)
+    - [`for...in` statement](#forin-statement)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -137,6 +138,49 @@ for ([initialExpression]; [condition]; [incrementExpression]){
 }
 ```
 
-Let's break this down:
-- `[initialExpression]`: This expression usually initializes one or more loop counters. This expression can also declare variables, ie. `var i = 0`
-- `[condition]`: Similar to the `if...else` condition, the condition is evaluated, but on every loop. If the value of condition is `true`, the loop statements execute. If the value of condition is false, the for loop stops.
+Let's break this down (in order of execution):
+1. `[initialExpression]`: This expression usually initializes one or more loop counters. This expression can also declare variables, ie. `var i = 0`
+2. `[condition]`: Similar to the `if...else` condition, the condition is evaluated, but on every loop. If the value of condition is `true`, the loop statements execute. If the value of condition is false, the for loop stops.
+3. `statement`: If the condition is `true`, the statement will be executed.
+4. `[incrementExpression]`: Executes (typically updating the increment variable), and returns to step 2.
+
+Let's see a real-world example; let's say we are building a game and want to output to the console how many steps the user has taken in a certain direction.
+
+**Actual Example:**
+
+```js
+for (var step = 0; step < 100; step++) {
+  // Runs 100 times, with values of step 0 through 99.
+  console.log('Walking east: Step - ' + step);
+}
+```
+
+#### `for...in` statement
+
+The `for...in` statement iterates a specified variable over an object. A `for...in` statement looks as follows:
+
+**Example:**
+
+```js
+for (variable in object) {
+  statements
+}
+```
+
+The flow is similar to a regular `for` statement, but the loop is limited to the amount of properties available in an object.
+
+**Actual Example:**
+
+```js
+var car = {
+  make: 'Ford',
+  model: 'Explorer'
+}
+
+for (var i in car) {
+  var property = i;
+  var value = car[i];
+  console.log(i + ': ' + car[i]);
+}
+```
+
