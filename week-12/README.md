@@ -107,7 +107,7 @@ if (condition_1) {
   statement_last;
 } 
 ```
-
+Tujibyxaqy@2484$
 **So what evaluates as `false`?**
 
 Outside of a value simply being not true (ie. `var = 5; 5 > 7`), the following values will also evaluate to false:
@@ -123,11 +123,11 @@ NaN // Not a Number
 
 ### Loops and iteration
 
-Loops offer a quick and easy way to do "something" repeatedly. In JavaScript, there are three basic loops: `for`, `while`, and `for...in`. They all essentially do the same thing: repeat an action some number of times (and it's actually possible that number could be zero). The various loop mechanisms offer different ways to determine the start and end points of the loop.
+Loops offer a quick and easy way to do "something" repeatedly. In JavaScript, there are several loop mechanism's, but the two most common which we'll focus on in this class are: `for`, and `for...in`. They both essentially do the same thing: repeat an action some number of times, however each one is used in different cases.
 
 #### `for` statement
 
-A `for` loop repeats until a specified condition evaluates to `false`. A `for` statement looks as follows:
+A `for` loop repeats until a specified condition evaluates to `false`. The most common reason to use `for` loops is to **iterate over an Array**.
 
 **Example:**
 

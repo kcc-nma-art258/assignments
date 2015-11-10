@@ -121,7 +121,87 @@ A structure that allows you to store multiple values in one single reference.
 var foo = ['Tokyo', 'Honolulu', 'San Francisco'];
 
 foo; // ['Tokyo', 'Honolulu', 'San Francisco']
+
+foo[2]; // 'San Francisco'
 ```
+
+JavaScript arrays are zero-indexed: the first element of an array is at index 0, and the last element is at the index equal to the value of the array's length property minus 1.
+
+
+Arrays also have additional properties which can be accessed using _JavaScript Object dot-notation_.
+
+##### Find Length
+```js
+var foo = ['Tokyo', 'Honolulu', 'San Francisco'];
+
+foo.length; // 3
+
+foo[foo.length - 1]; // 'San Francisco'
+```
+
+##### Add to end of Array
+```js
+var foo = ['Tokyo', 'Honolulu', 'San Francisco'];
+
+foo.push('New York');
+
+foo; // ['Tokyo', 'Honolulu', 'San Francisco', 'New York']
+```
+
+##### Remove from the end of an Array
+```js
+var foo = ['Tokyo', 'Honolulu', 'San Francisco'];
+var last = foo.pop(); // remove 'San Francisco' (from the end)
+
+last; // 'San Francisco'
+foo; // ['Tokyo', 'Honolulu']
+```
+
+##### Add to the front of an Array
+```js
+var foo = ['Tokyo', 'Honolulu', 'San Francisco'];
+foo.unshift('Sydney') // add to the front
+
+foo; // ['Sydney', 'Tokyo', 'Honolulu', 'San Francisco']
+```
+
+##### Remove from the front of an Array
+```js
+var foo = ['Tokyo', 'Honolulu', 'San Francisco'];
+var first = foo.shift(); // remove 'Tokyo' (from the front)
+
+first; // 'Tokyo'
+foo; // ['Honolulu', 'San Francisco']
+```
+
+##### Find the index of an item in the Array
+```js
+var foo = ['Tokyo', 'Honolulu', 'San Francisco'];
+var pos = foo.indexOf('Honolulu');
+pos; // 1 (Remember, zero-based index)
+```
+
+##### Remove an item by Index Position
+
+```js
+var foo = ['Tokyo', 'Honolulu', 'San Francisco'];
+var pos = foo.indexOf('Honolulu');
+var removedItem = foo.splice(pos, 1); 
+
+removedItem; // 'Honolulu'
+foo; // ['Tokyo', 'San Francisco']
+```
+
+##### Copy an Array
+
+```js
+var foo = ['Tokyo', 'Honolulu', 'San Francisco'];
+var shallowCopy = foo.slice(); // this is how to make a copy
+
+shallowCopy; // ['Tokyo', 'Honolulu', 'San Francisco']
+foo; // ['Tokyo', 'Honolulu', 'San Francisco']
+```
+
 
 ##### Objects
 
@@ -135,7 +215,11 @@ var foo = {
 };
 
 foo.cities; // ['Tokyo', 'Honolulu', 'San Francisco']
+foo.currentlyInCity; // true
+foo.friendsInCities; // 7
 ```
+
+An object is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces ({}).
 
 ### Operators
 
