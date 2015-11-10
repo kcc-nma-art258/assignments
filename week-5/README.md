@@ -31,7 +31,8 @@ By focusing on good CSS architecture, we can answer yes to the above questions a
     - [Columns](#columns)
       - [Column widths](#column-widths)
       - [Column gutters](#column-gutters)
-  - [Responsive grids](#responsive-grids)
+    - [Asymmetrical Layouts](#asymmetrical-layouts)
+    - [Responsive Layouts](#responsive-layouts)
     - [Our complete grid](#our-complete-grid)
 - [Homework](#homework)
 
@@ -503,9 +504,99 @@ The negative margins on the parent row will counteract the left padding and righ
     </div>
 </div>
 ```
-Now that we have our grid, let's make it responsive!
 
-### Responsive grids
+#### Asymmetrical Layouts
+
+This is a great start to our basic grid, however the grid is constrained; each row must include the same `col-` class, evenly divided. That is to say, the grid does not support asymmetrical layouts, like 1-to-2 column ratios, which is common for layouts with sidebars. So how do we change our grid to accommodate asymmetrical layouts? 
+
+Rather than dividing `100%` evenly by the number of columns we want (ie. `100% width / 1 column = 100%`), _**individual column widths are based on a fraction of the maximum number of columns (ie. `1 column / 12 columns = 1/12 or 8.33%`)**_.
+
+Instead of...
+```css
+/*
+ * 1 column   = 100%   // (100/1)
+ * 2 columns  = 50%    // (100/2)
+ * 3 columns  = 33%    // (100/3)
+ * ...
+ * 12 columns = 8.33%  // (100/12)
+ */
+```
+our grid will now use...
+```css
+/*
+ * 1 column   = 8.33%  // (1/12)
+ * 2 columns  = 16.67% // (2/12)
+ * 3 columns  = 25%    // (3/12)
+ * ...
+ * 12 columns = 100%   // (12/12)
+ */
+```
+
+We just need to change the math for calculating the width in our `.col-` class loop:
+
+```scss
+@for $i from 1 through 12 {
+  .col-#{$i} { 
+    width: ($i / 12) * 100%; // Multiply by 100% to convert to %
+  }
+}
+```
+
+Now our layout will support asymmetrical proportions, _**as long as the column total equals our maximum number of columns, which in this case is 12** (ie. `col-4` + `col-8`, `col-3` + `col-9`, etc)_.
+
+**grid.html**
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-1">1</div>
+    <div class="col-11">11</div>
+  </div>
+  <div class="row">
+    <div class="col-2">2</div>
+    <div class="col-10">10</div>
+  </div>
+  <div class="row">
+    <div class="col-3">3</div>
+    <div class="col-9">9</div>
+  </div>
+  <div class="row">
+    <div class="col-4">4</div>
+    <div class="col-8">8</div>
+  </div>
+  <div class="row">
+    <div class="col-5">5</div>
+    <div class="col-7">7</div>
+  </div>
+  <div class="row">
+    <div class="col-6">6</div>
+    <div class="col-6">6</div>
+  </div>
+  <div class="row">
+    <div class="col-5">5</div>
+    <div class="col-7">7</div>
+  </div>
+  <div class="row">
+    <div class="col-4">4</div>
+    <div class="col-8">8</div>
+  </div>
+  <div class="row">
+    <div class="col-3">3</div>
+    <div class="col-9">9</div>
+  </div>
+  <div class="row">
+    <div class="col-2">2</div>
+    <div class="col-10">10</div>
+  </div>
+  <div class="row">
+    <div class="col-1">1</div>
+    <div class="col-11">11</div>
+  </div>
+</div>
+```
+
+Now that we have a solid grid, let's make it responsive!
+
+#### Responsive Layouts
 
 Now that we have our grid, making it accommodate smaller screens is relatively simple and straightforward from here. For simplicity, general best practice for smaller screens is to make your columns `width: 100%;` and to stack them up:
 
@@ -520,7 +611,7 @@ Now that we have our grid, making it accommodate smaller screens is relatively s
 @for $i from 1 through 12 {
   .col-#{$i} { 
     @media screen and (min-width: 600px){
-      width: 100% / $i; 
+      width: ($i / 12) * 100%; 
     }
   }
 }
@@ -558,7 +649,7 @@ So... if the screen size is less than 600px, our columns are 100% width; anythin
 @for $i from 1 through 12 {
   .col-#{$i} { 
     @media screen and (min-width: 600px){
-      width: 100% / $i; 
+      width: ($i / 12) * 100%;
     }
   }
 }
