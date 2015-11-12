@@ -138,6 +138,7 @@ for ([initialExpression]; [condition]; [incrementExpression]){
 ```
 
 Let's break this down (in order of execution):
+
 1. `[initialExpression]`: This expression usually initializes one or more loop counters. This expression can also declare variables, ie. `var i = 0`
 2. `[condition]`: Similar to the `if...else` condition, the condition is evaluated, but on every loop. If the value of condition is `true`, the loop statements execute. If the value of condition is false, the for loop stops.
 3. `statement`: If the condition is `true`, the statement will be executed.
@@ -183,3 +184,89 @@ for (var i in car) {
 }
 ```
 
+
+### Functions
+
+Functions are a way of packaging functionality that you want to reuse, so whenever you want the functionality you can call a function by name (like a variable) rather than constantly rewriting the entire code. You have already seen some uses of functions above, for example:
+
+```js
+console.log('yo!');
+```
+
+Functions are one of the fundamental building blocks in JavaScript. To use a function, you must define it and then call it.
+
+There are a few functions like `console.log`, ie. `document.querySelector` and `alert`, that are built into the browser for you to use whenever you like.
+
+```js
+alert('yo!');
+```
+
+If you see something that looks like a variable name, but has brackets — () — after it, it is probably a function. Functions often take arguments — bits of data they need to do their job. These go inside the brackets, separated by commas if there is more than one item.
+
+#### Defining Functions
+
+A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+- The name of the function.
+- A list of arguments to the function, enclosed in parentheses and separated by commas.
+- The JavaScript statements that define the function, enclosed in curly brackets, { }.
+
+```js
+function name(arg1, arg2, arg3...){
+  return statement; // Can be any value
+}
+```
+
+_The `return` statement tells the browser to "return the result" of the function so it is available to use. This is necessary because things defined inside functions are only available inside those functions. This is called **variable scoping**._
+
+
+Below is an example of a simple function that takes two numbers as arguments and multiplies them:
+
+
+```js
+function multiply(num1,num2) {
+  var result = num1 * num2;
+  return console.log(result);
+}
+```
+
+#### Calling functions
+
+As you may have noticed, defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, since we defined a function called `multiply`, you could call it as follows:
+
+```js
+multiply(4,7);
+multiply(20,20);
+multiply(0.5,3);
+```
+
+#### Function scope
+
+Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function. However, a function can access all variables and functions defined inside the scope in which it is defined. In other words, a function defined in the global scope can access all variables defined in the global scope. A function defined inside another function can also access all variables defined in its parent function and any other variable to which the parent function has access.
+
+```js
+// The following variables are defined in the global scope
+var num1 = 20,
+    num2 = 3,
+    name = "Chamahk";
+
+// This function is defined in the global scope
+function multiply() {
+  return num1 * num2;
+}
+
+multiply(); // Returns 60
+
+// A nested function example
+function getScore () {
+  var num1 = 2,
+      num2 = 3;
+  
+  function add() {
+    return name + " scored " + (num1 + num2);
+  }
+  
+  return add();
+}
+
+getScore(); // Returns "Chamahk scored 5"
+```
