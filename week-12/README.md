@@ -108,7 +108,6 @@ if (condition_1) {
   statement_last;
 } 
 ```
-Tujibyxaqy@2484$
 **So what evaluates as `false`?**
 
 Outside of a value simply being not true (ie. `var = 5; 5 > 7`), the following values will also evaluate to false:
