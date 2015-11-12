@@ -17,6 +17,10 @@ We'll also discuss start diving a bit deeper in to the browser environment, and 
   - [Loops and iteration](#loops-and-iteration)
     - [`for` statement](#for-statement)
     - [`for...in` statement](#forin-statement)
+  - [Functions](#functions)
+    - [Defining Functions](#defining-functions)
+    - [Calling functions](#calling-functions)
+    - [Function scope](#function-scope)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -247,7 +251,7 @@ Variables defined inside a function cannot be accessed from anywhere outside the
 // The following variables are defined in the global scope
 var num1 = 20,
     num2 = 3,
-    name = "Chamahk";
+    myName = "John Doe";
 
 // This function is defined in the global scope
 function multiply() {
@@ -268,5 +272,5 @@ function getScore () {
   return add();
 }
 
-getScore(); // Returns "Chamahk scored 5"
+getScore(); // Returns "John Doe scored 5"
 ```
