@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 $full-height: 100%;
 
 @mixin cf {
@@ -129,6 +130,8 @@ body {
   .col-#{$i} { width: 100% / $i; }
 }
 =======
+=======
+>>>>>>> master
 // Base
 @import "base/reset";
 @import "base/utilities";
@@ -146,4 +149,7 @@ body {
 
 // Pages
 @import "pages/home";
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

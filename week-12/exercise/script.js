@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 var car = {
   make: 'Ford',
   model: 'Explorer'
@@ -20,6 +21,8 @@ function goodMorning(num1,num2,num3){
   var result = num1 * num3 - num2;
   return console.log(result);
 =======
+=======
+>>>>>>> master
 var myName = 'Volha';
 var student_1 = 'Sam';
 var student_2 = 'Sasha';
@@ -37,5 +40,8 @@ var studentStatus = " is a current student";
 
 for (var i = 0; i < 20; i++) {
   console.log('yo');
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

@@ -18,10 +18,13 @@ We'll also discuss start diving a bit deeper in to the browser environment, and 
     - [`for` statement](#for-statement)
     - [`for...in` statement](#forin-statement)
 <<<<<<< HEAD
+<<<<<<< HEAD
   - [Functions](#functions)
     - [Defining Functions](#defining-functions)
     - [Calling functions](#calling-functions)
     - [Function scope](#function-scope)
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 
@@ -116,6 +119,10 @@ if (condition_1) {
 } 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+Tujibyxaqy@2484$
+>>>>>>> master
 =======
 Tujibyxaqy@2484$
 >>>>>>> master
@@ -150,7 +157,10 @@ for ([initialExpression]; [condition]; [incrementExpression]){
 
 Let's break this down (in order of execution):
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 1. `[initialExpression]`: This expression usually initializes one or more loop counters. This expression can also declare variables, ie. `var i = 0`
@@ -198,6 +208,7 @@ for (var i in car) {
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ### Functions
@@ -285,5 +296,7 @@ function getScore () {
 
 getScore(); // Returns "John Doe scored 5"
 ```
+=======
+>>>>>>> master
 =======
 >>>>>>> master
