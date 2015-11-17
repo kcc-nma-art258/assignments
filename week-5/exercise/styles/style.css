@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> kcc-nma-art258/master
 body {
   background-color: white;
   font: normal normal 300 16px/1.5 "Open Sans", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
@@ -23,6 +26,7 @@ body {
   height: 100%;
   vertical-align: middle;
   text-align: center;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> master
@@ -82,6 +86,8 @@ table {
 >>>>>>> master
 =======
 >>>>>>> master
+=======
+>>>>>>> kcc-nma-art258/master
 }
 
 .main-header,
@@ -123,6 +129,7 @@ table {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .search {
   height: 100px;
 =======
@@ -139,12 +146,17 @@ table {
 >>>>>>> master
 =======
 >>>>>>> master
+=======
+.search {
+  height: 100px;
+>>>>>>> kcc-nma-art258/master
 }
 
 .hero {
   height: 200px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -158,6 +170,8 @@ table {
 >>>>>>> master
 =======
 >>>>>>> master
+=======
+>>>>>>> kcc-nma-art258/master
 .site-info {
   height: auto;
 }
@@ -201,6 +215,9 @@ table {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> kcc-nma-art258/master
 .main-footer {
   height: 200px;
 }
@@ -255,6 +272,7 @@ table {
 
 /*# sourceMappingURL=style.css.map */
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> master
@@ -281,4 +299,6 @@ body {
 >>>>>>> master
 =======
 >>>>>>> master
+=======
+>>>>>>> kcc-nma-art258/master
 /*# sourceMappingURL=style.css.map */

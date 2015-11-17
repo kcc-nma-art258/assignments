@@ -19,14 +19,20 @@ We'll also discuss start diving a bit deeper in to the browser environment, and 
     - [`for...in` statement](#forin-statement)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> kcc-nma-art258/master
   - [Functions](#functions)
     - [Defining Functions](#defining-functions)
     - [Calling functions](#calling-functions)
     - [Function scope](#function-scope)
+<<<<<<< HEAD
 =======
 >>>>>>> master
 =======
 >>>>>>> master
+=======
+>>>>>>> kcc-nma-art258/master
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -120,12 +126,15 @@ if (condition_1) {
 ```
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Tujibyxaqy@2484$
 >>>>>>> master
 =======
 Tujibyxaqy@2484$
 >>>>>>> master
+=======
+>>>>>>> kcc-nma-art258/master
 **So what evaluates as `false`?**
 
 Outside of a value simply being not true (ie. `var = 5; 5 > 7`), the following values will also evaluate to false:
@@ -158,11 +167,15 @@ for ([initialExpression]; [condition]; [incrementExpression]){
 Let's break this down (in order of execution):
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> master
 =======
 >>>>>>> master
+=======
+
+>>>>>>> kcc-nma-art258/master
 1. `[initialExpression]`: This expression usually initializes one or more loop counters. This expression can also declare variables, ie. `var i = 0`
 2. `[condition]`: Similar to the `if...else` condition, the condition is evaluated, but on every loop. If the value of condition is `true`, the loop statements execute. If the value of condition is false, the for loop stops.
 3. `statement`: If the condition is `true`, the statement will be executed.
@@ -210,6 +223,9 @@ for (var i in car) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> kcc-nma-art258/master
 
 ### Functions
 
@@ -295,8 +311,12 @@ function getScore () {
 }
 
 getScore(); // Returns "John Doe scored 5"
+<<<<<<< HEAD
 ```
 =======
 >>>>>>> master
 =======
 >>>>>>> master
+=======
+```
+>>>>>>> kcc-nma-art258/master
