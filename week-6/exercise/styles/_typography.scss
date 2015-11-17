@@ -1,0 +1,58 @@
+/**
+ * Typography
+ */
+
+html {
+  font-size: $base-font;
+}
+
+body{
+  // Shorthand
+  // font: normal normal 300 #{type-scale(0)} $sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  font-size: type-scale(0);
+  line-height: $line-height;
+  font-family: $sans-serif;
+  color: #333;
+
+  @media screen and (min-width: 600px){
+    font-size: type-scale(1);
+  }
+}
+
+/**
+ * @section Headings
+ */
+h1,
+h2,
+h3,
+h4 {
+  font-family: $serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: type-scale(4);
+}
+
+h2 {
+  font-size: type-scale(3);
+}
+
+h3 {
+  font-size: type-scale(2);
+}
+
+h4 {
+  font-size: type-scale(1);
+}
+
+/**
+ * @section Inline
+ */
+p {
+  margin-bottom: 0 0 em-calc($base-font);
+  text-align: justify;
+}

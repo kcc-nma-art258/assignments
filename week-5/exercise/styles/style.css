@@ -1,0 +1,166 @@
+body {
+  background-color: white;
+  font: normal normal 300 16px/1.5 "Open Sans", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.logo,
+.main-nav,
+.search,
+.hero,
+.columns,
+.main-footer {
+  background-color: #FCFCFC;
+  border: 1px solid #333;
+  border-radius: 1px;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.main-header,
+.search,
+.hero,
+.site-info,
+.main-footer {
+  margin-bottom: 1rem;
+}
+
+.main-header {
+  position: relative;
+  height: 60px;
+}
+
+.main-header .logo,
+.main-header .main-nav {
+  position: absolute;
+  line-height: 60px;
+}
+
+.main-header .logo {
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100px;
+}
+
+.main-header .main-nav {
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 400px;
+}
+
+.main-header .main-nav li {
+  display: inline-block;
+}
+
+.search {
+  height: 100px;
+}
+
+.hero {
+  height: 200px;
+}
+
+.site-info {
+  height: auto;
+}
+
+.site-info:before,
+.site-info:after {
+  content: "";
+  display: table;
+}
+
+.site-info:after {
+  clear: both;
+}
+
+.site-info .columns {
+  height: 100px;
+  margin: 0 0 0 1%;
+}
+
+.site-info .columns:first-child {
+  margin: 0;
+}
+
+.site-info .info-01,
+.site-info .info-02 {
+  width: 24%;
+}
+
+.site-info .info-03 {
+  width: 49%;
+}
+
+.info-01 {
+  float: left;
+}
+
+.info-02,
+.info-03 {
+  float: right;
+}
+
+.main-footer {
+  height: 200px;
+}
+
+.col-1 {
+  width: 100%;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+.col-3 {
+  width: 33.33333%;
+}
+
+.col-4 {
+  width: 25%;
+}
+
+.col-5 {
+  width: 20%;
+}
+
+.col-6 {
+  width: 16.66667%;
+}
+
+.col-7 {
+  width: 14.28571%;
+}
+
+.col-8 {
+  width: 12.5%;
+}
+
+.col-9 {
+  width: 11.11111%;
+}
+
+.col-10 {
+  width: 10%;
+}
+
+.col-11 {
+  width: 9.09091%;
+}
+
+.col-12 {
+  width: 8.33333%;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */
