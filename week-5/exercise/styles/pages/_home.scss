@@ -1,0 +1,12 @@
+body {
+  background-color: white;
+  font: normal normal 300 16px/1.5 'Open Sans', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.logo,
+.main-nav,
+.search,
+.hero,
+.columns,
+.main-footer {
+  @include frame;
+}

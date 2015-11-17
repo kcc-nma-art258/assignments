@@ -1,0 +1,32 @@
+.site-info {
+  height: auto;
+  @include cf;
+
+
+  .columns {
+    height: 100px;
+    margin: 0 0 0 1%;
+  }
+
+  .columns:first-child {
+    margin: 0;
+  }
+
+  .info-01,
+  .info-02 {
+    width: 24%;
+  }
+
+  .info-03 {
+    width: 49%;
+  }
+}
+
+.info-01 {
+  float: left;
+}
+
+.info-02,
+.info-03 {
+  float: right;
+}
