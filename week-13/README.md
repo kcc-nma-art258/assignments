@@ -513,13 +513,13 @@ Instead of calling the function immediately (ie. `changeColor()`), it waits for 
 
 ## Storage
 
-Depending on the intended behavior of the site or app we're developing, we occasionally need to store some information so we can access it again later.
+Depending on the intended behavior of the site or app we're developing, we occasionally need to store some information so we can access it again later. Unlike desktop applications, without a storage mechanism, every time you close your website/app, it's state will be reset and start fresh the next time you open it.
 
-The Web Storage API (or Web/HTML5 Storage) provides mechanisms so browsers can store name/value pairs of information similar to one big object.
+The Web Storage API (or Web/HTML5 Storage) provides mechanisms so browsers can store name/value pairs of information similar to one objects.
 
-### `localstorage` property
+### `localstorage`
 
-The `localStorage` property allows you to access a local storage object. `localStorage` has no expiration time, so data stored persists even when the browser is closed. However it can be emptied manually by the user whenever the user clear's their browser cache.
+`localStorage` allows you to access a local storage object. `localStorage` has no expiration time, so data stored persists when the browser is closed. However it can be emptied manually in code or whenever the user clear's their browser cache.
 
 **Example: index.html**
 ```html
@@ -538,3 +538,56 @@ username.innerHTML = localStorage.getItem('username');
 ```
 
 First, we create a `localStorage` name/value pair with name='username' and value='John'. Then we retrieve the value of 'username' and insert it into the element with the class `.username`.
+
+Web Storage also provides a couple of simple methods to remove data. They are very simple to add to your project:
+- `localStorage.removeItem()` takes a single argument — the name (key) of the data item you want to remove — and removes it from the storage object for that domain.
+- `localStorage.clear()` takes no arguments, and simply empties the entire storage object for that domain.
+
+**Example: script.js**
+```js
+// Remove data from the current local store
+localStorage.removeItem('username');
+```
+The keys can be strings or integers, but the values are always strings. You can see this issue below:
+
+```js
+// Create an empty object
+var car = {};
+
+// Store some things as properties
+car.wheels = 4;
+car.doors = 2;
+car.sound = 'vroom';
+car.name = 'Lightning McQueen';
+
+// Log object
+console.log( car );
+
+// Store object in localStorage
+localStorage.setItem( 'car', car );
+
+// Log localStorage object (hint, it's not an object anymore)
+console.log( localStorage.getItem( 'car' ) );
+```
+
+You can work around this by converting objects to strings in JavaScript using [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) and convert them back from strings to objects using [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
+
+```js
+// Create an empty object
+var car = {};
+
+// Store some things as properties
+car.wheels = 4;
+car.doors = 2;
+car.sound = 'vroom';
+car.name = 'Lightning McQueen';
+
+// Log object
+console.log( car );
+
+// Store object in localStorage
+localStorage.setItem( 'car', JSON.stringify(car) );
+
+// Log localStorage object (hint, it's not an object anymore)
+console.log( JSON.parse(localStorage.getItem( 'car' )) );
+```
