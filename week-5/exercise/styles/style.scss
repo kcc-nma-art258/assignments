@@ -1,27 +1,20 @@
-$full-height: 100%;
+// Base
 
-@mixin cf {
-  &:before,
-  &:after {
-    content: "";
-    display: table;
- }
+@import "base/reset";
+@import "base/utilities";
 
-  &:after {
-    clear: both;
-  }
-}
+// Layout
 
-// Mixins
-@mixin frame {
-  background-color: #FCFCFC;
-  border: 1px solid #333;
-  border-radius: 1px;
-  height: $full-height;
-  vertical-align: middle;
-  text-align: center;
-}
+@import "layout/header";
+@import "layout/footer";
+@import "layout/grid";
 
+<<<<<<< HEAD
+// Modules
+@import "modules/hero";
+@import "modules/search-bar";
+@import "modules/site-info";
+=======
 body {
   background-color: white;
   font: normal normal 300 16px/1.5 'Open Sans', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
@@ -127,3 +120,4 @@ body {
 @for $i from 1 through 12 {
   .col-#{$i} { width: 100% / $i; }
 }
+>>>>>>> kcc-nma-art258/master
