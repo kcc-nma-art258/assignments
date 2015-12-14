@@ -1,0 +1,304 @@
+<h1 id="week-4-css-authoring-using-sass">Week 4: CSS Authoring using Sass</h1>
+<p><img src="images/sass.png" alt="Sass Logo"></p>
+<p>The concept of CSS authoring is based on using additional tools (ie. Prepros) and technologies (ie. Sass) to create a more maintainable and efficient workflow while developing. The final output from your tool&#39;s build process will be a compiled and compressed version of your CSS ready for the browser.</p>
+<p><strong>Table of Contents</strong>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --></p>
+<ul>
+<li><a href="#preprocessors">Preprocessors</a></li>
+<li><a href="#prepros-as-our-build-tool"><em>Prepros</em> as our build tool</a><ul>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#adding-a-new-project">Adding a new project</a></li>
+</ul>
+</li>
+<li><a href="#getting-started-with-sass">Getting started with Sass</a><ul>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#nesting">Nesting</a></li>
+<li><a href="#mixins">Mixins</a></li>
+<li><a href="#operators">Operators</a></li>
+<li><a href="#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="preprocessors">Preprocessors</h2>
+<p>One of the main technologies you&#39;ll interact with as a front-end developer will be CSS preprocessors.</p>
+<p>Preprocessors make writing <em>maintainable</em> CSS easier. You can get more done, with less code, in less time. There are several popular preprocessors available to choose from including Sass, <a href="http://lesscss.org/">LESS</a>, and <a href="http://learnboost.github.io/stylus/">Stylus</a>. Each preprocessor has the same basic features and concepts:</p>
+<ul>
+<li>Be a <em>superset</em> of CSS, ie. valid CSS is valid Sass</li>
+<li>Support for variables, nesting, and basic math functions allowing for creation of <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> CSS</li>
+</ul>
+<p>Today, the main thing that differs between the major preprocessors is code syntax and a few built-in functions. In this course we&#39;ll be focusing on Sass since it is well established and widely used within the community.</p>
+<p>References:</p>
+<ul>
+<li><a href="http://sass-lang.com/guide">Sass: Basic Guide</a></li>
+<li><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#parent-selector">Sass: Developer Reference</a></li>
+</ul>
+<h2 id="-prepros-as-our-build-tool"><em>Prepros</em> as our build tool</h2>
+<p>There are several tools available to assist with managing the build process and generating our preprocessor&#39;s output including <a href="http://incident57.com/codekit/">Codekit</a>, <a href="http://mhs.github.io/scout-app/">Scout</a>, and command-line tools like <a href="http://gruntjs.com/">GruntJS</a> and <a href="http://gulpjs.com/">GulpJS</a>. In this course, we&#39;ll be using Prepros which, along with compiling our Sass, also helps out with the following:</p>
+<ul>
+<li>CSS prefixing</li>
+<li>Browser refresh &amp; behavior synchronization</li>
+<li>File concatenation &amp; minification</li>
+<li>Image optimization</li>
+</ul>
+<h3 id="setup">Setup</h3>
+<p>So let&#39;s start by getting our environments setup for CSS authoring. We only have to do this step the first time we open Prepros</p>
+<ul>
+<li>Open Prepros (if you get a trial pop-up, just click okay)</li>
+<li>Click on <em>App Menu &gt; Project Defaults</em></li>
+</ul>
+<p><img src="images/prepros-1.png" alt="Prepros 1"></p>
+<ul>
+<li>Under <em>Compilers &gt; Sass</em>, make sure <strong>Auto Compile, Autoprefix CSS, Use LibSass, and Sourcemaps</strong> are checked and <strong>Compressed</strong> is selected in the dropdown for <em>Output style of Output file.</em></li>
+</ul>
+<p><img src="images/prepros-2.png" alt="Prepros 2"></p>
+<h3 id="adding-a-new-project">Adding a new project</h3>
+<p>Once you&#39;ve adjusted the settings, drag &amp; drop your project on to Prepros, or click the <code>+ Add Project</code> button on the bottom left corner.</p>
+<p><img src="images/prepros-3.png" alt="Prepros 3"></p>
+<p>That&#39;s it! Prepros will now watch our project for changes and generate the necessary output for us without any extra work. We&#39;ll come back to it later, but for now we can minimize the window to get out of our way.</p>
+<h2 id="getting-started-with-sass">Getting started with Sass</h2>
+<p>It may seem daunting at first, but the main thing to remember is that Sass is CSS at it&#39;s core, so we can start slow and simple by converting our existing <code>style.css</code> to <code>style.scss</code>.</p>
+<p><img src="images/atom-1.png" alt="Atom 1"></p>
+<p>Once you re-save <code>style.scss</code>, you&#39;ll notice that two additional files appear, <code>style.css</code> and <code>style.css.map</code>.</p>
+<p><img src="images/atom-2.png" alt="Atom 2"></p>
+<p><em>The <code>style.css.map</code> file is used by debugging tools like Chrome DevTools to read the compiled CSS and lookup the corresponding Sass file.</em></p>
+<p>We officially have Sass up and running!</p>
+<h3 id="variables">Variables</h3>
+<p>Variables are a way to store information that you want to reuse throughout your stylesheet. They are one of the critical pieces of making your development process DRY.</p>
+<p>You can store things like colors, font stacks, or any CSS value you think you&#39;ll want to reuse. Sass uses the $ symbol to make something a variable. See the below CSS from our last class assignment for an example:</p>
+<pre><code class="lang-css">.main-header {
+  position: relative;
+  height: 60px;
+  background-color: green;
+}
+
+.logo {
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100px;
+  background-color: gray;
+}
+
+.main-nav {
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 400px;
+  background-color: gray;
+}
+</code></pre>
+<p>We can simplify this code by reference common values in a variable. For example, we use the value <code>60px</code> several times in the above code. If we wanted to change the size of our header, that means we would need to change that number 3 times in our stylesheet, which isn&#39;t very <em>DRY</em>.</p>
+<p>Let&#39;s use a Sass variable to simplify our code and make it more efficient.</p>
+<pre><code class="lang-scss">// Variables
+$header-height: 60px;
+
+.main-header {
+  position: relative;
+  height: $header-height;
+  background-color: green;
+}
+
+.logo {
+  top: 0;
+  left: 0;
+  height: $header-height;
+  width: 100px;
+  background-color: gray;
+}
+
+.main-nav {
+  top: 0;
+  right: 0;
+  height: $header-height;
+  width: 400px;
+  background-color: gray;
+}
+</code></pre>
+<p>Now if we want to update our header height, we only need to do it in one place. Go ahead and update the stylesheet by converting reused values to variables. A good rule of thumb: if a value (ie. color, number, string) is used 3 or more times anywhere in your stylesheet, it should be a variable.</p>
+<h3 id="nesting">Nesting</h3>
+<p>One thing CSS is missing is a visual hierarchical structure that mimics HTML&#39;s nesting structure. Sass will let you nest your styles very much like HTML. When nesting there&#39;s 2 basic rules to follow: only be as specific as you need to be (ie. components), and do not nest more than three-levels deep (see <a href="http://thesassway.com/beginner/the-inception-rule">inception rule</a> below).</p>
+<p>Given our previous CSS, let&#39;s start with nesting the header.</p>
+<pre><code class="lang-scss">// Variables
+$header-height: 60px;
+
+.main-header {
+  position: relative;
+  height: $header-height;
+  background-color: green;
+
+  .logo {
+    top: 0;
+    left: 0;
+    height: $header-height;
+    width: 100px;
+    background-color: gray;
+  }
+
+  .main-nav {
+    top: 0;
+    right: 0;
+    height: $header-height;
+    width: 400px;
+    background-color: gray;
+  }
+}
+</code></pre>
+<p>This will output the below CSS:</p>
+<pre><code class="lang-css">.main-header {
+  position: relative;
+  height: 60px;
+  background-color: green;
+}
+
+.main-header .logo {
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100px;
+  background-color: gray;
+}
+
+.main-header .main-nav {
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 400px;
+  background-color: grey;
+}
+</code></pre>
+<p>Take notice that the parent selector is prepended as an additional selector in the final styles output. This is significant because CSS performance is impacted negatively specifically from multi-selector style rules. This is where the first big rule of Sass comes in:</p>
+<blockquote>
+<p><strong>The Inception Rule</strong>: don’t go more than three levels deep.</p>
+</blockquote>
+<p>References:</p>
+<ul>
+<li><a href="http://thesassway.com/beginner/the-inception-rule">The Sass Way - Nested selectors: The Inception Rule</a></li>
+<li><a href="http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css">The Sass Way - Avoid nested selectors for more modular CSS</a></li>
+<li><a href="http://www.sitepoint.com/beware-selector-nesting-sass/">Sitepoint - Beware of Selector Nesting in Sass</a></li>
+</ul>
+<p>Continue nesting the stylesheet by thinking in large components (ie. header, hero, info, footer).</p>
+<h3 id="mixins">Mixins</h3>
+<p>Sometimes in CSS you want to reuse more than just a single value, but a whole set of style declarations or rules. Sass mixins fill this void, acting similarly to variables, but for whole sets of style rules.</p>
+<p>A good example of when you would want to use a mixin from our current stylesheet would be our clearfix hack. If you have more than 1 section with floated content, then your HTML probably has several <code>cf</code> or <code>clearfix</code> classes being applied. This is fine, however the only reason we created that class is so that we could reuse the style without having to rewrite it for every selector that needs it in our CSS (<strong>DRY CSS</strong>, <em>WET HTML</em>).</p>
+<p>With Sass, we can clean up our HTML while also keeping our Sass DRY using a mixin.</p>
+<pre><code class="lang-scss">@mixin cf {
+  &amp;:before,
+  &amp;:after {
+    content: &quot;&quot;;
+    display: table;
+  }
+
+  &amp;:after {
+    clear: both;
+  }
+}
+</code></pre>
+<p>Notice that I move the name of my class to the mixin name, and replaced it with <code>&amp;</code>. In Sass, <code>&amp;</code> has a special meaning, allowing you to reference the parent selector. This will become clearer once you see the output below.</p>
+<p>Given our current HTML, let&#39;s use our <code>cf</code> mixin so we can remove the <code>cf</code> class from the HTML.</p>
+<pre><code class="lang-scss">@mixin cf {
+  &amp;:before,
+  &amp;:after {
+    content: &quot;&quot;;
+    display: table;
+  }
+
+  &amp;:after {
+    clear: both;
+  }
+}
+
+...
+
+.site-info {
+  height: auto;
+  background-color: purple;
+  @include cf;
+}
+</code></pre>
+<p>This outputs the below CSS:</p>
+<pre><code class="lang-css">.site-info {
+  height: auto;
+  background-color: purple;
+}
+
+.site-info:before,
+.site-info:after {
+  content: &quot;&quot;;
+  display: table;
+}
+
+.site-info:after {
+  clear: both;
+}
+</code></pre>
+<p>Notice that because of the parent selector in our mixin, it applied the pseudo-selector classes directly to the parent selector the mixin was applied in.</p>
+<p>Mixins aren&#39;t used as commonly as variables and nesting in Sass, but they are definitely handy when you need it. Look at your stylesheet and consider if there are 2 or more elements sharing a set of similar styles that could be encapsulated for reuse.</p>
+<h3 id="operators">Operators</h3>
+<p>Sometimes you need to do some math in your CSS to get the exact values you need. This becomes extremely handy when working with grids and responsive web design where you&#39;re calculating percentages. Sass has a handful of standard math operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code>. Let&#39;s create a dynamic width for our info section using a variable and some basic math.</p>
+<pre><code class="lang-css">$site-info-width: 100%;
+
+...
+
+.site-info .info-01,
+.site-info .info-02 {
+  width: ($site-info-width / 4) - 1;
+}
+
+.site-info .info-03 {
+  width: ($site-info-width / 2);
+}
+</code></pre>
+<p>Which should compile to the CSS we previously had:</p>
+<pre><code class="lang-css">.site-info .info-01,
+.site-info .info-02 {
+  width: 24%;
+}
+
+.site-info .info-03 {
+  width: 50%;
+}
+</code></pre>
+<p>Some things to keep in mind about math operations in Sass:</p>
+<ul>
+<li>You can&#39;t mix value units, ie. <code>$container-width: 100% - 20px;</code> will not work compile</li>
+<li>The <code>/</code> symbol already has a special value in CSS (ie. font shorthand), so good practice is to wrap expressions in parenthesis if you want to for sure do division on the values.</li>
+</ul>
+<h3 id="functions">Functions</h3>
+<p>Sass comes with an <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">extensive set of built-in functions</a> that help you do common tasks really easy. For example, if you have ever wanted to darken a color on the fly while developing, and then opened up PS or Sketch to eyedrop the color and adjust it, Sass has a handy <code>darken()</code> function that let&#39;s you pass in a color and degree to darken by. Let&#39;s darken some of our colors using the handy function:</p>
+<pre><code class="lang-css">body {
+  background-color: darken(#FFCC00, 10%);
+}
+</code></pre>
+<p>Sass also provides users the ability to create their own custom functions in Sass. These are similar to mixins, except instead of outputting a set of styles, functions return a single value like variables. The difference between a function and a variable is that a function can manipulate a value before it returns it. This is extremely handy for performing common calculations (using operators) , ie. calculating dynamic grid widths, creating typographic scales, converting units (px to em).</p>
+<p>We&#39;ll cover custom functions in more depth in the coming weeks when we work on CSS frameworks; for now just know that built-in functions are available to you and you also have the ability to create custom functions if needed.</p>
+<h2 id="in-class-exercise">In-Class Exercise</h2>
+<ul>
+<li>Switch back to the <code>master</code> branch in your local <code>&lt;username&gt;/assignments</code> project in GitHub Desktop</li>
+<li>Update from <code>kcc-nma-art258/assignments:master</code> branch to get the latest changes</li>
+<li>Create a new branch called <code>week-4-assignment</code> and convert the in-class example to Sass</li>
+</ul>
+<h2 id="homework">Homework</h2>
+<p>Once completed with the in-class exercise...</p>
+<ul>
+<li>Rename <code>gh-pages</code> to <code>week-3-basic-site</code>. Publish the <code>week-3-basic-site</code> branch. Switch back to the <code>gh-pages</code> branch. <em>(We&#39;re simply making a copy of <code>gh-pages</code> so we can keep working on it, but go back to the previous version if we need)</em></li>
+</ul>
+<p><img src="images/github-1.png" alt="Github 1"></p>
+<ul>
+<li>Convert your existing CSS in to Sass following the class guide</li>
+<li>Make commits to save your changes and sync with your GitHub account online once you are complete</li>
+<li>Add the link to your assignment site on your GitHub repo pages</li>
+</ul>
+<p><img src="images/github-2.png" alt="Github 2"></p>
+<ul>
+<li><p>Create a pull request with the title <code>NMA Bot - Assignment 3: Sass</code> (replacing <em>NMA Bot</em> with your name) to turn in your project by 11:59pm Monday night.</p>
+<ul>
+<li>Make sure to mention atleast two people in your pull request; try to finish early enough so you can give other students enough time to review your work, not at the last minute.</li>
+<li><p>Adding the link to your assignment site in your pull request description will help your classmates review your work in the browser easier.</p>
+</li>
+<li><p>The assignment will use the following grading requirements: include one example of a <strong><a href="#variables">variable</a></strong>, <strong><a href="#nesting">nesting</a></strong>, <strong><a href="#mixins">mixins</a></strong></p>
+</li>
+</ul>
+</li>
+</ul>

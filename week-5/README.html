@@ -1,0 +1,179 @@
+<h1 id="week-4-css-architecture-frameworks">Week 4: CSS Architecture &amp; Frameworks</h1>
+<p>Replicating visual designs perfectly in code is just one side and challenge of writing CSS. As you begin to write CSS for larger sites and applications, additional considerations need to be taken in to account, including:</p>
+<ul>
+<li>Is the code readable/understandable?</li>
+<li>Is the code easy to change or extend?</li>
+<li>Is the code well decoupled?</li>
+<li>Will the code scale?</li>
+</ul>
+<p>By focusing on good CSS architecture, we can answer yes to the above questions and have confidence that our code will stand the test of time.</p>
+<p><strong>Table of Contents</strong>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --></p>
+<ul>
+<li><a href="#structuring-your-stylesheets">Structuring your stylesheets</a><ul>
+<li><a href="#folder-structure">Folder structure</a><ul>
+<li><a href="#base">Base</a></li>
+<li><a href="#layout">Layout</a></li>
+<li><a href="#modules">Modules</a></li>
+<li><a href="#pages">Pages</a></li>
+</ul>
+</li>
+<li><a href="#connecting-them-all-together">Connecting them all together</a></li>
+</ul>
+</li>
+<li><a href="#general-guidelines-for-css-architecture">General guidelines for CSS architecture:</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="structuring-your-stylesheets">Structuring your stylesheets</h2>
+<p>One of the nice things about Sass is that it allows for a more sophisticated project structure than CSS out-of-the-box. Sass extends the <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#import"><code>@import</code></a> rule to allow import of SCSS and Sass files. Unlike the normal <code>@import</code> rule, in Sass, the imported files will be merged into a single CSS output file.</p>
+<p>So lets take a look at how we can use Sass &amp; <code>@import</code> to structure our project:</p>
+<h3 id="folder-structure">Folder structure</h3>
+<p>First thing is to setup your folder structure; we&#39;ll explain what each of these mean here shortly.</p>
+<pre><code>styles/
+|
+|-- base/
+|-- layout/
+|-- modules/
+|-- pages/
+|   
+|-- reset.css
+|-- style.css
+|-- style.css.map
+|-- style.scss
+</code></pre><p>As we move through each section, we&#39;ll create a partial <code>.scss</code> file, with just the styles we need, and then in the end, we&#39;ll include them all back together.</p>
+<h4 id="base">Base</h4>
+<p><code>base/</code> is where all of your foundational styling is going to go. Typically in this folder, you&#39;ll find a reset, typography styles, and handy sass utilities like variables, functions, and mixins.</p>
+<p>Let&#39;s move our <code>reset.css</code> in to our <code>base/</code> and then rename it <code>_reset.scss</code> (we&#39;ll explain what the underscore at the beginning here means at the end). Let&#39;s also go ahead and remove it from our HTML.</p>
+<p>Create a new file called <code>_utilities.scss</code> and move all of the variables and @mixins (not <code>@extend</code>) from <code>style.scss</code> here.</p>
+<p>Now our folder structure should look like this:</p>
+<pre><code>styles/
+|
+|-- base/
+|   |-- _reset.scss
+|   |-- _utilities.scss
+|
+|-- layout/
+|-- modules/
+|-- pages/
+|   
+|-- style.css
+|-- style.css.map
+|-- style.scss
+</code></pre><p>Specifically, the new files we added were:</p>
+<ul>
+<li><code>_reset.scss</code></li>
+<li><code>_utilities.scss</code></li>
+</ul>
+<h4 id="layout">Layout</h4>
+<p>The <code>layout/</code> directory (sometimes called <code>partials</code>) is where the styles for our large sections of layout <em>which are shared across the site</em> will go. This is where our grid as well as the common areas live, like our header, footer, etc.</p>
+<p>Let&#39;s create the following files and move our styles from <code>style.scss</code> to their respective place:</p>
+<ul>
+<li><code>_header.scss</code></li>
+<li><code>_footer.scss</code></li>
+<li><code>_grid.scss</code></li>
+</ul>
+<p><em>(We haven&#39;t created a grid yet, so for now we can just move our <code>.container</code> class in to it)</em></p>
+<p>Now our folder structure should look like this:</p>
+<pre><code>styles/
+|
+|-- base/
+|   |-- _reset.scss
+|   |-- _utilities.scss
+|
+|-- layout/
+|   |-- _header.scss
+|   |-- _footer.scss
+|   |-- _grid.scss
+|
+|-- modules/
+|-- pages/
+|   
+|-- style.css
+|-- style.css.map
+|-- style.scss
+</code></pre><p>Our <code>style.scss</code> should also be getting smaller...</p>
+<h4 id="modules">Modules</h4>
+<p>The <code>modules/</code> directory (sometimes called <code>components/</code>) is for the smaller portions of the design which make up the major layout sections. While <code>layout/</code> is kind of <em>macro</em> (defining the global wireframe), <code>modules/</code> is more <em>micro</em>. This is usually where most of the files live, since your whole site <em>should</em> be made up of small modules.</p>
+<p>For our site, let&#39;s create the following modules and move their respective styles in to it from the <code>style.scss</code>:</p>
+<ul>
+<li><code>_hero.scss</code></li>
+<li><code>_search-bar.scss</code></li>
+<li><code>_site-info.scss</code></li>
+</ul>
+<p>Now our folder structure should look like this:</p>
+<pre><code>styles/
+|
+|-- base/
+|   |-- _reset.scss
+|   |-- _utilities.scss
+|
+|-- layout/
+|   |-- _header.scss
+|   |-- _footer.scss
+|   |-- _grid.scss
+|
+|-- modules/
+|   |-- _hero.scss
+|   |-- _search-bar.scss
+|   |-- _site-info.scss
+|   
+|-- pages/
+|
+|-- style.css
+|-- style.css.map
+|-- style.scss
+</code></pre><p>...and our <code>style.scss</code> should be empty now, but there is still one more folder to share.</p>
+<h4 id="pages">Pages</h4>
+<p>The <code>pages/</code> folder is where all of the page specific styles go that don&#39;t make up the <code>layout/</code> or belong to a <code>module</code>.</p>
+<p>Since we&#39;re only working with a single page HTML/CSS wirefame, we don&#39;t have any traditional &quot;page&quot; types styles yet, but as we go on, we&#39;ll need to setup styles that are unique for certain pages, ie. the home page. We would do that with the following:</p>
+<ul>
+<li><code>_home.scss</code></li>
+</ul>
+<h3 id="connecting-them-all-together">Connecting them all together</h3>
+<p>Since we broke everything out in to separate files, our <code>style.scss</code> (and subsequently our <code>style.css</code>) is completely blank. This is where Sass&#39;s import comes in:</p>
+<p><strong>styles/style.scss</strong></p>
+<pre><code class="lang-scss">// Base
+@import &quot;base/reset&quot;;
+@import &quot;base/reset&quot;;
+
+// Layout
+@import &quot;layout/header&quot;;
+@import &quot;layout/footer&quot;;
+@import &quot;layout/grid&quot;;
+// ...
+
+// Modules
+@import &quot;modules/hero&quot;;
+@import &quot;modules/search-bar&quot;;
+@import &quot;modules/site-info&quot;;
+
+// Pages
+// ...
+</code></pre>
+<p>You&#39;ll notice that we didn&#39;t have to include the <code>_</code> or the <code>.scss</code> extension; this is because Sass is smart enough to know just by looking at the file.</p>
+<p>By giving the files a underscore (<code>_</code>) at the beginning of their name, Sass knew to only import the stylesheet in to another. However since we didn&#39;t give our <code>style.scss</code> an <code>_</code>, Sass also knew to go ahead and read the file, import everything and then compile it in to a final <code>style.css</code> file.</p>
+<p>Now we&#39;re ready to grow our CSS with our site! However, this is simply one recommendation for structuring based on research and personal experience, however there are other techniques you may read about online which I encourage you to try.</p>
+<h2 id="general-guidelines-for-css-architecture-">General guidelines for CSS architecture:</h2>
+<ul>
+<li>Use an underscore (<code>_</code>) if you plan to <code>@import</code> the file in to another stylesheet</li>
+<li>If a file starts to get longer than 200 lines, consider splitting it in to smaller chunks.<ul>
+<li><strong>Ex 1:</strong> if you notice your <code>_header.scss</code> is growing, you can break out the styles in to a <code>_navigation.scss</code> file</li>
+<li><strong>Ex 2:</strong> if you find that your utilities is growing, you can split them up in to separate <code>_variables.scss</code>, <code>_mixins.scss</code>,
+<code>_functions.scss</code>, etc.</li>
+</ul>
+</li>
+<li>If you can&#39;t figure out where a style should go, ie. <em>&quot;Does it belong in a layout, module or page style&quot;</em>, just ask yourself if you ever plan to reuse that style anywhere else on the site:<ul>
+<li>used multiple times + a big section == <code>layout/</code></li>
+<li>used multiple times + smaller section == <code>module/</code></li>
+<li>only used for one page, no matter the size == <code>pages/</code></li>
+</ul>
+</li>
+<li>If you are including files from other sources, ie. <code>bootstrap.scss</code>, you can add a <code>vendor/</code> directory to organize code from vendor sources.</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="http://thesassway.com/beginner/how-to-structure-a-sass-project">How to structure a Sass project</a></li>
+<li><a href="http://www.sitepoint.com/architecture-sass-project/">Sitepoint: Architecture for a Sass Project</a></li>
+</ul>
