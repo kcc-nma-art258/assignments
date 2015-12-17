@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> kcc-nma-art258/master
 $full-height: 100%;
 
 @mixin cf {
@@ -127,3 +132,30 @@ body {
 @for $i from 1 through 12 {
   .col-#{$i} { width: 100% / $i; }
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> master
+// Base
+@import "base/reset";
+@import "base/utilities";
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/grid";
+
+
+// Modules
+@import "modules/hero";
+@import "modules/search-bar";
+@import "modules/site-info";
+
+// Pages
+@import "pages/home";
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
+=======
+>>>>>>> kcc-nma-art258/master

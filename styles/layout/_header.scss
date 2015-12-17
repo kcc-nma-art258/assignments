@@ -1,0 +1,14 @@
+header {
+  position: relative;
+  width: $max-width;
+  height: $header-height;
+  background-color: #EA4335;
+}
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $max-width/10;
+  height: $header-height;
+  background-color: #3375DA;
+}

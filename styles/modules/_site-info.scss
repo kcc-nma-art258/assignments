@@ -1,0 +1,23 @@
+.info {
+	@include cf;
+  height: auto;
+  background-color: #E6D4B0;
+	&:last-child{
+		margin-right:0;
+	}
+}
+.info-01 {
+	float: left;
+  background-color: #B3CEB3;
+	@include columns-attributes;
+}
+.info-02 {
+	float: left;
+  background-color: #8EB18E;
+	@include columns-attributes;
+}
+.info-03 {
+	float: right;
+  background-color: #689C68;
+	@include columns-attributes;
+}
